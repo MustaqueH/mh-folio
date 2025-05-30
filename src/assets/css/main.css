@@ -162,6 +162,7 @@ h6 {
   font-weight: 600;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(255, 30, 66, 0.6);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 30, 66, 0.4);
   transition: all 0.35s ease;
@@ -177,6 +178,7 @@ h6 {
   font-weight: 600;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 201, 141, 0.6);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(0, 201, 141, 0.4);
   transition: all 0.35s ease;
@@ -192,6 +194,7 @@ h6 {
   font-weight: 500;
   border-radius: 10px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 8px rgba(0, 255, 231, 0.15);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   transition: all 0.35s ease;
 }
@@ -468,6 +471,7 @@ main, .content-wrapper {
 /* Dropdown enhancements */
 .navmenu .dropdown ul {
   background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(26, 188, 156, 0.1);
   box-shadow: 
@@ -1244,6 +1248,9 @@ section,
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -1255,8 +1262,8 @@ section,
   inset: 0;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   box-shadow: 
     0 4px 24px -1px rgba(0, 0, 0, 0.05),
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
@@ -1506,6 +1513,7 @@ section,
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1760,8 +1768,10 @@ section,
   aspect-ratio: 3/4;
   width: 100%;
   background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit--webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .about .about-image:hover {
@@ -1817,6 +1827,8 @@ section,
 
 .about .personal-info {
   background: rgba(255, 255, 255, 0.02);
+  -webkit--webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -2011,6 +2023,7 @@ section,
   background: rgba(255, 255, 255, 0.02);
   border-radius: 20px;
   padding: 2rem;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 
@@ -2231,6 +2244,8 @@ section,
   box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.1),
     inset 0 0 4px rgba(255, 255, 255, 0.05);
+  -webkit--webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   }
@@ -2300,6 +2315,7 @@ section,
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(180%) blur(10px);
 }
 
