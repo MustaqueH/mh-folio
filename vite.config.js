@@ -1,0 +1,53 @@
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+
+export default defineConfig({
+  root: 'src',
+  plugins: [
+    ViteImageOptimizer({
+      png: {
+        quality: 80
+      },
+      jpeg: {
+        quality: 80
+      },
+      jpg: {
+        quality: 80
+      },
+      webp: {
+        lossless: true
+      }
+    })
+  ],
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src/index.html'),
+        portfolio: resolve(__dirname, 'src/portfolio-details.html'),
+        service: resolve(__dirname, 'src/service-details.html'),
+        starter: resolve(__dirname, 'src/starter-page.html')
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split('.')[1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img';
+          }
+          return `assets/${extType}/[name][extname]`;
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js'
+      }
+    }
+  },
+  server: {
+    open: true,
+    port: 3000
+  },
+  css: {
+    devSourcemap: true
+  }
+}); 
