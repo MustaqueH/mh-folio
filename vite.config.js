@@ -12,9 +12,6 @@ export default defineConfig({
       jpeg: {
         quality: 80
       },
-      jpg: {
-        quality: 80
-      },
       webp: {
         lossless: true
       }
@@ -32,10 +29,7 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.')[1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'img';
-          }
+          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(assetInfo.name.split('.')[1]) ? 'img' : assetInfo.name.split('.')[1];
           return `assets/${extType}/[name][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
