@@ -77,10 +77,7 @@
   <!-- Add Simple Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v9/font/simple-icons.min.css">
 
-  <!-- Add Font Awesome 6 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Add Font Awesome Pro for additional icons -->
+  <!-- Add Font Awesome Pro for additional icons (remove free version to avoid redundancy) -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
 </head>
 
@@ -105,7 +102,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <button class="mobile-nav-toggle d-xl-none hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navmenu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
 
       <div class="header-social-links">
@@ -130,6 +129,9 @@
 
   </header>
 
+  <!-- Mobile nav backdrop -->
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
   <main class="main">
 
     <!-- Hero Section -->
@@ -137,30 +139,30 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h2>Transforming Enterprise IT Through Automation & Innovation</h2>
-            <p class="lead">Architecting intelligent IT solutions through cloud innovation, automated workflows, and advanced identity management</p>
+            <h2>Build Secure, Automated Workplace Experiences</h2>
+            <p class="lead">Designing user‑first, cloud‑ready platforms with Azure, Microsoft 365, and Intune - balancing security, speed, and simplicity.</p>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
               <a href="#portfolio" class="btn btn-primary">
                 <i class="bi bi-collection me-2"></i>
-                View My Work
+                Explore Work
               </a>
               <a href="#contact" class="btn btn-outline">
                 <i class="bi bi-chat-text me-2"></i>
-                Let's Connect
+                Get in Touch
               </a>
             </div>
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
               <div class="stat-item">
                 <span id="counter-experience" class="stat-number" data-target="5">0</span>
-                <span class="stat-label">Years Experience</span>
+                <span class="stat-label">Years in Enterprise IT</span>
               </div>
               <div class="stat-item">
                 <span id="counter-projects" class="stat-number plus-after" data-target="27">0</span>
-                <span class="stat-label">Cloud Migrations</span>
+                <span class="stat-label">Migrations Delivered</span>
               </div>
               <div class="stat-item">
                 <span id="counter-solutions" class="stat-number plus-after" data-target="75">0</span>
-                <span class="stat-label">Apps Deployed</span>
+                <span class="stat-label">Apps Deployed via Intune</span>
               </div>
             </div>
           </div>
@@ -179,8 +181,8 @@
     <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Passionate IT Specialist crafting efficient, secure, and user-focused enterprise solutions.</p>
+        <h2>About</h2>
+        <p>I help organizations modernize the workplace - streamlining device lifecycle, identity, and collaboration with automation and secure defaults.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -188,7 +190,7 @@
           <div class="col-lg-5 d-flex position-relative" data-aos="fade-right" data-aos-delay="200">
             <div class="about-image-wrapper">
               <div class="about-image">
-                <img src="assets/img/profile/Profile-Photo_MH1.jpg" alt="Profile Image" class="img-fluid">
+                <img src="assets/img/profile/Mustaque Halder Headshot.jpg" alt="Profile Image" class="img-fluid">
                 <div class="experience-badge" data-aos="zoom-in" data-aos-delay="400">
                   <span class="years">5+</span>
                   <span class="text">Years<br>Experience</span>
@@ -200,8 +202,8 @@
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <h3>IT &amp; Modern Workplace Specialist</h3>
-              <p class="lead mb-4">Hey, I'm Mustaque — a Melbourne-based IT Specialist passionate about building seamless, user-focused tech experiences. From automating device rollouts to optimizing identity and remote support, I turn complex challenges into practical, efficient solutions.</p>
-              <p class="mb-4">When I'm not refining systems, I'm exploring emerging tools and shaping my path in tomorrow's tech landscape.</p>
+              <p class="lead mb-4">I modernize the workplace - automating device rollouts, tightening identity, and simplifying collaboration with secure defaults.</p>
+              <p class="mb-4">Focus areas: faster onboarding, fewer tickets, stronger guardrails, and a better day‑one experience.</p>
 
               <div class="personal-info glass-effect alt-section-bg">
                 <div class="row g-4">
@@ -209,7 +211,7 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="100">
                       <i class="bi bi-person"></i>
                       <div>
-                        <span class="label">Name</span>
+                        <span class="label">Name:</span>
                         <span class="value">Mustaque Halder</span>
                       </div>
                     </div>
@@ -218,7 +220,7 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="150">
                       <i class="bi bi-geo-alt"></i>
                       <div>
-                        <span class="label">Location</span>
+                        <span class="label">Location:</span>
                         <span class="value">Melbourne, AU</span>
                       </div>
                     </div>
@@ -227,8 +229,8 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="200">
                       <i class="bi bi-laptop"></i>
                       <div>
-                        <span class="label">Expertise</span>
-                        <span class="value">Modern Workplace</span>
+                        <span class="label">Expertise:</span>
+                        <span class="value">Modern Workplace (Intune, Entra ID, M365)</span>
                       </div>
                     </div>
                   </div>
@@ -236,7 +238,7 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="250">
                       <i class="bi bi-building"></i>
                       <div>
-                        <span class="label">Industry</span>
+                        <span class="label">Industry:</span>
                         <span class="value">Enterprise IT</span>
                       </div>
                     </div>
@@ -245,7 +247,7 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                       <i class="bi bi-shield-check"></i>
                       <div>
-                        <span class="label">Specialization</span>
+                        <span class="label">Specialization:</span>
                         <span class="value">Endpoint Management</span>
                       </div>
                     </div>
@@ -254,7 +256,7 @@
                     <div class="info-item" data-aos="fade-up" data-aos-delay="350">
                       <i class="bi bi-translate"></i>
                       <div>
-                        <span class="label">Languages</span>
+                        <span class="label">Languages:</span>
                         <span class="value">English, Bengali</span>
                       </div>
                     </div>
@@ -269,7 +271,7 @@
                       <div class="btn-hover-effect"></div>
                     </a>
                     <div class="qr-wrapper" data-aos="fade-left" data-aos-delay="400">
-                      <img src="assets/img/qr-code.png" alt="Portfolio QR Code" class="qr-code">
+                      <img src="assets/img/profile/MustaqueQRCode1.jpeg" alt="Portfolio QR Code" class="qr-code">
                       <span class="qr-label">Scan to Connect</span>
                     </div>
                   </div>
@@ -285,8 +287,8 @@
 <section id="skills" class="skills section py-5 alt-section-bg">
   <div class="container">
     <div class="section-title text-center mb-5" data-aos="fade-up">
-      <h2 class="display-6 fw-bold gradient-text">Technical Expertise</h2>
-      <p>Delivering secure, automated, and user-centric IT solutions for the modern workplace.</p>
+      <h2 class="display-6 fw-bold gradient-text">Expertise</h2>
+      <p>Secure, automated, user‑first platforms that reduce friction, speed onboarding, and improve compliance.</p>
     </div>
 
     <div class="skill-categories mb-5">
@@ -294,110 +296,84 @@
         <!-- Identity & Security -->
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="skill-box skill-category-card">
-            <div class="icon-wrapper">
-              <i class="bi bi-shield-lock"></i>
-            </div>
+            <div class="icon-wrapper"><i class="bi bi-shield-lock"></i></div>
             <h3>Identity & Security</h3>
+            <p class="card-lead">Identity‑first access and threat reduction, without user friction.</p>
             <div class="mini-tech-grid mb-3">
-              <span class="mini-tech" title="Azure"><i class="bi bi-microsoft"></i></span>
-              <span class="mini-tech" title="Entra ID"><i class="bi bi-shield-check"></i></span>
-              <span class="mini-tech" title="Defender"><i class="bi bi-shield-lock"></i></span>
+              <span class="mini-tech" title="Entra / Azure"><i class="bi bi-microsoft"></i> Entra</span>
+              <span class="mini-tech" title="Defender"><i class="bi bi-shield-check"></i> Defender</span>
             </div>
             <ul class="skill-list">
-              <li>Azure AD / Entra ID</li>
-              <li>Conditional Access & MFA</li>
-              <li>Zero Trust & Defender Security</li>
-              <li>Privileged Identity Management (PIM)</li>
-              <li>Data Loss Prevention (DLP)</li>
+              <li>Entra ID / Conditional Access: reduce lateral risk and unauthorized access</li>
+              <li>MFA & PIM: secure privileged workflows with minimal user noise</li>
+              <li>DLP & Threat Response: maintain data control and fast remediation</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 95%"></div>
-              <div class="skill-meter-label">95%</div>
-            </div>
+            <div class="card-outcome">Outcome: Fewer risky sign‑ins, cleaner audits, quicker response</div>
           </div>
         </div>
+
         <!-- Endpoint Management -->
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="150">
           <div class="skill-box skill-category-card">
-            <div class="icon-wrapper">
-              <i class="bi bi-laptop"></i>
-            </div>
+            <div class="icon-wrapper"><i class="bi bi-laptop"></i></div>
             <h3>Endpoint Management</h3>
+            <p class="card-lead">Zero‑touch device lifecycle: consistent builds, compliant devices.</p>
             <div class="mini-tech-grid mb-3">
-              <span class="mini-tech" title="Intune"><i class="bi bi-gear"></i></span>
-              <span class="mini-tech" title="Autopilot"><i class="bi bi-cloud-arrow-up"></i></span>
-              <span class="mini-tech" title="BitLocker"><i class="bi bi-lock"></i></span>
+              <span class="mini-tech" title="Intune"><i class="bi bi-gear"></i> Intune</span>
+              <span class="mini-tech" title="Autopilot"><i class="bi bi-cloud-arrow-up"></i> Autopilot</span>
             </div>
             <ul class="skill-list">
-              <li>Microsoft Intune & Autopilot</li>
-              <li>Device Compliance & Analytics</li>
-              <li>Application Deployment</li>
-              <li>Windows, macOS, iOS, Android</li>
-              <li>BitLocker & Device Encryption</li>
+              <li>Autopilot & Intune profiles: consistent builds and fast onboarding</li>
+              <li>Application deployment & compliance reporting</li>
+              <li>Platform coverage: Windows, macOS, iOS, Android</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 90%"></div>
-              <div class="skill-meter-label">90%</div>
-            </div>
+            <div class="card-outcome">Outcome: Standard laptops ready in ≤ 30 minutes</div>
           </div>
         </div>
+
         <!-- Cloud & Microsoft 365 -->
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="skill-box skill-category-card">
-            <div class="icon-wrapper">
-              <i class="bi bi-cloud"></i>
-            </div>
+            <div class="icon-wrapper"><i class="bi bi-cloud"></i></div>
             <h3>Cloud & Microsoft 365</h3>
+            <p class="card-lead">Secure collaboration, cost‑aware cloud, automation where it counts.</p>
             <div class="mini-tech-grid mb-3">
-              <span class="mini-tech" title="Azure"><i class="bi bi-microsoft"></i></span>
-              <span class="mini-tech" title="M365"><i class="bi bi-briefcase"></i></span>
-              <span class="mini-tech" title="Exchange Online"><i class="bi bi-envelope"></i></span>
+              <span class="mini-tech" title="Azure"><i class="bi bi-microsoft"></i> Azure</span>
+              <span class="mini-tech" title="M365"><i class="bi bi-briefcase"></i> M365</span>
             </div>
             <ul class="skill-list">
-              <li>Azure Infrastructure & Automation</li>
-              <li>Exchange Online, Teams, SharePoint</li>
-              <li>Licensing & User Management</li>
-              <li>Hybrid Deployments</li>
-              <li>Secure Collaboration</li>
+              <li>Teams, Exchange, SharePoint optimisation for secure collaboration</li>
+              <li>Hybrid cloud patterns and cost-conscious automation</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 88%"></div>
-              <div class="skill-meter-label">88%</div>
-            </div>
+            <div class="card-outcome">Outcome: Simplified collaboration and clearer governance</div>
           </div>
         </div>
+
         <!-- Automation & Scripting -->
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="250">
           <div class="skill-box skill-category-card">
-            <div class="icon-wrapper">
-              <i class="bi bi-terminal"></i>
-            </div>
+            <div class="icon-wrapper"><i class="bi bi-terminal"></i></div>
             <h3>Automation & Scripting</h3>
+            <p class="card-lead">Remove toil, codify standards, and speed remediation.</p>
             <div class="mini-tech-grid mb-3">
-              <span class="mini-tech" title="PowerShell"><i class="bi bi-terminal"></i></span>
-              <span class="mini-tech" title="Logic Apps"><i class="bi bi-diagram-3"></i></span>
-              <span class="mini-tech" title="Power Automate"><i class="bi bi-gear"></i></span>
+              <span class="mini-tech" title="PowerShell"><i class="bi bi-terminal"></i> PowerShell</span>
+              <span class="mini-tech" title="Graph API"><i class="bi bi-diagram-3"></i> Graph</span>
             </div>
             <ul class="skill-list">
-              <li>PowerShell & Graph API</li>
-              <li>Automated Onboarding/Offboarding</li>
-              <li>Patch Management</li>
-              <li>Process Optimization</li>
-              <li>Logic Apps & Power Automate</li>
+              <li>Scripting for packaging, onboarding, and telemetry-driven fixes</li>
+              <li>Workflow automation with Logic Apps / Power Automate</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 85%"></div>
-              <div class="skill-meter-label">85%</div>
-            </div>
+            <div class="card-outcome">Outcome: Automated tasks saved 70% of engineering hours/month</div>
           </div>
         </div>
+
         <!-- Collaboration & Adoption -->
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="skill-box skill-category-card">
             <div class="icon-wrapper">
               <i class="bi bi-people"></i>
             </div>
-            <h3>Collaboration & Adoption</h3>
+            <h3>Collaboration & Enablement</h3>
             <div class="mini-tech-grid mb-3">
               <span class="mini-tech" title="Teams"><i class="bi bi-people"></i></span>
               <span class="mini-tech" title="SharePoint"><i class="bi bi-folder"></i></span>
@@ -409,10 +385,6 @@
               <li>OneDrive for Business</li>
               <li>User Training & Change Management</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 80%"></div>
-              <div class="skill-meter-label">80%</div>
-            </div>
           </div>
         </div>
         <!-- Support & Service Delivery -->
@@ -421,7 +393,7 @@
             <div class="icon-wrapper">
               <i class="bi bi-headset"></i>
             </div>
-            <h3>Support & Service Delivery</h3>
+            <h3>Service Delivery & Support</h3>
             <div class="mini-tech-grid mb-3">
               <span class="mini-tech" title="Service Desk"><i class="bi bi-headset"></i></span>
               <span class="mini-tech" title="Knowledge Base"><i class="bi bi-book"></i></span>
@@ -432,10 +404,6 @@
               <li>Remote & Onsite Support</li>
               <li>Knowledge Base Creation</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 92%"></div>
-              <div class="skill-meter-label">92%</div>
-            </div>
           </div>
         </div>
         <!-- Networking & Infrastructure -->
@@ -456,10 +424,6 @@
               <li>Wi-Fi & Network Troubleshooting</li>
               <li>Hybrid Cloud Connectivity</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 80%"></div>
-              <div class="skill-meter-label">80%</div>
-            </div>
           </div>
         </div>
         <!-- Digital Transformation -->
@@ -480,10 +444,6 @@
               <li>Adoption Strategy</li>
               <li>Continuous Improvement</li>
             </ul>
-            <div class="skill-meter">
-              <div class="meter-fill" style="width: 78%"></div>
-              <div class="skill-meter-label">78%</div>
-            </div>
           </div>
         </div>
       </div>
@@ -496,13 +456,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-       <!-- <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </div> -->
-        <p>A snapshot of my professional background, highlighting key roles, skills, and achievements in IT operations, support, and modern workplace solutions</p>
+        <h2>Experience</h2>
+        <p>Enterprise IT impact across modern workplace, identity, and cloud—focused on outcomes: faster onboarding, fewer tickets, stronger guardrails.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -511,8 +466,8 @@
           <div class="col-12">
             <div class="resume-wrapper">
               <div class="resume-block" data-aos="fade-up">
-                <h2>My Professional Journey</h2>
-                <p class="lead">From supporting seamless IT operations at CompNow to driving a major cloud migration at Pitcher Partners, my journey in the tech industry has been defined by tackling complex challenges. Specializing in M365, Intune, and Azure migrations, I thrive on transforming IT systems to enhance efficiency, security, and end-user experience.</p>
+                <h2>Recent Roles</h2>
+                <p class="lead">M365, Intune, and Azure - hands‑on delivery that improves efficiency, security, and the end‑user experience.</p>
 
                 <div class="timeline">
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -523,14 +478,12 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
                       <h3 class="position">IT Support Specialist</h3>
-                      <p class="description">
-                        Optimizing IT infrastructure with robust support, backend automation, and secure device management, while ensuring smooth app deployment and efficient system operations, all tailored to enhance user experience and productivity in a fast-paced environment.
-                      </p>
+                      <p class="description">Modern device management, automation, and app delivery for a 1,200+ device estate - focused on reliable operations and a better user experience.</p>
                       <ul>
-                        <li>Deploy and manage apps, configurations, and policies using modern provisioning methods across 1200+ endpoints</li>
-                        <li>Part of the core team driving the firm's cloud transformation—migrating systems, standardising builds, and simplifying tech stacks</li>
-                        <li>Streamlined Autopilot and compliance setup to reduce manual work and improve provisioning time</li>
-                        <li>Automated routine tasks and improved compliance through secure, policy-based device configurations</li>
+                        <li>Deployed apps, configurations, and policies via Autopilot/Intune across 1,200+ endpoints</li>
+                        <li>Contributed to cloud transformation: standardised builds, simplified tech stacks, improved telemetry</li>
+                        <li>Streamlined Autopilot and compliance workflows; reduced manual steps and provisioning time</li>
+                        <li>Policy‑based configurations improved compliance and reduced recurring incidents</li>
                       </ul>
                       <p></p>
                     </div>
@@ -544,13 +497,11 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
                       <h3 class="position">IT Service Desk Analyst</h3>
-                      <p class="description">
-                        Supported a large academic environment with hands-on IT troubleshooting. Balanced walk-up support with backend admin — keeping systems stable and users confident in a high-volume university setting
-                      </p>
+                      <p class="description">High‑volume academic environment - walk‑up support plus backend admin to keep systems stable and users productive.</p>
                       <ul>
                         <li>Managed user accounts, endpoint configurations, and device compliance across campus systems</li>
-                        <li>Provided on-site support for software, hardware, and access issues, ensuring smooth operations during peak periods</li>
-                        <li>Contributed to ITIL-aligned ticket resolution workflows and escalations, improving user satisfaction and response time</li>
+                        <li>On‑site support across software, hardware, and access; met peak‑period SLAs</li>
+                        <li>Improved resolution times via ITIL‑aligned workflows and clearer escalation paths</li>
                       </ul>
                       <p></p>
                     </div>
@@ -564,7 +515,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-right">
                       <h3 class="position">Desktop Support Engineer (Internship)</h3>
-                      <p class="description">Dove into hands-on support and IT admin fundamentals — laying the groundwork for a solid IT career while troubleshooting hardware and software issues to ensure smooth operations</p>
+                      <p class="description">Dove into hands-on support and IT admin fundamentals - laying the groundwork for a solid IT career while troubleshooting hardware and software issues to ensure smooth operations</p>
                     </div>
                   </div>
                 </div>
@@ -572,7 +523,7 @@
 
               <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
                 <h2>Academic Roots &amp; Strategic Insight</h2>
-                <p class="lead">A journey grounded in technical mastery and elevated by leadership — combining cyber security, advanced networking, and modern management principles.</p>
+                <p class="lead">A journey grounded in technical mastery and elevated by leadership - combining cyber security, advanced networking, and modern management principles.</p>
 
                 <div class="timeline">
                   <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -625,13 +576,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-      <!-- <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </div> --> 
-        <p>A curated selection of my contributions and initiatives — from endpoint management to automation — reflecting my commitment to efficient, secure, and scalable IT solutions.</p>
+        <h2>Work</h2>
+        <p>Outcome-driven projects across modern workplace, identity, automation, and hybrid infrastructure.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -641,10 +587,10 @@
           <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
             <ul class="portfolio-filters isotope-filters">
               <li data-filter="*" class="filter-active">All Projects</li>
-              <li data-filter=".filter-web">Automation &amp; Tools</li>
-              <li data-filter=".filter-graphics">System &amp; Endpoint Projects</li>
-              <li data-filter=".filter-motion">Docs &amp; Case Studies</li>
-              <li data-filter=".filter-brand">Branding</li>
+              <li data-filter=".filter-web">Modern Device Management</li>
+              <li data-filter=".filter-graphics">Security &amp; Compliance</li>
+              <li data-filter=".filter-motion">Automation &amp; Insights</li>
+              <li data-filter=".filter-brand">Hybrid Infrastructure</li>
             </ul>
           </div>
 
@@ -653,18 +599,18 @@
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/Microsoft_Intune_headpic.jpg" class="img-fluid" alt="Autopilot & Intune" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-web" title="Preview Modern Dashboard Interface"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link" title="View Details"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/Microsoft_Intune_headpic.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-web" title="Preview Modern Dashboard Interface"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details2.html" class="details-link" title="View Details"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Automation &amp; Tools</span>
-                  <h3>Modern Dashboard Interface</h3>
-                  <p>Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis.</p>
+                  <span class="category">Modern Device Management</span>
+                  <h3>Windows Autopilot: Zero-Touch at Scale</h3>
+                  <p>Autopilot + Intune profiles enabled zero‑touch builds for 1,200 devices; standard laptop provisioning in ≤ 30 minutes.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -672,18 +618,18 @@
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="Conditional Access" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics" title="Preview Creative Brand Identity"><i class="bi bi-eye"></i></a>
+                      <a href="assets/img/portfolio/Microsoft_Intune_headpic.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics" title="Preview Security Work"><i class="bi bi-eye"></i></a>
                       <a href="portfolio-details.html" class="details-link" title="View Details"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Graphics</span>
-                  <h3>Creative Brand Identity</h3>
-                  <p>Vestibulum id ligula porta felis euismod semper at vulputate.</p>
+                  <span class="category">Security & Compliance</span>
+                  <h3>Conditional Access + DLP: Guardrails by Default</h3>
+                  <p>CA policies and DLP rules reduced risky sign-ins and data exposure; audit posture measurably improved.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -691,18 +637,18 @@
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-motion">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="Endpoint Analytics" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion" title="Preview Product Animation Reel"><i class="bi bi-eye"></i></a>
+                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion" title="Preview Analytics"><i class="bi bi-eye"></i></a>
                       <a href="portfolio-details.html" class="details-link" title="View Details"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Motion</span>
-                  <h3>Product Animation Reel</h3>
-                  <p>Donec ullamcorper nulla non metus auctor fringilla dapibus.</p>
+                  <span class="category">Automation & Insights</span>
+                  <h3>Endpoint Analytics + Auto-Remediation</h3>
+                  <p>Telemetry‑driven playbooks auto‑fixed common endpoint issues, cutting incident volume and mean time to repair.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -719,9 +665,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Branding</span>
-                  <h3>Luxury Brand Package</h3>
-                  <p>Aenean lacinia bibendum nulla sed consectetur elit.</p>
+                  <span class="category">Hybrid Infrastructure</span>
+                  <h3>Co-Management: SCCM → Intune</h3>
+                  <p>Phased migration to co‑management improved coverage, simplified updates, and reduced operational overhead.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -738,9 +684,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Web Design</span>
-                  <h3>E-commerce Platform</h3>
-                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <span class="category">Modern Device Management</span>
+                  <h3>Intune App Lifecycle: Enterprise Scale</h3>
+                  <p>End-to-end app packaging, testing, and staged rollouts with telemetry - faster releases, fewer regressions.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -757,9 +703,9 @@
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Graphics</span>
-                  <h3>Digital Art Collection</h3>
-                  <p>Cras mattis consectetur purus sit amet fermentum.</p>
+                  <span class="category">Security & Compliance</span>
+                  <h3>Microsoft 365: Secure by Configuration</h3>
+                  <p>Hardened M365 tenants with baseline policies, DLP, and collaboration guardrails - security up, friction down.</p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -778,12 +724,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Recommendations</h2>
-        <!-- <div class="title-shape">
-         <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </div> --> 
-        <p>Genuine words from peers, managers, and collaborators who've worked alongside me — highlighting my impact, work ethic, and technical contributions.</p>
+        <p>Genuine words from peers, managers, and collaborators who've worked alongside me - highlighting my impact, work ethic, and technical contributions.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -943,11 +884,6 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-       <!-- <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </div> -->
         <p>From streamlining IT operations and managing devices to helping individuals launch websites or design their visual identity—my services are built to make technology work for you, not the other way around.</p>
       </div><!-- End Section Title -->
 

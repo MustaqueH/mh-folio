@@ -42,138 +42,121 @@
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">EasyFolio</h1>
+        <h1 class="sitename">PROJECTS</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="twitter" title="Visit our Twitter profile"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" title="Visit our Facebook profile"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" title="Visit our Instagram profile"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" title="Visit our LinkedIn profile"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </header>
 
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
+    <div class="page-title enhanced-bg" style="margin-top: 100px; position: relative; z-index: 2;">
+      <div class="breadcrumbs" style="margin-bottom: 1.5rem;">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html#portfolio">Portfolio</a></li>
             <li class="breadcrumb-item active current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
-
       <div class="title-wrapper">
-        <h1>Portfolio Details</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        <h1>Enterprise Intune App Lifecycle Management</h1>
+        <p>End-to-end management of business-critical applications using Microsoft Intune</p>
       </div>
+      <!-- Gradient overlay for visual enhancement -->
+      <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,rgba(30,200,251,0.10) 0%,rgba(26,188,156,0.10) 100%);backdrop-filter:blur(6px);"></div>
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
+    <section id="portfolio-details" class="portfolio-details section glass-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="row gy-4 g-lg-5">
           <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid mb-4" alt="">
-            <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid mb-4" alt="">
+            <img src="assets/img/portfolio/device-stats.png" class="img-fluid mb-4" alt="Intune Apps Dashboard">
+            <img src="assets/img/portfolio/user-stats.png" class="img-fluid mb-4" alt="Win32 Packaging Flow">
+            <img src="assets/img/portfolio/intunewin-powershell.jpg" class="img-fluid mb-4" alt="PowerShell Deployment Script">
           </div>
-
           <div class="col-lg-6">
-
             <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description">
-                <h2>This is an example of portfolio details</h2>
+              <div class="portfolio-description glass-card">
+                <span class="badge bg-primary mb-2"><i class="bi bi-layers me-1"></i> Endpoint Management / Modern Device Management</span>
+                <h2 class="mb-3">Enterprise Intune App Lifecycle Management</h2>
+                <h5 class="text-muted mb-4">End-to-end application packaging, deployment, and lifecycle automation for enterprise endpoints</h5>
+
                 <p>
-                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                </p>
-                <p>
-                  Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
+                  Lead architect for application lifecycle at scale — I package, validate, and automate deployment of business-critical software across a co-managed estate. Solutions combine Win32 packaging (.intunewin), PowerShell detection logic, Graph API automation, and deployment orchestration to deliver reliable installs and near-zero disruption for end users.
                 </p>
 
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
+                <div class="portfolio-sections">
+                  <div class="portfolio-section-card" data-aos="fade-up">
+                    <div class="section-accent"></div>
+                    <h4><i class="bi bi-bullseye"></i> Objectives</h4>
+                    <ul>
+                      <li>Deliver reliable, repeatable application installs with clear rollback paths.</li>
+                      <li>Automate packaging and deployment to reduce human error and manual effort.</li>
+                      <li>Improve deployment success rates and reduce helpdesk volume.</li>
+                    </ul>
+                  </div>
+
+                  <div class="section-divider-glass"></div>
+
+                  <div class="portfolio-section-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="section-accent"></div>
+                    <h4><i class="bi bi-person-gear"></i> Responsibilities</h4>
+                    <ul>
+                      <li>Packaged and deployed 170+ Win32 apps (.intunewin) with robust detection and rollback.</li>
+                      <li>Authored reusable PowerShell modules and deployment templates for scale.</li>
+                      <li>Built monitoring dashboards surfacing failures and automated remediation triggers.</li>
+                    </ul>
+                  </div>
+
+                  <div class="section-divider-glass"></div>
+
+                  <div class="portfolio-section-card glass-highlight" data-aos="fade-up" data-aos-delay="200">
+                    <div class="section-accent"></div>
+                    <h4><i class="bi bi-stars"></i> Impact & Outcomes</h4>
+                    <ul class="ps-3 impact-list list-unstyled">
+                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>98%+ successful deployments across managed devices.</li>
+                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>80% reduction in software-related helpdesk tickets.</li>
+                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Faster rollouts with minimal end-user interruption.</li>
+                    </ul>
                   </div>
                 </div>
-
-                <p>
-                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-                </p>
-
-                <p>
-                  Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
-                </p>
-
               </div>
-
-              <div class="portfolio-info mt-5">
+              <div class="portfolio-info mt-5 glass-card">
                 <h3>Project information</h3>
                 <ul>
-                  <li><strong>Category</strong> Web design</li>
-                  <li><strong>Client</strong> ASU Company</li>
-                  <li><strong>Project date</strong> 01 March, 2020</li>
-                  <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
+                  <li><strong>Category</strong>: Endpoint Management</li>
+                  <li><strong>Client</strong>: Pitcher Partners</li>
+                  <li><strong>Project date</strong>: 01 March, 2024</li>
+                  <li><strong>Project URL</strong>: <a href="#">www.pitcher.com.au</a></li>
                   <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
-
     </section><!-- /Portfolio Details Section -->
 
   </main>
@@ -185,10 +168,10 @@
         <p>© <span>Copyright</span> <strong class="px-1 sitename">EasyFolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="" title="Visit our Twitter profile"><i class="bi bi-twitter-x"></i></a>
+        <a href="" title="Visit our Facebook profile"><i class="bi bi-facebook"></i></a>
+        <a href="" title="Visit our Instagram profile"><i class="bi bi-instagram"></i></a>
+        <a href="" title="Visit our LinkedIn profile"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -202,7 +185,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

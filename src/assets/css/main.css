@@ -1,3 +1,31 @@
+/* Hamburger button styling */
+@media (max-width: 1199px) {
+  .hamburger {
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    left: 9px;
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+  .hamburger span:nth-child(1) { top: 14px; }
+  .hamburger span:nth-child(2) { top: 20px; }
+  .hamburger span:nth-child(3) { top: 26px; }
+
+  .hamburger.is-active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.is-active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
 /**
 * Template Name: EasyFolio
 * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
@@ -11,12 +39,6 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-:root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Questrial",  sans-serif;
-  --nav-font: "Noto Sans",  sans-serif;
-  --logo-font: "Audiowide", sans-serif; /* Options: Orbitron, Audiowide, Rajdhani, Syncopate, Bruno Ace, Noto Sans (original)*/
-}
 
 :root {
   /* Fonts unchanged */
@@ -399,25 +421,7 @@ main, .content-wrapper {
 }
 
 /* Add shine effect to nav items */
-.navmenu a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: 0.5s ease;
-}
-
-.navmenu a:hover::before {
-  left: 100%;
-}
+/* removed duplicated shine overlay to avoid overlap with tech-inspired lines */
 
 /* Tech-inspired hover animation */
 .navmenu a::before {
@@ -827,13 +831,19 @@ main, .content-wrapper {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
     padding: 8px;
-    line-height: 1; /* instead of 0, for better layout consistency */
+    line-height: 1;
     border-radius: 6px;
     margin-right: 10px;
     cursor: pointer;
-    transition: color 0.3s;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    transition: transform 0.3s ease, color 0.3s;
   }
 
   .navmenu {
@@ -842,18 +852,31 @@ main, .content-wrapper {
   }
 
   .navmenu ul {
-    display: none; /* default hidden */
     list-style: none;
-    padding: 0;
+    padding: 12px 0;
     margin: 0;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    left: 20px;
-    background-color: var(--nav-mobile-background-color);
-    border-radius: 8px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    z-index: 9998;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(80vw, 360px);
+    background: #1e1e1e;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0;
+    box-shadow: -8px 0 30px rgba(0,0,0,0.4);
+    z-index: 10001;
+    opacity: 1;
+    visibility: hidden;
+    transform: translateX(110%);
+    transition: transform 240ms ease, visibility 240ms linear;
+    will-change: transform;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobile-nav-active .navmenu {
@@ -861,23 +884,19 @@ main, .content-wrapper {
     inset: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(33, 37, 41, 0.9); /* dark overlay or transparent bg */
-    z-index: 9999; /* on top of all sections */
+    background: rgba(33, 37, 41, 0.8);
+    z-index: 9999;
     overflow-y: auto;
     justify-content: center;
-    padding-top: 60px; /* pushes nav items down a bit */
-    transition: 0.3s ease-in-out;
+    padding-top: 60px;
+    transition: background 220ms ease-in-out;
+    will-change: background;
+    transform: translateZ(0);
   }
 
   .mobile-nav-active .navmenu ul {
-    display: block;
-    background: #1e1e1e; /* your preferred bg */
-    border-radius: 12px;
-    width: 90%;
-    max-width: 320px;
-    margin: auto;
-    padding: 20px 0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    transform: translateX(0);
   }
 
   .navmenu li {
@@ -890,7 +909,9 @@ main, .content-wrapper {
 
   .navmenu a,
   .navmenu a:focus {
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
     padding: 15px 20px;
     font-size: 17px;
     font-weight: 500;
@@ -947,28 +968,31 @@ main, .content-wrapper {
   width: 100%;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 20px;
-    margin-right: 0;
-    z-index: 10000;
-  }
+  /* duplicate mobile overlay rules removed; handled above for smoother transitions */
 
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
+}
 
-  .mobile-nav-active .navmenu ul {
-    display: block;
-  }
+/* Backdrop for mobile drawer */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms linear;
+  z-index: 10000;
+}
 
+.mobile-nav-active .nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Reduce heavy backdrop effects while mobile nav overlay is open (prevents flicker) */
+body.mobile-nav-active .header .header-container {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 
@@ -1313,16 +1337,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.section-title p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: var(--text-color);
-  opacity: 0.9;
-  line-height: 1.6;
-  padding: 0 1rem;
-  margin-top: 1rem;
-}
+/* removed duplicate section-title p (kept later consolidated version) */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -1479,33 +1494,7 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(240,250,255,0.9));
-  background-blend-mode: overlay;
-}
-
-/* Enhanced background effect */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(26, 188, 156, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 188, 156, 0.03) 1px, transparent 1px);
-  animation: grid-move 30s linear infinite;
-  opacity: 0.5;
-  z-index: 0;
-}
-
-@keyframes grid-move {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(20px) translateX(-10px); }
-  100% { transform: translateY(0) translateX(0); }
-}
+/* hero styles consolidated later; removed earlier background/grid variant */
 
 .hero .content {
   position: relative;
@@ -1899,6 +1888,33 @@ section,
   background: linear-gradient(120deg, rgba(26,188,156,0.12) 0%, rgba(0,198,251,0.10) 100%);
   opacity: 0.95;
 }
+
+/* Dark mode: tech vibe background overrides */
+:root[data-theme="dark"] .hero {
+  background: linear-gradient(120deg, #0b0f14 0%, #12161f 100%);
+}
+
+:root[data-theme="dark"] .hero::after {
+  background: radial-gradient(circle at 60% 40%, rgba(26,188,156,0.22) 0%, transparent 70%);
+  opacity: 0.55;
+  filter: blur(8px);
+}
+
+/* Support alternate dark class hook */
+body.dark-background .hero {
+  background: linear-gradient(120deg, #0b0f14 0%, #12161f 100%);
+}
+
+body.dark-background .hero::before {
+  background: linear-gradient(120deg, rgba(26,188,156,0.12) 0%, rgba(0,198,251,0.10) 100%);
+  opacity: 0.95;
+}
+
+body.dark-background .hero::after {
+  background: radial-gradient(circle at 60% 40%, rgba(26,188,156,0.22) 0%, transparent 70%);
+  opacity: 0.55;
+  filter: blur(8px);
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1942,8 +1958,6 @@ section,
   width: 100%;
   background: rgba(255, 255, 255, 0.02);
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  -webkit--webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -2000,8 +2014,6 @@ section,
 
 .about .personal-info {
   background: rgba(255, 255, 255, 0.02);
-  -webkit--webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -2384,71 +2396,7 @@ section,
     border: 1px solid var(--border-color);
   }
 
-  .resume-btn {
-    color: var(--nav-color);
-  padding: 16px 20px;
-  font-size: 18px;
-  font-family: var(--nav-font);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.1),
-    inset 0 0 4px rgba(255, 255, 255, 0.05);
-  -webkit--webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  }
-
-  .resume-btn:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255,255,255,0.2);
-    color: var(--heading-color);
-  }
-
-  .resume-text {
-    white-space: nowrap;
-  }
-
-  .qr-code {
-    width: 100px;
-    height: 100px;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-color);
-    padding: 0.25rem;
-    background-color: var(--surface-color);
-  }
-
-  .signature-resume-block {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .resume-btn {
-      color: var(--light-text);
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .resume-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .qr-code {
-      background-color: var(--dark-surface);
-      border-color: var(--dark-border);
-    }
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.15);
-    }
-  }
+/* removed generic resume/qr utility in favor of scoped .about styles */
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -2605,122 +2553,7 @@ section,
 }
 
 /* Mini tech grid hover effects */
-.skills .mini-tech {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(26, 188, 156, 0.08);
-  color: var(--accent-color);
-  border-radius: 12px;
-  padding: 0.4rem 0.8rem;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: default;
-  border: 1px solid rgba(26, 188, 156, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.skills .mini-tech i {
-  margin-right: 0.4em;
-  font-size: 1.1em;
-  transition: transform 0.3s ease;
-}
-
-.skills .mini-tech:hover {
-  background: var(--accent-color);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 
-    0 4px 12px rgba(26, 188, 156, 0.2),
-    inset 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.skills .mini-tech:hover i {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
-}
-
-.skills .skill-meter {
-  margin-top: auto;
-  padding-top: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  position: relative;
-}
-
-.skills .skill-meter-label {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  opacity: 0.9;
-}
-
-.skills .meter-fill {
-  height: 8px;
-  width: 100%;
-  background: linear-gradient(90deg,
-    var(--accent-color) 0%,
-    rgba(26, 188, 156, 0.3) 100%
-  );
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 2px 8px rgba(26, 188, 156, 0.15),
-    inset 0 1px 2px rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.skills .meter-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    transparent 100%
-  );
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(200%); }
-}
-
-.skills .skill-box:hover .meter-fill {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 4px 12px rgba(26, 188, 156, 0.2),
-    inset 0 1px 3px rgba(255, 255, 255, 0.15);
-}
-
-:root[data-theme="dark"] .skills .meter-fill {
-  background: linear-gradient(90deg,
-    var(--accent-color) 0%,
-    rgba(26, 188, 156, 0.2) 100%
-  );
-  box-shadow: 
-    0 2px 8px rgba(26, 188, 156, 0.2),
-    inset 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-:root[data-theme="dark"] .skills .meter-fill::after {
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 100%
-  );
-}
+/* removed earlier duplicate of mini-tech and meter; kept later refined variants */
 
 .skills .dots-rating {
   display: flex;
@@ -2751,10 +2584,10 @@ section,
   border-radius: 50%;
   background: var(--accent-color);
   opacity: 0.2;
-  animation: pulse 2s infinite;
+  animation: pulse-dot 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulse-dot {
   0% { transform: scale(1); opacity: 0.2; }
   50% { transform: scale(1.5); opacity: 0; }
   100% { transform: scale(1); opacity: 0.2; }
@@ -2946,10 +2779,7 @@ section,
   animation: shimmer 2s infinite;
 }
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
+/* shimmer keyframes consolidated at bottom of file */
 
 /* Dark mode adjustments */
 :root[data-theme="dark"] .skills .skill-box {
