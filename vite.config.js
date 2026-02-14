@@ -4,7 +4,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: 'src',
-  base: '/EasyFolio-MH/',   // <-- add this (repo name)
+  base: '/MustaqueHalderPortfolioWebsite/',   // <-- add this
   plugins: [
     ViteImageOptimizer({
       png: { quality: 80 },
@@ -24,9 +24,11 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
-          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(assetInfo.name.split('.')[1])
+          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(
+            assetInfo.name.split('.')[4]
+          )
             ? 'img'
-            : assetInfo.name.split('.')[1];
+            : assetInfo.name.split('.')[4];
           return `assets/${extType}/[name][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
