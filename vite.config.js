@@ -4,17 +4,12 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: 'src',
+  base: '/EasyFolio-MH/',   // <-- add this (repo name)
   plugins: [
     ViteImageOptimizer({
-      png: {
-        quality: 80
-      },
-      jpeg: {
-        quality: 80
-      },
-      webp: {
-        lossless: true
-      }
+      png: { quality: 80 },
+      jpeg: { quality: 80 },
+      webp: { lossless: true }
     })
   ],
   build: {
@@ -29,7 +24,9 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
-          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(assetInfo.name.split('.')[1]) ? 'img' : assetInfo.name.split('.')[1];
+          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(assetInfo.name.split('.')[1])
+            ? 'img'
+            : assetInfo.name.split('.')[1];
           return `assets/${extType}/[name][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -44,4 +41,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
-}); 
+});
