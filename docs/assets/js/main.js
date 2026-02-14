@@ -5,7 +5,6 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-import '../css/main.css';  // from src/assets/js/ → src/assets/css/main.css
 
 (function() {
   "use strict";
