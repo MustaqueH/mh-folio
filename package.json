@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
     "format": "prettier --write .",
     "lint:js": "eslint . --ext .js",
     "lint:css": "stylelint \"**/*.css\"",
@@ -15,13 +16,16 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "sass": "^1.71.0",
+    "sharp": "^0.34.5",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
+    "svgo": "^4.0.1",
     "vite": "^6.3.5",
-    "sass": "^1.71.0",
     "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
