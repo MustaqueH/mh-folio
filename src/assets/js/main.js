@@ -24,33 +24,41 @@
   window.addEventListener('load', toggleScrolled);
 
   /**
-   * Mobile nav toggle
+   * Mobile nav toggle (modern drawer + backdrop)
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-  const navBackdrop = document.querySelector('.nav-backdrop');
+  const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+  const navBackdrops = document.querySelectorAll('.nav-backdrop');
+  const pageBody = document.body;
 
-  function mobileNavToggle() {
-    const body = document.querySelector('body');
-    const isOpen = body.classList.toggle('mobile-nav-active');
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.classList.toggle('is-active', isOpen);
-      mobileNavToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
-  }
-
-  if (navBackdrop) {
-    navBackdrop.addEventListener('click', () => {
-      if (document.body.classList.contains('mobile-nav-active')) mobileNavToggle();
+  function setMobileNav(open) {
+    pageBody.classList.toggle('mobile-nav-active', open);
+    mobileNavToggles.forEach((btn) => {
+      btn.classList.toggle('is-active', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 
+  function mobileNavToggle() {
+    const isOpen = pageBody.classList.contains('mobile-nav-active');
+    setMobileNav(!isOpen);
+  }
+
+  mobileNavToggles.forEach((btn) => {
+    btn.addEventListener('click', mobileNavToggle);
+  });
+
+  navBackdrops.forEach((backdrop) => {
+    backdrop.addEventListener('click', () => {
+      if (pageBody.classList.contains('mobile-nav-active')) {
+        setMobileNav(false);
+      }
+    });
+  });
+
   // Close on ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && document.body.classList.contains('mobile-nav-active')) {
-      mobileNavToggle();
+    if (e.key === 'Escape' && pageBody.classList.contains('mobile-nav-active')) {
+      setMobileNav(false);
     }
   });
 
@@ -241,10 +249,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Frequently Asked Questions Toggle
+   * Ensure clicks on the icon or button toggle the whole faq-item
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  document.querySelectorAll('.faq-item .faq-question, .faq-item .faq-toggle').forEach((el) => {
+    el.addEventListener('click', () => {
+      const item = el.closest('.faq-item');
+      if (!item) return;
+      item.classList.toggle('faq-active');
     });
   });
 
