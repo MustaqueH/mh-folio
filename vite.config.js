@@ -1,17 +1,17 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+// import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';  // ← commented out
 
 export default defineConfig({
   root: 'src',
-  base: '/MustaqueHalderPortfolioWebsite/',   // <-- add this
+  base: './',  // ← relative paths for any static host
   plugins: [
-    ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 80 },
-      webp: { lossless: true }
-    })
-  ],
+    //  ViteImageOptimizer({
+    //    png: { quality: 80 },
+    //    jpeg: { quality: 80 },
+    //    webp: { lossless: true }
+    //  })
+    ],
   build: {
     outDir: '../dist',
     emptyOutDir: true,
@@ -19,21 +19,22 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
         portfolio: resolve(__dirname, 'src/portfolio-details.html'),
+        portfolio2: resolve(__dirname, 'src/portfolio-details2.html'),
+        portfolioSecurity: resolve(__dirname, 'src/portfolio-security.html'),
+        portfolioAutomation: resolve(__dirname, 'src/portfolio-automation.html'),
+        portfolioHybrid: resolve(__dirname, 'src/portfolio-hybrid.html'),
         service: resolve(__dirname, 'src/service-details.html'),
         starter: resolve(__dirname, 'src/starter-page.html')
       },
       output: {
         assetFileNames: (assetInfo) => {
-          const extType = /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(
-            assetInfo.name.split('.')[4]
-          )
-            ? 'img'
-            : assetInfo.name.split('.')[4];
-          return `assets/${extType}/[name][extname]`;
+          const ext = assetInfo.name.split('.').pop() || '';
+          const type = ext.match(/png|jpe?g|webp|gif|svg/) ? 'img' : ext;
+          return `assets/${type}/[name].[hash][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js'
-      }
+      }      
     }
   },
   server: {
