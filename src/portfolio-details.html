@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -29,17 +29,41 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page dark-background">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.body.classList.remove('dark-background');
+        }
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header">
+    <div class="header-outer container-fluid container-xl d-flex align-items-center justify-content-between flex-nowrap gap-2 gap-md-3">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename pattern-fill logo-heading" data-text="MUSTAQUE">MUSTAQUE</h1>
-      </a>
+      <div class="header-container position-relative d-flex align-items-center justify-content-between flex-grow-1 min-w-0 gap-2">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+        <div class="header-brand d-flex align-items-center gap-2 min-w-0 flex-grow-1">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename pattern-fill logo-heading" data-text="MUSTAQUE">MUSTAQUE</h1>
+          </a>
+          <div class="header-social-links header-social-links--with-brand d-flex d-xl-none align-items-center flex-shrink-0" aria-label="Social profiles">
+            <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <nav id="navmenu" class="navmenu navmenu--rail" aria-label="Primary navigation">
+        <ul id="primary-nav-list">
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#resume">Resume</a></li>
@@ -47,22 +71,36 @@
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <button class="mobile-nav-toggle d-xl-none hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navmenu">
-          <span></span><span></span><span></span>
-        </button>
       </nav>
+
+      <div class="header-end d-flex align-items-center flex-shrink-0 gap-1 gap-sm-2">
+        <div class="header-social-links header-social-links--desktop-bar d-none d-xl-flex" aria-label="Social profiles">
+          <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="theme-toggle" title="Toggle dark/light mode">
+          <input type="checkbox" id="theme-switch" class="theme-switch" checked aria-label="Toggle color theme">
+          <label for="theme-switch" class="switch-label">
+            <span class="switch-ball">
+              <i class="bi bi-sun-fill icon-sun"></i>
+              <i class="bi bi-moon-fill icon-moon"></i>
+            </span>
+          </label>
+        </div>
+
+      </div>
 
     </div>
   </header>
 
-  <!-- Mobile nav backdrop for this page -->
-  <div class="nav-backdrop" aria-hidden="true"></div>
-
-  <main class="main">
+  <main id="main" class="main" tabindex="-1">
 
     <!-- Page Title -->
-    <div class="page-title enhanced-bg" style="margin-top: 100px; position: relative; z-index: 2;">
-      <div class="breadcrumbs" style="margin-bottom: 1.5rem;">
+    <div class="page-title enhanced-bg">
+      <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
@@ -75,8 +113,6 @@
         <h1>Enterprise Intune App Lifecycle Management</h1>
         <p>End-to-end management of business-critical applications using Microsoft Intune</p>
       </div>
-      <!-- Gradient overlay for visual enhancement -->
-      <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(120deg,rgba(30,200,251,0.10) 0%,rgba(26,188,156,0.10) 100%);backdrop-filter:blur(6px);"></div>
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
