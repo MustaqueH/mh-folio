@@ -31,7 +31,6 @@
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
-  document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
   /**
@@ -95,10 +94,11 @@
   }
 
   window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * Animation on scroll (AOS). Must run on DOMContentLoaded (or earlier), not window load:
+   * AOS.init() registers window "load" internally; if we call init from a load handler, that
+   * inner listener never runs and [data-aos] nodes stay at opacity:0 forever.
    */
   function aosInit() {
     if (typeof AOS === 'undefined') return;
@@ -108,55 +108,69 @@
       easing: 'ease-in-out',
       once: true,
       mirror: false,
-      disable: reduceMotion
+      disable: reduceMotion,
+      startEvent: 'DOMContentLoaded'
     });
+    if (typeof AOS.refresh === 'function') {
+      AOS.refresh();
+    }
   }
-  window.addEventListener('load', aosInit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', aosInit);
+  } else {
+    aosInit();
+  }
 
   /**
- * Animate the skills items on reveal
- */
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-      new Waypoint({
-        element: bar,
-        offset: '90%',
-        handler: () => {
-          const pct = parseInt(bar.getAttribute('aria-valuenow'), 10);
-          const num = bar.nextElementSibling;
-          let count = 0;
-          const step = Math.max(Math.floor(1200 / pct), 20);
-
-          // Assign threshold class
-          if (pct < 50) bar.classList.add('low');
-          else if (pct <= 80) bar.classList.add('medium');
-          else bar.classList.add('high');
-
-          // Trigger bar width animation
-          bar.style.width = pct + '%';
-          bar.classList.add('active');
-
-          // Animate numeric counter
-          const interval = setInterval(() => {
-            if (count < pct) {
-              count++;
-              num.textContent = count + '%';
-            } else {
-              clearInterval(interval);
-            }
-          }, step);
-        }
-      });
-    });
-  });
-
-
-
-  /**
-   * Initiate glightbox
+   * GLightbox: load CSS/JS when first gallery link is near viewport (index defers; subpages may already load vendor).
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
+  let glightboxLoading = false;
+  let glightboxInited = false;
+  function initGlightboxWhenReady() {
+    if (glightboxInited || typeof GLightbox === 'undefined') return;
+    glightboxInited = true;
+    GLightbox({ selector: '.glightbox' });
+  }
+  function injectGlightbox() {
+    if (glightboxLoading || glightboxInited) return;
+    glightboxLoading = true;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = new URL('assets/vendor/glightbox/css/glightbox.min.css', document.baseURI).href;
+    document.head.appendChild(link);
+    const s = document.createElement('script');
+    s.src = new URL('assets/vendor/glightbox/js/glightbox.min.js', document.baseURI).href;
+    s.defer = true;
+    s.onload = function() { initGlightboxWhenReady(); };
+    document.body.appendChild(s);
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof GLightbox !== 'undefined') {
+      initGlightboxWhenReady();
+      return;
+    }
+    const firstGlb = document.querySelector('a.glightbox');
+    if (!firstGlb) return;
+    const kick = function() {
+      if (glightboxInited || typeof GLightbox !== 'undefined') {
+        initGlightboxWhenReady();
+        return;
+      }
+      if (!glightboxLoading) injectGlightbox();
+    };
+    const root = firstGlb.closest('section') || firstGlb.closest('main') || document.body;
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function(entries) {
+        if (entries.some(function(e) { return e.isIntersecting; })) {
+          io.disconnect();
+          kick();
+        }
+      }, { rootMargin: '500px 0px' });
+      io.observe(root);
+    } else {
+      window.addEventListener('load', kick);
+    }
+    firstGlb.addEventListener('pointerdown', kick, { passive: true, once: true });
   });
 
   /**
@@ -282,23 +296,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Init swiper sliders
+   * Swiper: load bundle when carousel is near viewport (unless vendor already on page).
    */
+  let swiperLoading = false;
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+      const cfgEl = swiperElement.querySelector(".swiper-config");
+      if (!cfgEl) return;
+      let config = JSON.parse(cfgEl.innerHTML.trim());
 
       if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
+        if (typeof initSwiperWithCustomPagination === 'function') {
+          initSwiperWithCustomPagination(swiperElement, config);
+        }
       } else {
         new Swiper(swiperElement, config);
       }
     });
   }
-
-  window.addEventListener("load", initSwiper);
+  function injectSwiper() {
+    if (typeof Swiper !== 'undefined') {
+      initSwiper();
+      return;
+    }
+    if (swiperLoading) return;
+    swiperLoading = true;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = new URL('assets/vendor/swiper/swiper-bundle.min.css', document.baseURI).href;
+    document.head.appendChild(link);
+    const s = document.createElement('script');
+    s.src = new URL('assets/vendor/swiper/swiper-bundle.min.js', document.baseURI).href;
+    s.defer = true;
+    s.onload = function() { initSwiper(); };
+    document.body.appendChild(s);
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('.init-swiper')) return;
+    if (typeof Swiper !== 'undefined') {
+      initSwiper();
+      return;
+    }
+    const host = document.querySelector('.init-swiper');
+    const root = host.closest('section') || host;
+    const kick = function() { injectSwiper(); };
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function(entries) {
+        if (entries.some(function(e) { return e.isIntersecting; })) {
+          io.disconnect();
+          kick();
+        }
+      }, { rootMargin: '400px 0px' });
+      io.observe(root);
+    } else {
+      window.addEventListener('load', kick);
+    }
+  });
 
   /**
    * FAQ accordion: expanding one question closes all others in the same block.
@@ -381,7 +435,16 @@ function navmenuScrollspy() {
 }
 
 window.addEventListener('load', navmenuScrollspy);
-document.addEventListener('scroll', navmenuScrollspy);
+let scrollRaf = 0;
+function flushScrollHandlers() {
+  scrollRaf = 0;
+  toggleScrolled();
+  toggleScrollTop();
+  navmenuScrollspy();
+}
+document.addEventListener('scroll', function() {
+  if (!scrollRaf) scrollRaf = requestAnimationFrame(flushScrollHandlers);
+}, { passive: true });
 
 
   /** ------------------------
@@ -469,42 +532,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (statsSection) {
     observer.observe(statsSection);
   }
-});
-
-// Animate progress bars on scroll into view
-document.addEventListener('DOMContentLoaded', () => {
-  const skillBoxes = document.querySelectorAll('.skill-box');
-
-  function animateSkills() {
-    skillBoxes.forEach(box => {
-      const progressBar = box.querySelector('.progress-bar');
-      const progressNumber = box.querySelector('.progress-number');
-      const progressValue = parseInt(box.dataset.progress, 10);
-      const progressContainer = box.querySelector('.progress');
-
-      if (box.getBoundingClientRect().top < window.innerHeight * 0.9 && !box.classList.contains('animated')) {
-        box.classList.add('animated');
-        let start = 0;
-        const duration = 1200; // animation duration ms
-        const stepTime = 15;   // ms
-
-        function step() {
-          start += (progressValue / duration) * stepTime;
-          if (start > progressValue) start = progressValue;
-          progressBar.style.width = `${start}%`;
-          progressContainer.setAttribute('aria-valuenow', Math.floor(start));
-          progressNumber.textContent = `${Math.floor(start)}%`;
-          if (start < progressValue) {
-            requestAnimationFrame(step);
-          }
-        }
-        step();
-      }
-    });
-  }
-
-  window.addEventListener('scroll', animateSkills);
-  animateSkills(); // initial check on load
 });
 
 // Define tech stack data

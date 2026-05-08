@@ -2190,7 +2190,7 @@ section,
   flex-wrap: wrap;
   gap: 0.5rem 0.65rem;
   list-style: none;
-  margin: 2rem 0 1.75rem;
+  margin: 1.15rem 0 1rem;
   padding: 0;
   max-width: 600px;
   opacity: 0;
@@ -2225,7 +2225,7 @@ section,
 }
 
 .hero .content h2 {
-  font-size: clamp(2.35rem, 5.2vw, 3.65rem);
+  font-size: clamp(2.05rem, 4.5vw, 3.15rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.08;
@@ -2252,9 +2252,9 @@ section,
 }
 
 .hero .content .lead {
-  font-size: 1.12rem;
+  font-size: 1.02rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.55;
   max-width: 34rem;
   margin-inline: 0;
   margin-bottom: 0;
@@ -2279,7 +2279,7 @@ section,
 .hero .cta-buttons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.15rem;
   opacity: 0;
   animation: fade-in 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
 }
@@ -2334,9 +2334,9 @@ section,
 /* Enhanced stats section */
 .hero .hero-stats {
   display: flex;
-  gap: clamp(1.25rem, 3.5vw, 2.75rem);
-  margin-top: 2.25rem;
-  padding-top: 1.5rem;
+  gap: clamp(0.85rem, 2.2vw, 1.65rem);
+  margin-top: 1.25rem;
+  padding-top: 1rem;
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 88%);
   animation: fade-in 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s forwards;
 }
@@ -2344,8 +2344,8 @@ section,
 .hero .hero-stats .stat-item {
   flex: 1;
   text-align: center;
-  padding: clamp(1.35rem, 2.5vw, 1.85rem) clamp(1rem, 2vw, 1.35rem);
-  min-height: 7.5rem;
+  padding: clamp(0.65rem, 1.4vw, 0.95rem) clamp(0.65rem, 1.2vw, 0.85rem);
+  min-height: 4.35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2372,7 +2372,7 @@ section,
 
 .hero .hero-stats .stat-item .stat-number {
   display: inline-block;
-  font-size: clamp(2.45rem, 5.5vw, 3.45rem);
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--heading-color);
@@ -2413,10 +2413,10 @@ section,
 }
 
 .hero .hero-stats .stat-item .stat-label {
-  font-size: clamp(0.78rem, 1.85vw, 0.88rem);
-  line-height: 1.4;
+  font-size: clamp(0.72rem, 1.65vw, 0.82rem);
+  line-height: 1.35;
   color: color-mix(in srgb, var(--default-color), transparent 26%);
-  margin-top: 0.85rem;
+  margin-top: 0.55rem;
   display: block;
   transition: all 0.3s ease;
   max-width: 11.5rem;
@@ -2504,12 +2504,17 @@ section,
 .hero .hero-image {
   position: relative;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero .hero-image img {
   position: relative;
   z-index: 2;
-  max-width: 88%;
+  display: block;
+  margin-inline: auto;
+  max-width: 92%;
   border-radius: 22px;
   box-shadow:
     0 24px 60px color-mix(in srgb, var(--heading-color), transparent 88%),
@@ -2543,6 +2548,7 @@ section,
 
 @media (max-width: 991px) {
   .hero {
+    min-height: auto;
     text-align: center;
     padding: 60px 0;
   }
@@ -2709,6 +2715,49 @@ body.dark-background .hero::after {
     radial-gradient(circle at 58% 55%, color-mix(in srgb, var(--accent-color) 26%, transparent) 0%, transparent 62%);
   opacity: 0.58;
   filter: blur(10px);
+}
+
+/* Homepage hero only: wins over `section,.section { padding: 60px }` and keeps the fold shorter.
+   Note: min-height is a floor — total height still follows content + portrait column. */
+section#hero.hero {
+  /* Top gets extra offset because fixed header visually "eats" hero space. */
+  padding-top: clamp(54px, 7vh, 92px);
+  padding-bottom: clamp(28px, 3.8vh, 50px);
+  min-height: clamp(620px, calc(100svh - 160px), 860px);
+}
+
+@media (min-width: 992px) {
+  section#hero.hero .row.content {
+    align-items: center;
+  }
+
+  section#hero.hero .hero-image img {
+    max-height: min(500px, 68svh);
+    max-width: min(94%, 580px);
+    width: auto;
+    object-fit: contain;
+  }
+
+  section#hero.hero .hero-image .shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -20px;
+    right: 4%;
+  }
+
+  section#hero.hero .hero-image .shape-2 {
+    width: 220px;
+    height: 220px;
+    bottom: -16px;
+    left: 4%;
+  }
+}
+
+@media (max-width: 991px) {
+  section#hero.hero {
+    min-height: auto;
+    padding-block: clamp(28px, 5vw, 48px);
+  }
 }
 
 :root[data-theme="dark"] .hero-focus-pills li,

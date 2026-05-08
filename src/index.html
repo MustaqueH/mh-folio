@@ -21,6 +21,27 @@
   <meta name="twitter:description" content="Transforming workplaces with modern IT solutions and secure cloud infrastructure.">
   <meta name="twitter:image" content="assets/img/profile/Profile-Photo_MH1.jpg">
 
+  <!-- Update Person.url + image URLs if canonical host differs (e.g. github.io/repo/). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mustaque Halder",
+    "url": "https://mustaquehalder.com/",
+    "jobTitle": "IT & Modern Workplace Specialist",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "AU"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/mustaquehalder/",
+      "https://github.com/MustaqueH",
+      "https://x.com/iammustaq"
+    ]
+  }
+  </script>
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
@@ -39,12 +60,10 @@
   <!-- Optimized Google Fonts (reduced from 8 to 3 essential fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files (GLightbox + Swiper CSS load on demand via main.js when near viewport) -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -56,12 +75,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
-  <!-- Add Simple Icons CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v9/font/simple-icons.min.css">
-
-  <!-- Add Font Awesome Pro for additional icons (remove free version to avoid redundancy) -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
 </head>
 
 <body class="index-page dark-background">
@@ -144,13 +157,13 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p class="hero-kicker">
               <span class="hero-kicker__accent" aria-hidden="true"></span>
-              <span>Melbourne · Modern workplace · Endpoint &amp; identity</span>
+              <span>Melbourne · Endpoint &amp; identity</span>
             </p>
-            <h2>Engineering seamless IT experiences - from endpoint to cloud.</h2>
+            <h2>Calm, secure IT—from endpoint to cloud.</h2>
             <p class="lead">
-              I help teams graduate from brittle legacy stacks to cloud‑ready estates: Intune and Autopilot for the device
-              lifecycle, Entra ID for trustworthy sign‑in, and Microsoft 365 collaboration that stays usable, governable,
-              and ready for audit—without the fire drills.
+              I turn messy device and identity estates into repeatable systems: Intune, Entra ID, and Microsoft 365 with
+              less friction and clearer outcomes. The focus is simple: stronger security, faster onboarding, and better
+              day-to-day reliability for your teams.
             </p>
             <ul class="hero-focus-pills" aria-label="Primary focus areas">
               <li><i class="bi bi-shield-lock" aria-hidden="true"></i> Entra ID &amp; CA</li>
@@ -171,15 +184,15 @@
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="400" role="region" aria-label="Career highlights">
               <div class="stat-item">
                 <span id="counter-experience" class="stat-number stat-number--no-suffix" data-target="6">0</span>
-                <span class="stat-label">Years in enterprise IT &amp; modern workplace</span>
+                <span class="stat-label">Years in enterprise IT</span>
               </div>
               <div class="stat-item">
                 <span id="counter-projects" class="stat-number stat-number--suffix-plus" data-target="75">0</span>
-                <span class="stat-label">Rollouts, migrations &amp; transformation initiatives</span>
+                <span class="stat-label">Rollouts &amp; migrations delivered</span>
               </div>
               <div class="stat-item">
                 <span id="counter-solutions" class="stat-number stat-number--suffix-plus" data-target="289">0</span>
-                <span class="stat-label">Apps &amp; updates shipped through Intune</span>
+                <span class="stat-label">Apps shipped via Intune</span>
               </div>
             </div>
           </div>
@@ -188,6 +201,8 @@
               <img src="assets/img/profile/Screenshot_20220807-182805_Facebook1.png"
                    alt="Mustaque Halder - Modern Workplace Specialist"
                    class="img-fluid"
+                   fetchpriority="high"
+                   decoding="async"
                    data-aos="zoom-out" data-aos-delay="300">
               <div class="shape-1"></div>
               <div class="shape-2"></div>
@@ -931,41 +946,43 @@
 
           <div class="swiper-wrapper">
 
+            <!-- Order: current PM (holistic) → delivery manager → IT support peer → systems engineer → L&D leadership -->
             <div class="swiper-slide">
               <div class="testimonial-item testimonial-card">
                 <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
                   <div class="col-lg-8 testimonial-card__col">
                     <div class="testimonial-card__quote">
-                    <h2>A Proven IT Support Expert and Emerging Leader</h2>
+                    <h2>Technical strength, stakeholder clarity, and calm collaboration</h2>
                     <p>
-                      I wholeheartedly recommend Mustaque for his outstanding expertise in IT support Level 1 and 2. 
-                      His depth of knowledge and experience is evident in his ability to address diverse challenges effectively.
-                       Mustaque impressively manages stakeholders with patience and professionalism, showcasing excellent interpersonal skills. 
-                       His leadership extends to team management, where he excels in guiding and mentoring. Mustaque's proficiency extends to onboarding and training new employees, highlighting his commitment to fostering a skilled workforce. 
-                       
+                      I currently work with Mustaque and really enjoy collaborating with him. He brings a great mix of strong technical capability and easy, effective communication.
                     </p>
                     <p>
-                      Additionally, his in-depth knowledge of networking further enhances his contributions to any IT environment. Mustaque is a valuable asset to any organization seeking a skilled and versatile IT professional.
+                      Mustaque is excellent at working with vendors and internal stakeholders, and he has a knack for explaining technical topics in a clear, practical way. He&rsquo;s calm, approachable, and easy to work with, which makes a big difference when coordinating across teams or working through complex issues.
+                    </p>
+                    <p>
+                      On the technical side, Mustaque consistently delivers strong outcomes across application delivery, deployments, and automation. While much of the technical work happens behind the scenes, the results are clear&mdash;solutions that are reliable, scalable, and well thought through, with a strong focus on simplifying processes and reducing manual effort.
+                    </p>
+                    <p>
+                      What really stands out is how reliable and supportive he is as a team member. He follows through and works collaboratively to get the best outcome. This is reflected in the fact that he is frequently nominated for the Cheers for your Peers award and has won on multiple occasions&mdash;a great indicator of how much the team values his contribution and support.
                     </p>
                     </div>
                     <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/mukesh-tatavarty.jpg" class="profile-img" alt="">
+                      <img src="assets/img/person/Amanda-Mak.png" class="profile-img" alt="Amanda Mak">
                       <div class="profile-info">
-                        <h3>Mukesh Tatavarty</h3>
-                        <span>Bachelor of Networking | IT Service Desk Technician</span>
+                        <h3>Amanda Mak</h3>
+                        <span>Project Manager | Continuous Improvement</span>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
                     <div class="featured-img-wrapper">
-                      <img src="assets/img/person/mukesh-tatavarty.jpg" class="featured-img" alt="">
+                      <img src="assets/img/person/Amanda-Mak.png" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End Testimonial Item -->
 
-            <!-- Serle Harvey: replace quote body with his approved wording when you have the full text -->
             <div class="swiper-slide">
               <div class="testimonial-item testimonial-card">
                 <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
@@ -989,7 +1006,40 @@
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
                     <div class="featured-img-wrapper">
-                      <img src="assets/img/person/serle-harvey-stock.webp" class="featured-img" alt="">
+                      <img src="assets/img/person/serle-harvey-stock.webp" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item testimonial-card">
+                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
+                  <div class="col-lg-8 testimonial-card__col">
+                    <div class="testimonial-card__quote">
+                    <h2>A Proven IT Support Expert and Emerging Leader</h2>
+                    <p>
+                      I wholeheartedly recommend Mustaque for his outstanding expertise in IT support Level 1 and 2.
+                      His depth of knowledge and experience is evident in his ability to address diverse challenges effectively.
+                      Mustaque impressively manages stakeholders with patience and professionalism, showcasing excellent interpersonal skills.
+                      His leadership extends to team management, where he excels in guiding and mentoring. Mustaque's proficiency extends to onboarding and training new employees, highlighting his commitment to fostering a skilled workforce.
+                    </p>
+                    <p>
+                      Additionally, his in-depth knowledge of networking further enhances his contributions to any IT environment. Mustaque is a valuable asset to any organization seeking a skilled and versatile IT professional.
+                    </p>
+                    </div>
+                    <div class="profile d-flex align-items-center testimonial-card__profile">
+                      <img src="assets/img/mukesh-tatavarty.jpg" class="profile-img" alt="Mukesh Tatavarty">
+                      <div class="profile-info">
+                        <h3>Mukesh Tatavarty</h3>
+                        <span>Bachelor of Networking | IT Service Desk Technician</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/mukesh-tatavarty.jpg" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -1010,7 +1060,7 @@
                     </p>
                     </div>
                     <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/visheshprasad.jpg" class="profile-img" alt="">
+                      <img src="assets/img/person/visheshprasad.jpg" class="profile-img" alt="Vishesh Donthi Prasad">
                       <div class="profile-info">
                         <h3>Vishesh Donthi Prasad</h3>
                         <span>Systems Engineer</span>
@@ -1019,7 +1069,7 @@
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
                     <div class="featured-img-wrapper">
-                      <img src="assets/img/person/visheshprasad.jpg" class="featured-img" alt="">
+                      <img src="assets/img/person/visheshprasad.jpg" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -1035,14 +1085,14 @@
                       A Future-Ready Leader with Integrity, Drive, and Dedication
                     </h2>
                     <p>
-                      Mustaque is a dilligent, hard working and attentive individual with a highly adaptable, quietly confident nature, highly perceptive, determined, goal-focused and motivated invidual. 
+                      Mustaque is a dilligent, hard working and attentive individual with a highly adaptable, quietly confident nature, highly perceptive, determined, goal-focused and motivated invidual.
                     </p>
                     <p>
                       I believe he possess all of the qualities required to be an incredible leader in the future. Mustaque is principle focused, is outstanding at prioritising his tasks and works well under pressure and his true character full of dependability, comitment and passion emerges. His willingness to learn and develop is rare at PE and I truly believe he will be an great asset to any organisation he is employed by.
                     </p>
                     </div>
                     <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/mahboob-hossain.png" class="profile-img" alt="">
+                      <img src="assets/img/person/mahboob-hossain.png" class="profile-img" alt="Mehboob Hussain">
                       <div class="profile-info">
                         <h3>Mehboob Hussain</h3>
                         <span>L&D Business Partner | Thought Leader</span>
@@ -1051,37 +1101,7 @@
                   </div>
                   <div class="col-lg-4 d-none d-lg-block">
                     <div class="featured-img-wrapper">
-                      <img src="assets/img/person/mahboob-hossain.png" class="featured-img" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>Impedit dolor facilis nulla</h2>
-                    <p>
-                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    </p>
-                    <p>
-                      Omnis aspernatur accusantium qui delectus praesentium repellendus. Facilis sint odio aspernatur voluptas commodi qui qui qui pariatur. Corrupti deleniti itaque quaerat ipsum deleniti culpa tempora tempore. Et consequatur exercitationem hic aspernatur nobis est voluptatibus architecto laborum.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
-                      <div class="profile-info">
-                        <h3>Jena Karlis</h3>
-                        <span>Store Owner</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/person/person-f-10.webp" class="featured-img" alt="">
+                      <img src="assets/img/person/mahboob-hossain.png" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
                     </div>
                   </div>
                 </div>
@@ -1105,17 +1125,17 @@
     <!-- Services Section -->
     <section id="services" class="services services-showcase section py-5 alt-section-bg" aria-labelledby="services-heading">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2 id="services-heading" class="section-heading">
           <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-grid-1x2-fill"></i></span>
           <span class="section-heading__text">Services</span>
         </h2>
         <p class="services-showcase__lede">
-          From one-off rollouts to longer modernisation threads—devices, identity, apps, and automation—documented and repeatable so your team isn’t reinventing the wheel every quarter.
+          Three focused ways I help teams move faster and stay secure.
         </p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="80">
+      <div class="container">
 
         <div class="row align-items-stretch g-4 g-lg-5">
           <div class="col-lg-4 mb-2 mb-lg-0">
@@ -1123,7 +1143,7 @@
               <p class="services-showcase__kicker">How I work with teams</p>
               <h3 class="services__intro-title">Designed operations, not hero shifts</h3>
               <p class="services-showcase__copy">
-                I’m strongest when there’s a gap between how things run today and how they need to run at scale—then we agree outcomes, sequence the work, and land changes your service desk and security partners can own.
+                Clear outcomes, practical implementation, and handover your team can own.
               </p>
               <ul class="services-showcase__bullets" aria-label="Typical engagement focus">
                 <li>Clear baselines and guardrails before flashy features</li>
@@ -1136,46 +1156,46 @@
           <div class="col-lg-8">
             <div class="row g-4">
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+              <div class="col-md-6">
                 <article class="service-item service-card">
                   <span class="service-card__icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
                   <h3>Modern endpoint management</h3>
                   <p class="service-card__tagline">Intune · Autopilot · compliance you can explain</p>
                   <p>
-                    Intune and co-managed estates: Autopilot profiles, configuration baselines, patch and app rings, and compliance reporting stakeholders actually trust.
+                    Intune baselines, app delivery, and compliance controls that stay stable in production.
                   </p>
                 </article>
               </div>
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="180">
+              <div class="col-md-6">
                 <article class="service-item service-card">
                   <span class="service-card__icon" aria-hidden="true"><i class="bi bi-cloud-arrow-up"></i></span>
                   <h3>Cloud migration &amp; identity</h3>
                   <p class="service-card__tagline">Entra ID · M365 · access that matches risk</p>
                   <p>
-                    Conditional Access, hybrid join, guest lifecycle, and tenant hygiene—migrations and tune-ups that reduce sign-in drama without freezing collaboration.
+                    Conditional Access and identity architecture that improves security without hurting user flow.
                   </p>
                 </article>
               </div>
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="240">
+              <div class="col-md-6">
                 <article class="service-item service-card">
                   <span class="service-card__icon" aria-hidden="true"><i class="bi bi-code-square"></i></span>
                   <h3>Automation &amp; PowerShell</h3>
                   <p class="service-card__tagline">Less ticket churn, more signal</p>
                   <p>
-                    Packaging helpers, onboarding scripts, compliance sweeps, and remediation playbooks—versioned, tested, and safe to run outside “the one person who wrote it.”
+                    Repeatable scripts and remediation playbooks that reduce manual effort and recurring issues.
                   </p>
                 </article>
               </div>
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-md-6">
                 <article class="service-item service-card">
                   <span class="service-card__icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></span>
                   <h3>Enterprise app lifecycle</h3>
-                  <p class="service-card__tagline">SCCM + Intune, rings, rollbacks</p>
+                  <p class="service-card__tagline">SCCM + Intune · staged rollouts</p>
                   <p>
-                    Packaging through staged rollout and feedback: .intunewin, detection, rings, and rollback stories so app owners sleep better on release week.
+                    Packaging, pilot rings, and rollback-ready releases so app updates stay controlled and predictable.
                   </p>
                 </article>
               </div>
@@ -1192,7 +1212,7 @@
     <section id="faq" class="faq faq-showcase section py-5 alt-section-bg-2" aria-labelledby="faq-heading">
 
       <div class="container">
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title">
           <h2 id="faq-heading" class="section-heading">
             <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-patch-question-fill"></i></span>
             <span class="section-heading__text">Frequently asked questions</span>
@@ -1200,7 +1220,7 @@
           <p class="faq-showcase__lede">Quick answers on how I work, what I’m good for, and what it’s like to collaborate—from first message to delivery.</p>
         </div>
 
-        <div class="faq-showcase__panel" data-aos="fade-up" data-aos-delay="80">
+        <div class="faq-showcase__panel">
           <div class="faq-container">
 
               <div class="faq-item faq-active">
@@ -1301,11 +1321,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact contact-showcase section py-5 alt-section-bg" aria-labelledby="contact-heading">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="80">
+      <div class="container">
 
         <div class="row g-5 align-items-stretch">
           <div class="col-lg-6">
-            <div class="content contact-showcase__aside" data-aos="fade-up" data-aos-delay="120">
+            <div class="content contact-showcase__aside">
               <div class="section-category mb-3"><i class="bi bi-send-fill" aria-hidden="true"></i> Contact</div>
               <h2 id="contact-heading" class="display-5 mb-3">Tell me what you’re trying to fix or ship</h2>
               <p class="lead mb-4 contact-showcase__lede">A short note on context, timeline, and whether this is exploratory or deadline-driven is enough—I’ll respond as soon as I can. For urgent production issues, mention that in the subject.</p>
@@ -1344,7 +1364,7 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="contact-form card contact-showcase__form" data-aos="fade-up" data-aos-delay="180">
+            <div class="contact-form card contact-showcase__form">
               <div class="card-body p-4 p-lg-5">
                 <h3 class="contact-showcase__form-title h5 mb-4">Send a message</h3>
 
@@ -1434,17 +1454,13 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS (defer). Bootstrap.bundle removed — unused; nav is custom in main.js. -->
+  <script src="/assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="/assets/vendor/aos/aos.js" defer></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
 
-  <!-- Main JS File -->
+  <!-- Main JS (GLightbox + Swiper injected when sections near viewport) -->
   <script type="module" src="/assets/js/main.js"></script>
 
 </body>
