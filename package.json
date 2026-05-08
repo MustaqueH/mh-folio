@@ -4,14 +4,14 @@
   "description": "Personal Portfolio Website",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-vendor.mjs",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build",
     "format": "prettier --write .",
     "lint:js": "eslint . --ext .js",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:scss": "stylelint \"**/*.scss\"",
-    "clean": "rimraf dist"
+    "clean": "rimraf docs"
   },
   "devDependencies": {
     "eslint": "^8.56.0",

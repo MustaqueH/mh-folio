@@ -4,6 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: 'src',
+  publicDir: resolve(__dirname, 'src/public'),
   base: './',  // ← relative paths for any static host
   plugins: [
     //  ViteImageOptimizer({
@@ -13,7 +14,7 @@ export default defineConfig({
     //  })
     ],
   build: {
-    outDir: '../dist',
+    outDir: '../docs',
     emptyOutDir: true,
     rollupOptions: {
       input: {

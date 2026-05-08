@@ -100,8 +100,19 @@
    * AOS.init() registers window "load" internally; if we call init from a load handler, that
    * inner listener never runs and [data-aos] nodes stay at opacity:0 forever.
    */
+  function revealAosFallback() {
+    document.querySelectorAll('[data-aos]').forEach(function(el) {
+      el.classList.add('aos-animate');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+
   function aosInit() {
-    if (typeof AOS === 'undefined') return;
+    if (typeof AOS === 'undefined') {
+      revealAosFallback();
+      return;
+    }
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     AOS.init({
       duration: reduceMotion ? 0 : 600,
@@ -120,6 +131,15 @@
   } else {
     aosInit();
   }
+  window.addEventListener('load', function() {
+    if (typeof AOS === 'undefined') {
+      revealAosFallback();
+      return;
+    }
+    if (typeof AOS.refresh === 'function') {
+      AOS.refresh();
+    }
+  });
 
   /**
    * GLightbox: load CSS/JS when first gallery link is near viewport (index defers; subpages may already load vendor).
@@ -222,78 +242,84 @@
   }
 
   /**
-   * Init isotope layout and filters
+   * Init isotope layout and filters.
+   * Wait for full load so vendor scripts (imagesLoaded/Isotope) are available.
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    const isoContainer = isotopeItem.querySelector('.isotope-container');
-    if (!isoContainer) return;
+  function initIsotopeLayouts() {
+    if (typeof imagesLoaded === 'undefined' || typeof Isotope === 'undefined') return;
 
-    const layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    const filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    const sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-    const isShowcasePortfolio = Boolean(isotopeItem.closest('.portfolio-showcase'));
+    document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+      const isoContainer = isotopeItem.querySelector('.isotope-container');
+      if (!isoContainer) return;
 
-    let initIsotope = null;
-    let pendingFilter = null;
-    let showcaseResizeTimer = null;
+      const layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+      const filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+      const sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+      const isShowcasePortfolio = Boolean(isotopeItem.closest('.portfolio-showcase'));
 
-    imagesLoaded(isoContainer, function() {
-      const initialFilter = pendingFilter !== null ? pendingFilter : filter;
-      const isoOptions = {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: initialFilter,
-        sortBy: sort
-      };
-      if (isShowcasePortfolio) {
-        isoOptions.percentPosition = true;
-        isoOptions.transitionDuration = '0s';
-      }
-      initIsotope = new Isotope(isoContainer, isoOptions);
-      pendingFilter = null;
+      let initIsotope = null;
+      let pendingFilter = null;
+      let showcaseResizeTimer = null;
 
-      if (isShowcasePortfolio) {
-        initIsotope.on('layoutComplete', function onShowcaseLayout() {
-          if (initIsotope._portfolioEqualizeInner) {
-            initIsotope._portfolioEqualizeInner = false;
-            return;
-          }
-          requestAnimationFrame(function() {
+      imagesLoaded(isoContainer, function() {
+        const initialFilter = pendingFilter !== null ? pendingFilter : filter;
+        const isoOptions = {
+          itemSelector: '.isotope-item',
+          layoutMode: layout,
+          filter: initialFilter,
+          sortBy: sort
+        };
+        if (isShowcasePortfolio) {
+          isoOptions.percentPosition = true;
+          isoOptions.transitionDuration = '0s';
+        }
+        initIsotope = new Isotope(isoContainer, isoOptions);
+        pendingFilter = null;
+
+        if (isShowcasePortfolio) {
+          initIsotope.on('layoutComplete', function onShowcaseLayout() {
+            if (initIsotope._portfolioEqualizeInner) {
+              initIsotope._portfolioEqualizeInner = false;
+              return;
+            }
             requestAnimationFrame(function() {
-              equalizeShowcasePortfolioCardHeights(initIsotope);
-              initIsotope._portfolioEqualizeInner = true;
-              initIsotope.layout();
+              requestAnimationFrame(function() {
+                equalizeShowcasePortfolioCardHeights(initIsotope);
+                initIsotope._portfolioEqualizeInner = true;
+                initIsotope.layout();
+              });
             });
           });
-        });
 
-        window.addEventListener('resize', function onShowcaseResize() {
-          clearTimeout(showcaseResizeTimer);
-          showcaseResizeTimer = setTimeout(function() {
-            if (initIsotope) initIsotope.layout();
-          }, 200);
-        });
-      }
-    });
+          window.addEventListener('resize', function onShowcaseResize() {
+            clearTimeout(showcaseResizeTimer);
+            showcaseResizeTimer = setTimeout(function() {
+              if (initIsotope) initIsotope.layout();
+            }, 200);
+          });
+        }
+      });
 
-    isotopeItem.querySelectorAll('.isotope-filters [data-filter]').forEach(function(filterBtn) {
-      filterBtn.addEventListener('click', function() {
-        const prev = isotopeItem.querySelector('.isotope-filters .filter-active');
-        if (prev) prev.classList.remove('filter-active');
-        this.classList.add('filter-active');
-        const f = this.getAttribute('data-filter') || '*';
-        if (!initIsotope) {
-          pendingFilter = f;
-          return;
-        }
-        const arrangeOpts = { filter: f };
-        if (isShowcasePortfolio) {
-          arrangeOpts.transitionDuration = '0s';
-        }
-        initIsotope.arrange(arrangeOpts);
-      }, false);
+      isotopeItem.querySelectorAll('.isotope-filters [data-filter]').forEach(function(filterBtn) {
+        filterBtn.addEventListener('click', function() {
+          const prev = isotopeItem.querySelector('.isotope-filters .filter-active');
+          if (prev) prev.classList.remove('filter-active');
+          this.classList.add('filter-active');
+          const f = this.getAttribute('data-filter') || '*';
+          if (!initIsotope) {
+            pendingFilter = f;
+            return;
+          }
+          const arrangeOpts = { filter: f };
+          if (isShowcasePortfolio) {
+            arrangeOpts.transitionDuration = '0s';
+          }
+          initIsotope.arrange(arrangeOpts);
+        }, false);
+      });
     });
-  });
+  }
+  window.addEventListener('load', initIsotopeLayouts);
 
   /**
    * Swiper: load bundle when carousel is near viewport (unless vendor already on page).
