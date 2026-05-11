@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="fn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="52%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#164e63" stop-opacity="0.38"/>
+    </linearGradient>
+    <radialGradient id="fn-vignette" cx="72%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fn-rail" x1="80" y1="0" x2="720" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#334155" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#475569" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#334155" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fn-card" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#020617" flood-opacity="0.48"/>
+    </filter>
+    <filter id="fn-soft" x="-12%" y="-12%" width="124%" height="124%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="fn-arr" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
+      <path d="M0 0 L7 3.5 L0 7 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#fn-bg)"/>
+  <rect width="800" height="500" rx="16" fill="url(#fn-vignette)"/>
+  <rect x="72" y="118" width="656" height="1.5" fill="url(#fn-rail)" opacity="0.88"/>
+  <rect x="72" y="238" width="656" height="1.5" fill="url(#fn-rail)" opacity="0.72"/>
+  <rect x="72" y="358" width="656" height="1.5" fill="url(#fn-rail)" opacity="0.52"/>
+  <text x="400" y="44" text-anchor="middle" fill="#94a3b8" font-family="system-ui,Segoe UI,sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.14em">SECURE NETWORK ACCESS</text>
+  <text x="400" y="72" text-anchor="middle" fill="#f8fafc" font-family="system-ui,Segoe UI,sans-serif" font-size="21" font-weight="700" letter-spacing="-0.02em">FortiNAC — wired &amp; wireless trust fabric</text>
+  <text x="400" y="94" text-anchor="middle" fill="#64748b" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="500">EAP-TLS · enrollment PKI · zero-downtime estate rollout</text>
+  <g filter="url(#fn-soft)">
+    <g filter="url(#fn-card)">
+      <rect x="72" y="148" width="122" height="62" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.48"/>
+      <text x="133" y="178" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Trusted endpoints</text>
+      <text x="133" y="195" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Posture · PA agent</text>
+    </g>
+    <g filter="url(#fn-card)">
+      <rect x="216" y="148" width="122" height="62" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-opacity="0.46"/>
+      <text x="277" y="178" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Device enrollment</text>
+      <text x="277" y="195" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Machine certs · chain</text>
+    </g>
+    <g filter="url(#fn-card)">
+      <rect x="360" y="148" width="122" height="62" rx="8" fill="#1e293b" stroke="#2dd4bf" stroke-opacity="0.52"/>
+      <text x="421" y="178" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">EAP-TLS session</text>
+      <text x="421" y="195" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Mutual auth · TLS tunnel</text>
+    </g>
+    <g filter="url(#fn-card)">
+      <rect x="504" y="148" width="122" height="62" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-opacity="0.44"/>
+      <text x="565" y="178" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">FortiNAC core</text>
+      <text x="565" y="195" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Policy · RADIUS bridge</text>
+    </g>
+    <g filter="url(#fn-card)">
+      <rect x="648" y="148" width="102" height="62" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-opacity="0.4"/>
+      <text x="699" y="185" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">LAN / WLAN</text>
+    </g>
+  </g>
+  <path d="M194 179 H216" stroke="#64748b" stroke-width="1.75" marker-end="url(#fn-arr)" opacity="0.92"/>
+  <path d="M338 179 H360" stroke="#64748b" stroke-width="1.75" marker-end="url(#fn-arr)" opacity="0.92"/>
+  <path d="M482 179 H504" stroke="#64748b" stroke-width="1.75" marker-end="url(#fn-arr)" opacity="0.92"/>
+  <path d="M626 179 H648" stroke="#64748b" stroke-width="1.75" marker-end="url(#fn-arr)" opacity="0.92"/>
+  <line x1="421" y1="210" x2="421" y2="248" stroke="#475569" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.65"/>
+  <g filter="url(#fn-card)">
+    <rect x="106" y="268" width="148" height="62" rx="8" fill="#1e293b" stroke="#64748b" stroke-opacity="0.42"/>
+    <text x="180" y="298" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Startup reliability</text>
+    <text x="180" y="315" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Critical services · boot order</text>
+  </g>
+  <g filter="url(#fn-card)">
+    <rect x="286" y="268" width="148" height="62" rx="8" fill="#1e293b" stroke="#64748b" stroke-opacity="0.42"/>
+    <text x="360" y="298" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Remediation fabric</text>
+    <text x="360" y="315" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Scripted drift repair</text>
+  </g>
+  <g filter="url(#fn-card)">
+    <rect x="466" y="268" width="148" height="62" rx="8" fill="#1e293b" stroke="#64748b" stroke-opacity="0.42"/>
+    <text x="540" y="298" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Readiness gates</text>
+    <text x="540" y="315" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">Validation before enforce</text>
+  </g>
+  <g filter="url(#fn-card)">
+    <rect x="646" y="268" width="104" height="62" rx="8" fill="#1e293b" stroke="#64748b" stroke-opacity="0.42"/>
+    <text x="698" y="298" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="11" font-weight="600">Rollout waves</text>
+    <text x="698" y="315" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="9.5">No downtime</text>
+  </g>
+  <rect x="148" y="388" width="504" height="54" rx="10" fill="#155e75" fill-opacity="0.32" stroke="#38bdf8" stroke-opacity="0.35"/>
+  <text x="400" y="412" text-anchor="middle" fill="#e0f2fe" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600">Certificate authority &amp; operational plane</text>
+  <text x="400" y="430" text-anchor="middle" fill="#bae6fd" font-family="system-ui,sans-serif" font-size="10" opacity="0.9">FortiNAC PKI · primary / secondary trust · wired &amp; wireless 802.1X enforcement</text>
+</svg>

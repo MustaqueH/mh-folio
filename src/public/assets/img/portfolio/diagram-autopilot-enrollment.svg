@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ap-bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#157c88" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#3da8b8" stop-opacity="0.04"/>
+    </linearGradient>
+    <pattern id="ap-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#ap-bg)"/>
+  <rect width="800" height="500" fill="url(#ap-grid)" opacity="0.45"/>
+  <!-- OEM / factory -->
+  <rect x="72" y="186" width="132" height="116" rx="10" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.88"/>
+  <path d="M108 228h60M108 252h44M108 276h52" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+  <text x="138" y="174" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Device (OEM)</text>
+  <!-- flow -->
+  <path d="M204 244h96" stroke="#157c88" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M292 236l16 8-16 8v-16z" fill="#157c88"/>
+  <!-- cloud enrollment -->
+  <rect x="324" y="168" width="200" height="152" rx="14" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.92"/>
+  <path d="M348 208c24-40 104-40 128 0 32-8 56 32 24 56H348c-32-24-8-64 24-56z" fill="#157c88" fill-opacity="0.12" stroke="#157c88" stroke-width="1.5"/>
+  <path d="M368 272h112M368 296h80M368 320h96" stroke="#3da8b8" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+  <text x="424" y="154" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Cloud enrollment</text>
+  <path d="M524 244h96" stroke="#157c88" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M612 236l16 8-16 8v-16z" fill="#157c88"/>
+  <!-- Intune-managed -->
+  <rect x="644" y="186" width="132" height="116" rx="10" stroke="#3da8b8" stroke-width="2" fill="#fff" fill-opacity="0.9"/>
+  <rect x="676" y="216" width="68" height="48" rx="6" stroke="#157c88" stroke-width="1.75" fill="#fff"/>
+  <path d="M692 264l18 18 34-34" stroke="#157c88" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710" y="174" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Managed state</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="la-river" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#157c88" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#5eead4" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#157c88" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#5eead4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#157c88" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="la-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0.35"/>
+    </linearGradient>
+    <mask id="la-soft">
+      <rect width="800" height="500" fill="url(#la-maskGrad)"/>
+    </mask>
+    <radialGradient id="la-maskGrad" cx="48%" cy="50%" r="78%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="58%" stop-color="#fff" stop-opacity="0.78"/>
+      <stop offset="92%" stop-color="#fff" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="la-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="la-sharp" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g mask="url(#la-soft)">
+    <path d="M0 260 Q200 140 400 248 T800 220" stroke="url(#la-river)" stroke-width="72" stroke-linecap="round" opacity="0.55" filter="url(#la-glow)"/>
+    <path d="M48 280 C200 200 520 180 752 268" stroke="#157c88" stroke-opacity="0.4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Ticket -->
+    <g transform="translate(72 100)" filter="url(#la-sharp)">
+      <path d="M0 16 L16 10 L16 112 L0 106 Q8 61 0 16Z" fill="url(#la-card)" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2"/>
+      <rect x="16" y="10" width="128" height="102" rx="8" fill="rgba(15,23,42,0.5)" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.75"/>
+      <path d="M32 36 H112 M32 58 H100 M32 80 H108" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="28" cy="36" r="5" fill="none" stroke="#5eead4" stroke-opacity="0.7" stroke-width="1.5"/>
+      <path d="M24 36 L27 40 L34 32" stroke="#5eead4" stroke-opacity="0.85" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- Pipeline -->
+    <g transform="translate(260 168)" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="18" width="80" height="52" rx="8" fill="rgba(21,124,136,0.25)" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2"/>
+      <rect x="0" y="62" width="80" height="6" rx="2" fill="#5eead4" fill-opacity="0.45"/>
+      <path d="M96 44 H124" stroke="#5eead4" stroke-opacity="0.65" stroke-width="3"/>
+      <path d="M112 32 L132 44 L112 56" stroke="#5eead4" stroke-opacity="0.65" stroke-width="3" fill="none"/>
+      <rect x="140" y="18" width="80" height="52" rx="8" fill="rgba(15,23,42,0.45)" stroke="#157c88" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="140" y="62" width="80" height="6" rx="2" fill="#157c88" fill-opacity="0.4"/>
+      <path d="M236 44 H264" stroke="#5eead4" stroke-opacity="0.55" stroke-width="3"/>
+      <path d="M252 32 L272 44 L252 56" stroke="#5eead4" stroke-opacity="0.55" stroke-width="3" fill="none"/>
+      <rect x="280" y="18" width="80" height="52" rx="8" fill="rgba(94,234,212,0.15)" stroke="#5eead4" stroke-opacity="0.7" stroke-width="2"/>
+      <rect x="280" y="62" width="80" height="6" rx="2" fill="#5eead4" fill-opacity="0.55"/>
+    </g>
+    <g transform="translate(520 124)" fill="none" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#la-sharp)">
+      <path d="M12 8 L32 24 L12 40"/>
+      <path d="M52 8 L32 24 L52 40"/>
+      <path d="M68 4 H128 M68 24 H116 M68 44 H108" stroke-width="2" stroke-opacity="0.45"/>
+    </g>
+    <g>
+      <circle cx="168" cy="268" r="8" fill="#157c88" fill-opacity="0.65" stroke="#5eead4" stroke-opacity="0.8" stroke-width="1.5"/>
+      <circle cx="328" cy="240" r="9" fill="#5eead4" fill-opacity="0.45" stroke="#fff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle cx="488" cy="252" r="8" fill="#157c88" fill-opacity="0.55" stroke="#5eead4" stroke-opacity="0.75" stroke-width="1.5"/>
+      <circle cx="648" cy="276" r="8" fill="#5eead4" fill-opacity="0.4" stroke="#157c88" stroke-opacity="0.65" stroke-width="1.5"/>
+    </g>
+    <rect x="240" y="352" width="320" height="44" rx="10" fill="rgba(15,23,42,0.4)" stroke="#5eead4" stroke-opacity="0.35" stroke-width="1.25"/>
+    <rect x="264" y="368" width="140" height="6" rx="2" fill="#5eead4" fill-opacity="0.5"/>
+  </g>
+</svg>

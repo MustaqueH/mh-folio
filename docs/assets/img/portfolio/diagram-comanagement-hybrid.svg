@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="cm-bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#157c88" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#3da8b8" stop-opacity="0.04"/>
+    </linearGradient>
+    <pattern id="cm-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#cm-bg)"/>
+  <rect width="800" height="500" fill="url(#cm-grid)" opacity="0.45"/>
+  <!-- on-prem / SCCM -->
+  <rect x="72" y="168" width="168" height="176" rx="12" stroke="#2e3848" stroke-opacity="0.4" stroke-width="2" fill="#fff" fill-opacity="0.9"/>
+  <rect x="104" y="204" width="104" height="36" rx="6" stroke="#157c88" stroke-width="1.75" fill="#fff"/>
+  <rect x="104" y="256" width="104" height="36" rx="6" stroke="#157c88" stroke-width="1.75" fill="#fff"/>
+  <rect x="104" y="308" width="104" height="36" rx="6" stroke="#157c88" stroke-width="1.75" fill="#fff"/>
+  <text x="156" y="152" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">ConfigMgr</text>
+  <!-- Intune cloud -->
+  <rect x="560" y="168" width="168" height="176" rx="12" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.92"/>
+  <path d="M596 228c28-44 120-44 148 0 36-10 64 36 28 72H596c-36-28-9-82 28-72z" fill="#157c88" fill-opacity="0.1" stroke="#157c88" stroke-width="1.5"/>
+  <path d="M624 292h104M624 316h72" stroke="#3da8b8" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <text x="644" y="152" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Intune</text>
+  <!-- shared device -->
+  <rect x="332" y="196" width="136" height="120" rx="12" stroke="#3da8b8" stroke-width="2.25" fill="#fff" fill-opacity="0.95"/>
+  <rect x="364" y="228" width="72" height="56" rx="6" stroke="#157c88" stroke-width="1.75" fill="#fff"/>
+  <path d="M382 286h36" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <text x="400" y="184" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Managed endpoint</text>
+  <!-- dual attach lines -->
+  <path d="M240 244h76M484 244h76" stroke="#157c88" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+  <circle cx="318" cy="244" r="5" fill="#157c88"/>
+  <circle cx="482" cy="244" r="5" fill="#3da8b8"/>
+  <!-- cloud attach hint -->
+  <path d="M156 372c48 48 240 48 288 0" stroke="#94a3b8" stroke-opacity="0.45" stroke-width="1.5" fill="none" stroke-dasharray="6 8"/>
+  <text x="400" y="416" fill="#2e3848" fill-opacity="0.5" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Co-managed workloads · phased cutover</text>
+</svg>

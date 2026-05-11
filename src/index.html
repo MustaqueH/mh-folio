@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mustaque Halder - IT & Modern Workplace Specialist</title>
-  <meta name="description" content="Mustaque Halder — Melbourne IT &amp; modern workplace specialist: deep passion for the platform; calm, secure estates with Intune, Entra ID, and Microsoft 365.">
-  <meta name="keywords" content="IT Specialist, Modern Workplace, Endpoint Management, Intune, Microsoft 365, Azure, Cloud Infrastructure, Digital Transformation, Melbourne IT, Entra ID, Automation, Device Management, IT Security">
+  <title>Mustaque Halder — Enterprise Endpoint &amp; Microsoft Cloud Engineer</title>
+  <meta name="description" content="Melbourne-based engineer: designs, deploys, and operates large Microsoft estates—devices, identity (Entra ID), secure network access, Intune/Autopilot programmes, and governed automation (PowerShell, Power Automate). Outcomes: faster onboarding, stronger endpoint posture, less manual IT overhead.">
+  <meta name="keywords" content="Endpoint Engineer, Modern Workplace Engineer, Microsoft Intune, Windows Autopilot, Entra ID, Conditional Access, FortiNAC, 802.1X, Enterprise Automation, PowerShell, Power Automate, Microsoft 365, Melbourne IT, Cloud Engineer, IAM">
 
   <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="Mustaque Halder - Modern Workplace & IT Specialist">
-  <meta property="og:description" content="Melbourne-based IT Specialist transforming workplaces with modern solutions, endpoint management, and secure cloud infrastructure.">
+  <meta property="og:title" content="Mustaque Halder — Enterprise Endpoint &amp; Microsoft Cloud Engineer">
+  <meta property="og:description" content="Enterprise Microsoft environments: device onboarding and governance, identity and access, secure LAN/WLAN programmes, and lifecycle automation—delivered with documentation teams can run.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mustaquehalder.com">
   <meta property="og:image" content="assets/img/profile/Profile-Photo_MH1.jpg">
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mustaque Halder - Modern Workplace Specialist">
-  <meta name="twitter:description" content="Transforming workplaces with modern IT solutions and secure cloud infrastructure.">
+  <meta name="twitter:title" content="Mustaque Halder — Enterprise Endpoint &amp; Microsoft Cloud Engineer">
+  <meta name="twitter:description" content="Large-scale Microsoft IT: dependable devices and sign-in, clearer onboarding, and automation that cuts repeat toil—without sacrificing security.">
   <meta name="twitter:image" content="assets/img/profile/Profile-Photo_MH1.jpg">
 
   <!-- Update Person.url + image URLs if canonical host differs (e.g. github.io/repo/). -->
@@ -28,7 +28,7 @@
     "@type": "Person",
     "name": "Mustaque Halder",
     "url": "https://mustaquehalder.com/",
-    "jobTitle": "IT & Modern Workplace Specialist",
+    "jobTitle": "IT Specialist — Enterprise Endpoint, Microsoft 365 and Cloud Engineering",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Melbourne",
@@ -50,7 +50,6 @@
 
   <!-- Preload Critical Resources -->
   <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="assets/css/main.css" as="style">
   <link rel="preload" href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Preconnect to External Domains -->
@@ -58,15 +57,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Optimized Google Fonts (reduced from 8 to 3 essential fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files (GLightbox + Swiper CSS load on demand via main.js when near viewport) -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Main + Tailwind CSS bundled via assets/js/main.js (Vite) -->
 
   <!-- =======================================================
   * Template Name: EasyFolio
@@ -78,60 +76,37 @@
 </head>
 
 <body class="index-page dark-background">
-  <script>
-    (function () {
-      try {
-        if (localStorage.getItem('theme') === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.body.classList.remove('dark-background');
-        }
-      } catch (e) { /* ignore */ }
-    })();
-  </script>
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <header id="header" class="header">
-    <div class="header-outer container-fluid container-xl d-flex align-items-center justify-content-between flex-nowrap gap-2 gap-md-3">
-
-      <div class="header-container position-relative d-flex align-items-center justify-content-between flex-grow-1 min-w-0 gap-2">
-
-        <div class="header-brand d-flex align-items-center gap-2 min-w-0 flex-grow-1">
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.webp" alt=""> -->
-            <h1 class="sitename pattern-fill logo-heading" data-text="MUSTAQUE">MUSTAQUE</h1>
-          </a>
-          <div class="header-social-links header-social-links--with-brand d-flex d-xl-none align-items-center flex-shrink-0" aria-label="Social profiles">
-            <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
+    <div class="layout-container header-shell">
+      <div class="header-brand">
+        <a href="index.html" class="logo">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <span class="logo-wordmark logo-heading">Mustaque</span>
+        </a>
       </div>
 
       <nav id="navmenu" class="navmenu navmenu--rail" aria-label="Primary navigation">
         <ul id="primary-nav-list">
           <li><a href="#hero" class="active" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#capability-stack">Stack</a></li>
+          <li><a href="#selected-work">Work</a></li>
+          <li><a href="#career-snapshot">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header-end d-flex align-items-center flex-shrink-0 gap-1 gap-sm-2">
-        <div class="header-social-links header-social-links--desktop-bar d-none d-xl-flex" aria-label="Social profiles">
+      <div class="header-actions">
+        <div class="header-social-links" aria-label="Social profiles">
           <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
           <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
           <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
-
         <div class="theme-toggle" title="Toggle dark/light mode">
           <input type="checkbox" id="theme-switch" class="theme-switch" checked aria-label="Toggle color theme">
           <label for="theme-switch" class="switch-label">
@@ -141,38 +116,33 @@
             </span>
           </label>
         </div>
-
       </div>
-
     </div>
-
   </header>
 
   <main id="main" class="main" tabindex="-1">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="layout-container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p class="hero-kicker">
               <span class="hero-kicker__accent" aria-hidden="true"></span>
-              <span>Melbourne · Endpoint &amp; identity</span>
+              <span>Melbourne · Enterprise IT · Endpoint Engineering</span>
             </p>
-            <h2>Calm, secure IT—from endpoint to cloud.</h2>
+            <h2>Endpoint engineering for organisations that can’t afford drift.</h2>
             <p class="lead">
-              I turn messy device and identity estates into repeatable systems: Intune, Entra ID, and Microsoft 365 with
-              less friction and clearer outcomes. The focus is simple: stronger security, faster onboarding, and better
-              day-to-day reliability for your teams.
+              I design and operate Microsoft-based workplace environments using Intune, Autopilot, and Entra ID. The focus is simple: stable device estates, secure access, and automated operations across enterprise environment.
             </p>
             <ul class="hero-focus-pills" aria-label="Primary focus areas">
               <li><i class="bi bi-shield-lock" aria-hidden="true"></i> Entra ID &amp; CA</li>
               <li><i class="bi bi-laptop" aria-hidden="true"></i> Intune &amp; Autopilot</li>
               <li><i class="bi bi-microsoft" aria-hidden="true"></i> Microsoft 365</li>
-              <li><i class="bi bi-terminal" aria-hidden="true"></i> Automation</li>
+              <li><i class="bi bi-terminal" aria-hidden="true"></i> IT Automation</li>
             </ul>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-              <a href="#portfolio" class="btn btn-primary">
+              <a href="#selected-work" class="btn btn-primary">
                 <i class="bi bi-collection me-2"></i>
                 Explore real projects
               </a>
@@ -212,28 +182,27 @@
       </div>
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container">
+    <!-- Profile Section -->
+    <section id="profile" class="about section section-stack">
+      <div class="layout-container">
         <header class="about-intro section-title" data-aos="fade-up">
           <h2 class="section-heading">
             <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-person-vcard-fill"></i></span>
-            <span class="section-heading__text">About</span>
+            <span class="section-heading__text">Profile</span>
           </h2>
           <p class="about-intro__lede">
-            Modern workplace work is a chain of small decisions—devices, identity, collaboration—that either compound into calm operations or into noise. I help teams land on the calm side.
+            Enterprise IT is a long chain of small choices—devices, sign-in, collaboration—that either compound into reliable operations or into noise. I help teams land on the calm side: standards that scale and evidence that survives audits.
           </p>
         </header>
-      </div>
 
-      <div class="container about-layout" data-aos="fade-up" data-aos-delay="80">
-        <div class="row about-layout__row g-4 g-xl-5">
-          <div class="col-lg-5 col-xl-5" data-aos="fade-up" data-aos-delay="120">
+        <div class="about-showcase__panel section-showcase-panel about-layout" data-aos="fade-up" data-aos-delay="80">
+        <div class="about-layout__row grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+          <div class="min-w-0 lg:col-span-5" data-aos="fade-up" data-aos-delay="120">
             <aside class="about-visual" aria-label="Portrait and focus areas">
               <figure class="about-visual__frame">
                 <img
                   src="assets/img/Mustaque Halder Headshot.jpg"
-                  alt="Mustaque Halder, IT and modern workplace specialist"
+                  alt="Mustaque Halder, enterprise endpoint and cloud security engineer"
                   class="about-visual__img img-fluid"
                   loading="lazy"
                   decoding="async">
@@ -246,46 +215,67 @@
                   </div>
                   <span class="about-visual__loc"><i class="bi bi-geo-alt" aria-hidden="true"></i> Melbourne · Enterprise IT</span>
                 </div>
-                <p class="about-visual__tagline">Intune · Entra ID · Microsoft 365 — estate patterns you can repeat, not one‑off heroics.</p>
+                <p class="about-visual__tagline">Standards that survive handover - devices, sign-in, and apps telling one coherent story.</p>
                 <ul class="about-stack-pills about-stack-pills--dock" aria-label="Primary technical focus">
-                  <li><i class="bi bi-laptop" aria-hidden="true"></i> Intune</li>
-                  <li><i class="bi bi-shield-lock" aria-hidden="true"></i> Entra ID</li>
-                  <li><i class="bi bi-microsoft" aria-hidden="true"></i> M365</li>
+                  <li><i class="bi bi-laptop" aria-hidden="true"></i> Endpoint platforms</li>
+                  <li><i class="bi bi-cloud-check" aria-hidden="true"></i> Cloud infrastructure</li>
+                  <li><i class="bi bi-shield-check" aria-hidden="true"></i> Security engineering</li>
                 </ul>
+              </div>
+
+              <div class="about-visual__connect">
+                <p class="about-visual__connect-label">Connect</p>
+                <nav class="about-hooks about-hooks--sidebar" aria-label="Professional profiles and email">
+                  <ul class="about-hooks__list">
+                    <li>
+                      <a href="https://www.linkedin.com/in/mustaquehalder/" class="about-hooks__link" rel="noopener noreferrer" target="_blank">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/MustaqueH" class="about-hooks__link" rel="noopener noreferrer" target="_blank">
+                        <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:mynameismustaq@gmail.com" class="about-hooks__link">
+                        <i class="bi bi-envelope-at" aria-hidden="true"></i> Email
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <a href="assets/doc/Mustaque-Halder-CV.pdf" class="resume-btn resume-btn--cv about-visual__cv-btn" download="Mustaque-Halder-CV.pdf">
+                  <i class="bi bi-download me-2"></i>
+                  <span class="resume-text">Download CV</span>
+                  <div class="btn-hover-effect"></div>
+                </a>
               </div>
             </aside>
           </div>
 
-          <div class="col-lg-7 col-xl-7">
+          <div class="min-w-0 lg:col-span-7">
             <article class="about-article" data-aos="fade-up" data-aos-delay="180">
-              <p class="about-article__eyebrow">How I work</p>
-              <h3 class="about-article__title">IT &amp; Modern Workplace Specialist</h3>
+              <p class="about-article__eyebrow">Practice</p>
+              <h3 class="about-article__title">Endpoint, cloud &amp; security engineering</h3>
               <div class="about-story">
                 <p class="about-story__lead">
-                  I started where most users meet IT first—the service desk—and kept following the thread backward: why that
-                  ticket kept reopening, why that build drifted, why sign‑ins felt flaky. That path led me deep into Intune,
-                  Entra ID, and the Microsoft 365 stack—where a policy change can quietly help hundreds of people, or quietly
-                  ruin their Tuesday.
+                  I started where most users meet IT first - the service desk - and kept following the thread backward: why that ticket kept reopening, why that build drifted, why sign‑ins felt flaky. That path led me deep into Intune, Entra ID, and the Microsoft 365 stack - where a policy change can quietly help hundreds of people, or quietly ruin their Tuesday.
                 </p>
                 <p>
-                  Today I design and run the kind of estates I wished I’d inherited: Autopilot and baselines that actually
-                  match your risk story, collaboration boundaries people understand, and automation that shrinks repeat
-                  toil instead of adding another script nobody owns.
+                  Today I design and run the kind of estates I wished I'd inherited: Autopilot and baselines that actually match your risk story, collaboration boundaries people understand, and automation that shrinks repeat toil instead of adding another script nobody owns.
                 </p>
                 <p class="about-story__note">
-                  If your world is “make it secure, make it repeatable, and don’t make people hate IT,” we’re already speaking the same language.
+                  I’m open to endpoint, identity, and cloud engineering roles in Australia, as well as scoped project work such as baseline reviews, application rollout planning, and lifecycle automation. The expectation remains the same: clear ownership, structured delivery, and documentation that holds up for engineers, auditors, and stakeholders alike.
                 </p>
               </div>
 
               <div class="personal-info personal-info--profile glass-effect about-article__panel">
-                <header class="personal-info__header">
-                  <p class="personal-info__eyebrow">Snapshot</p>
-                  <h4 class="personal-info__title">Profile &amp; contact hooks</h4>
-                  <p class="personal-info__sub">The quick facts—everything else is in the story above.</p>
+                <header class="personal-info__header personal-info__header--compact">
+                  <h4 class="personal-info__title">At a glance</h4>
                 </header>
 
-                <div class="row personal-info__grid g-3 g-sm-3">
-                  <div class="col-12 col-sm-6">
+                <div class="personal-info__grid personal-info__grid--compact grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <div class="min-w-0">
                     <div class="info-item" data-aos="fade-up" data-aos-delay="100">
                       <span class="info-item__icon" aria-hidden="true"><i class="bi bi-person"></i></span>
                       <div class="info-item__body">
@@ -294,7 +284,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-6">
+                  <div class="min-w-0">
                     <div class="info-item" data-aos="fade-up" data-aos-delay="150">
                       <span class="info-item__icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
                       <div class="info-item__body">
@@ -303,1013 +293,864 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="200">
-                      <span class="info-item__icon" aria-hidden="true"><i class="bi bi-laptop"></i></span>
-                      <div class="info-item__body">
-                        <span class="label">Focus</span>
-                        <span class="value">Modern workplace — Intune, Entra ID, M365</span>
-                      </div>
+                  <div class="min-w-0 sm:col-span-2 personal-info__columns" data-aos="fade-up" data-aos-delay="200">
+                    <div class="personal-info__column personal-info__column--focus">
+                      <p class="personal-info__column-kicker" id="glance-focus-heading"><i class="bi bi-laptop" aria-hidden="true"></i> Focus</p>
+                      <ul class="personal-info__column-list" aria-labelledby="glance-focus-heading">
+                        <li>Endpoint &amp; Modern Workplace Engineering</li>
+                        <li>Identity &amp; Access Management</li>
+                        <li>Microsoft 365 Operations</li>
+                        <li>Enterprise Application Delivery</li>
+                        <li>Secure Infrastructure &amp; Connectivity</li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="250">
-                      <span class="info-item__icon" aria-hidden="true"><i class="bi bi-building"></i></span>
-                      <div class="info-item__body">
-                        <span class="label">Industry</span>
-                        <span class="value">Enterprise IT</span>
-                      </div>
+                    <div class="personal-info__column personal-info__column--spec">
+                      <p class="personal-info__column-kicker" id="glance-spec-heading"><i class="bi bi-shield-check" aria-hidden="true"></i> Specialisation</p>
+                      <ul class="personal-info__column-list" aria-labelledby="glance-spec-heading">
+                        <li>Intune | Autopilot | Device Lifecycle Management</li>
+                        <li>Application Packaging &amp; Deployment</li>
+                        <li>Entra ID | Conditional Access | Identity Governance</li>
+                        <li>PowerShell Automation &amp; Remediation</li>
+                        <li>Microsoft 365 Administration</li>
+                        <li>802.1X / Network Access Control</li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                      <span class="info-item__icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
-                      <div class="info-item__body">
-                        <span class="label">Specialisation</span>
-                        <span class="value">Endpoint management &amp; modern workplace</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="350">
-                      <span class="info-item__icon" aria-hidden="true"><i class="bi bi-translate"></i></span>
-                      <div class="info-item__body">
-                        <span class="label">Languages</span>
-                        <span class="value">English, Bengali</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="personal-info__footer">
-                  <a href="#" class="resume-btn" data-aos="fade-right" data-aos-delay="400">
-                    <i class="bi bi-file-earmark-text me-2"></i>
-                    <span class="resume-text">Download Resume</span>
-                    <div class="btn-hover-effect"></div>
-                  </a>
-                  <div class="qr-wrapper" data-aos="fade-left" data-aos-delay="400">
-                    <img src="assets/img/MustaqueQRCode1.jpeg" alt="Scan to open portfolio or contact" class="qr-code" width="100" height="100" loading="lazy">
-                    <span class="qr-label">Scan to connect</span>
                   </div>
                 </div>
               </div>
             </article>
           </div>
         </div>
-      </div>
-    </section><!-- /About Section -->
-
-    <!-- Technical Expertise Section (Enhanced with More Categories & Visuals) -->
-<section id="skills" class="skills section py-5 alt-section-bg">
-  <div class="container">
-    <div class="section-title text-center mb-5" data-aos="fade-up">
-      <h2 class="section-heading">
-        <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
-        <span class="section-heading__text">Expertise</span>
-      </h2>
-      <p>Core depth in identity, devices, Microsoft 365, and automation—plus collaboration, service operations, networking, and change when the brief needs it.</p>
-    </div>
-
-    <div class="skill-categories mb-5">
-      <div class="row g-4 justify-content-center">
-        <!-- Identity & Security -->
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="skill-box skill-category-card">
-            <div class="icon-wrapper"><i class="bi bi-shield-lock"></i></div>
-            <h3>Identity &amp; Security</h3>
-            <p class="card-lead">Identity‑first access, measurable risk reduction, and sign‑in flows people can live with.</p>
-            <div class="skills-tech-row">
-              <span class="skills-tech-label">Tech</span>
-              <div class="mini-tech-grid">
-                <span class="mini-tech" title="Microsoft Entra ID"><i class="bi bi-microsoft" aria-hidden="true"></i> Entra</span>
-                <span class="mini-tech" title="Microsoft Defender"><i class="bi bi-shield-check" aria-hidden="true"></i> Defender</span>
-              </div>
-            </div>
-            <ul class="skill-list">
-              <li>Conditional Access, MFA, and guest lifecycle aligned to Zero Trust patterns</li>
-              <li>Privileged access (PIM) and auditable admin paths without day‑to‑day friction</li>
-              <li>Threat and data controls that shorten mean time to respond</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Endpoint Management -->
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="150">
-          <div class="skill-box skill-category-card">
-            <div class="icon-wrapper"><i class="bi bi-laptop"></i></div>
-            <h3>Endpoint Management</h3>
-            <p class="card-lead">Repeatable device lifecycle: build, enroll, patch, and retire with clear compliance signals.</p>
-            <div class="skills-tech-row">
-              <span class="skills-tech-label">Tech</span>
-              <div class="mini-tech-grid">
-                <span class="mini-tech" title="Microsoft Intune"><i class="bi bi-gear" aria-hidden="true"></i> Intune</span>
-                <span class="mini-tech" title="Windows Autopilot"><i class="bi bi-cloud-arrow-up" aria-hidden="true"></i> Autopilot</span>
-              </div>
-            </div>
-            <ul class="skill-list">
-              <li>Autopilot and baselines so new hardware is productive quickly and consistently</li>
-              <li>App delivery, update rings, and compliance reporting stakeholders can trust</li>
-              <li>Windows, macOS, iOS, and Android under one policy story where it matters</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Cloud & Microsoft 365 -->
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-          <div class="skill-box skill-category-card">
-            <div class="icon-wrapper"><i class="bi bi-cloud"></i></div>
-            <h3>Cloud &amp; Microsoft 365</h3>
-            <p class="card-lead">Workloads that are secure by default, right‑sized on cost, and easy to explain to the business.</p>
-            <div class="skills-tech-row">
-              <span class="skills-tech-label">Tech</span>
-              <div class="mini-tech-grid">
-                <span class="mini-tech" title="Microsoft Azure"><i class="bi bi-microsoft" aria-hidden="true"></i> Azure</span>
-                <span class="mini-tech" title="Microsoft 365"><i class="bi bi-briefcase" aria-hidden="true"></i> M365</span>
-              </div>
-            </div>
-            <ul class="skill-list">
-              <li>Teams, Exchange, and SharePoint patterns for collaboration with clear guardrails</li>
-              <li>Hybrid identity and workload placement without mystery “cloud sprawl”</li>
-              <li>Licensing hygiene, groups, and lifecycle for sites, teams, and guests</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Automation & Scripting -->
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="250">
-          <div class="skill-box skill-category-card">
-            <div class="icon-wrapper"><i class="bi bi-terminal"></i></div>
-            <h3>Automation &amp; Scripting</h3>
-            <p class="card-lead">Codify the boring parts: packaging, onboarding checks, and fixes driven by telemetry—not tickets.</p>
-            <div class="skills-tech-row">
-              <span class="skills-tech-label">Tech</span>
-              <div class="mini-tech-grid">
-                <span class="mini-tech" title="PowerShell"><i class="bi bi-terminal" aria-hidden="true"></i> PowerShell</span>
-                <span class="mini-tech" title="Microsoft Graph"><i class="bi bi-diagram-3" aria-hidden="true"></i> Graph</span>
-              </div>
-            </div>
-            <ul class="skill-list">
-              <li>PowerShell for deployment, drift detection, and repeatable remediation</li>
-              <li>Microsoft Graph and low‑code flows where APIs beat manual admin</li>
-              <li>Scheduled health checks and alerting that reduce reactive firefighting</li>
-            </ul>
-          </div>
         </div>
       </div>
+    </section><!-- /Profile Section -->
 
-      <div class="portfolio-disclosure-shell skills-expertise-more">
-        <p class="skills-expertise-more__intro">Enablement, service operations, connectivity, and programme delivery—expand when you want the full picture.</p>
-        <div class="portfolio-disclosure js-disclosure-animate">
-          <button type="button" class="portfolio-disclosure__summary" id="btn-skills-more" aria-expanded="false" aria-controls="panel-skills-more">
-            <span class="portfolio-disclosure__summary-icon" aria-hidden="true"><i class="bi bi-grid-1x2"></i></span>
-            <span class="portfolio-disclosure__summary-text">
-              <span class="portfolio-disclosure__label portfolio-disclosure__label--closed">Other areas of expertise</span>
-              <span class="portfolio-disclosure__label portfolio-disclosure__label--open">Hide other areas</span>
-            </span>
-            <span class="portfolio-disclosure__summary-chevron" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
-          </button>
-          <div id="panel-skills-more" class="portfolio-disclosure__panel" role="region" aria-labelledby="btn-skills-more" hidden>
-            <div class="portfolio-disclosure__body">
-              <div class="row g-4 justify-content-center">
-                <!-- Collaboration & Enablement -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="skill-box skill-category-card">
-                    <div class="icon-wrapper"><i class="bi bi-people"></i></div>
-                    <h3>Collaboration &amp; Enablement</h3>
-                    <p class="card-lead">Adoption that sticks: templates, training, and governance users actually follow.</p>
-                    <div class="skills-tech-row">
-                      <span class="skills-tech-label">Tech</span>
-                      <div class="mini-tech-grid">
-                        <span class="mini-tech" title="Microsoft Teams"><i class="bi bi-chat-dots" aria-hidden="true"></i> Teams</span>
-                        <span class="mini-tech" title="SharePoint Online"><i class="bi bi-folder2-open" aria-hidden="true"></i> SharePoint</span>
-                      </div>
-                    </div>
-                    <ul class="skill-list">
-                      <li>Teams and channels structured for projects, comms, and external collaboration</li>
-                      <li>SharePoint information architecture, permissions, and lifecycle for intranet content</li>
-                      <li>Change campaigns, office hours, and quick‑reference assets that cut repeat questions</li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Service Delivery & Support -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="skill-box skill-category-card">
-                    <div class="icon-wrapper"><i class="bi bi-headset"></i></div>
-                    <h3>Service Delivery &amp; Support</h3>
-                    <p class="card-lead">ITIL‑shaped operations: clear severity, owned incidents, and knowledge that shortens the next ticket.</p>
-                    <div class="skills-tech-row">
-                      <span class="skills-tech-label">Tech</span>
-                      <div class="mini-tech-grid">
-                        <span class="mini-tech" title="Ticketing &amp; queues"><i class="bi bi-ticket-detailed" aria-hidden="true"></i> ITSM</span>
-                        <span class="mini-tech" title="Knowledge base"><i class="bi bi-journal-text" aria-hidden="true"></i> KB</span>
-                      </div>
-                    </div>
-                    <ul class="skill-list">
-                      <li>Service desk workflows: triage, escalation, and communication under pressure</li>
-                      <li>Incident and problem management with trends fed back into permanent fixes</li>
-                      <li>Runbooks and KB articles so L1 and the business get consistent answers</li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Networking & Infrastructure -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="skill-box skill-category-card">
-                    <div class="icon-wrapper"><i class="bi bi-diagram-3"></i></div>
-                    <h3>Networking &amp; Infrastructure</h3>
-                    <p class="card-lead">Hybrid connectivity that holds up under load: identity‑aware access from office to cloud.</p>
-                    <div class="skills-tech-row">
-                      <span class="skills-tech-label">Tech</span>
-                      <div class="mini-tech-grid">
-                        <span class="mini-tech" title="VPN &amp; SD‑WAN"><i class="bi bi-router" aria-hidden="true"></i> VPN</span>
-                        <span class="mini-tech" title="Wi‑Fi"><i class="bi bi-wifi" aria-hidden="true"></i> Wi‑Fi</span>
-                      </div>
-                    </div>
-                    <ul class="skill-list">
-                      <li>LAN/WAN design, VPN paths, and firewall policy aligned to modern access models</li>
-                      <li>Wi‑Fi coverage, roaming, and troubleshooting for dense office environments</li>
-                      <li>Hybrid DNS, routing, and monitoring that make cloud dependencies visible</li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Digital Transformation -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="skill-box skill-category-card">
-                    <div class="icon-wrapper"><i class="bi bi-lightning-charge"></i></div>
-                    <h3>Digital Transformation</h3>
-                    <p class="card-lead">Turn pilots into standards: portals, automation, and feedback loops leadership can see.</p>
-                    <div class="skills-tech-row">
-                      <span class="skills-tech-label">Tech</span>
-                      <div class="mini-tech-grid">
-                        <span class="mini-tech" title="Self‑service &amp; portals"><i class="bi bi-window" aria-hidden="true"></i> Portals</span>
-                        <span class="mini-tech" title="Low‑code automation"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Automate</span>
-                      </div>
-                    </div>
-                    <ul class="skill-list">
-                      <li>Self‑service catalogues and intake that replace ad‑hoc email requests</li>
-                      <li>Process automation with measurable handoffs between IT and the business</li>
-                      <li>Roadmaps, adoption metrics, and iteration so change doesn’t stall after go‑live</li>
-                    </ul>
-                  </div>
-                </div>
+    <!-- Expertise: section-title + unified capability panel (same heading pattern as About / Experience) -->
+    <section id="capability-stack" class="skills skills-showcase section section-stack alt-section-bg" aria-labelledby="capability-stack-heading">
+      <div class="layout-container">
+        <header class="skills-intro section-title" data-aos="fade-up">
+          <h2 id="capability-stack-heading" class="section-heading">
+            <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
+            <span class="section-heading__text">Capability Stack</span>
+          </h2>
+          <p class="skills-intro__lede">
+            The stack behind the work—devices, identity, hybrid connectivity, M365, automation, and access—spelled out by lane so choices stay legible at handover, not buried in badge lists.
+          </p>
+        </header>
+
+        <div class="skills-expertise-panel" data-aos="fade-up" data-aos-delay="70" aria-label="Technical capabilities">
+          <div class="skills-expertise-grid">
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></span>
+                <h3 class="skills-expertise-cell__title">Identity &amp; Security</h3>
+                <p class="skills-expertise-cell__lede">Identity controls that reduce friction without weakening policy - sign-in, devices, and posture stakeholders can trace end to end.</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-</section>
-
-    <!-- Experience (id=resume keeps index.html#resume links working) -->
-    <section id="resume" class="resume resume-experience section py-5 alt-section-bg-2">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="section-heading">
-          <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-briefcase-fill"></i></span>
-          <span class="section-heading__text">Experience</span>
-        </h2>
-        <p>Current role up front; expand for earlier roles that shaped how I deliver Intune, Entra ID, and calm, compliant end‑user experiences.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-12">
-            <div class="resume-wrapper">
-              <div class="resume-block" data-aos="fade-up">
-                <div class="resume-spotlight-card resume-spotlight-card--experience">
-                  <p class="resume-eyebrow"><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Work</p>
-                  <h2>Current focus</h2>
-                  <p class="lead">Hands‑on with Microsoft 365, Intune, and Azure—standardising how devices join the estate, how policies roll out, and how users get unblocked without compromising guardrails.</p>
-
-                  <div class="timeline">
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-left">
-                      <h4 class="company">Pitcher Partners</h4>
-                      <span class="period">May 2024 – Present</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">IT Support Specialist</h3>
-                      <p class="description">Endpoint management, packaging, and policy for a 1,200+ device environment—balancing security baselines with a smooth day‑one experience for staff.</p>
-                      <ul>
-                        <li>Deployed apps, configurations, and compliance policies through Autopilot and Intune across 1,200+ endpoints</li>
-                        <li>Supported cloud transformation: fewer one‑off builds, clearer app catalogues, better visibility from telemetry</li>
-                        <li>Refined Autopilot and compliance journeys—less manual touch, faster time‑to‑productive for new hardware</li>
-                        <li>Strengthened posture with policy‑driven settings; fewer repeat incidents and cleaner audit narratives</li>
-                      </ul>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-
-                <div class="portfolio-disclosure-shell portfolio-disclosure-shell--experience">
-                  <div class="portfolio-disclosure js-disclosure-animate">
-                    <button type="button" class="portfolio-disclosure__summary" id="btn-experience-past" aria-expanded="false" aria-controls="panel-experience-past">
-                      <span class="portfolio-disclosure__summary-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></span>
-                      <span class="portfolio-disclosure__summary-text">
-                        <span class="portfolio-disclosure__label portfolio-disclosure__label--closed">Past roles</span>
-                        <span class="portfolio-disclosure__label portfolio-disclosure__label--open">Hide</span>
-                      </span>
-                      <span class="portfolio-disclosure__summary-chevron" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
-                    </button>
-                    <div id="panel-experience-past" class="portfolio-disclosure__panel" role="region" aria-labelledby="btn-experience-past" hidden>
-                      <div class="portfolio-disclosure__body">
-                        <div class="timeline timeline--nested">
-                          <div class="timeline-item">
-                            <div class="timeline-left">
-                              <h4 class="company">CompNow — RMIT University</h4>
-                              <span class="period">Feb 2022 – May 2024</span>
-                            </div>
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-right">
-                              <h3 class="position">IT Service Desk Analyst</h3>
-                              <p class="description">High‑volume academic setting: walk‑up and remote support, account and access lifecycle, and steady hands during teaching peaks.</p>
-                              <ul>
-                                <li>Owned day‑to‑day identity and mailbox tasks, endpoint compliance, and campus‑wide access in Entra‑connected systems</li>
-                                <li>Resolved hardware, software, and connectivity issues on site; kept queues moving under peak‑period expectations</li>
-                                <li>Applied ITIL‑style incident and request handling with clearer notes and handoffs—shorter loopbacks and faster escalations when needed</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-left">
-                              <h4 class="company">Angel Institute of Education</h4>
-                              <span class="period">Jun 2021 – Dec 2021</span>
-                            </div>
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-right">
-                              <h3 class="position">Desktop Support Engineer (Internship)</h3>
-                              <p class="description">First professional exposure to enterprise‑style support: deskside troubleshooting, imaging basics, and learning how tickets, SLAs, and user empathy fit together.</p>
-                              <ul>
-                                <li>Supported staff and lab endpoints—Windows imaging, peripherals, and common application break‑fix</li>
-                                <li>Assisted with Active Directory and M365‑adjacent admin tasks under senior guidance</li>
-                                <li>Documented steps and outcomes in the ticketing system; built habits that carried into ITIL‑aligned service desks later</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Identity and security platforms">
+                  <li><span class="skill-chip skill-chip--expertise">Entra ID</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Conditional Access</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Defender for Endpoint</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Entra ID Protection</span></li>
+                </ul>
               </div>
-            </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Identity and security outcomes">
+                <li>Conditional Access tuned to real workflows - strong MFA and risky sign-in coverage without routine lockout noise.</li>
+                <li>Controls anchored in Entra and endpoint telemetry - audit narratives grounded in measurable posture, not one-off evidence grabs.</li>
+                <li>Protection signals paired with repeatable remediation paths - identity incidents close through known runbooks, not weekend heroics.</li>
+              </ul>
+            </article>
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-pc-display-horizontal"></i></span>
+                <h3 class="skills-expertise-cell__title">Endpoint Management &amp; Application Delivery</h3>
+                <p class="skills-expertise-cell__lede">Endpoint management built for repeatable rollout, compliance, and handover - from pilot rings to full-estate policy.</p>
+              </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Endpoint management platforms">
+                  <li><span class="skill-chip skill-chip--expertise">Microsoft Intune</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Windows Autopilot</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Win32 App Packaging &amp; Deployment</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">PowerShell Remediations</span></li>
+                </ul>
+              </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Endpoint management outcomes">
+                <li>Autopilot and ESP paths that minimise manual steps between dock and productive work.</li>
+                <li>Baselines and remediations that surface drift in telemetry before it becomes ticket volume.</li>
+                <li>Phased rings for policy and apps—change with contained blast radius across hybrid fleets.</li>
+              </ul>
+            </article>
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-cloud-check"></i></span>
+                <h3 class="skills-expertise-cell__title">Azure &amp; Hybrid Cloud</h3>
+                <p class="skills-expertise-cell__lede">Azure and hybrid patterns that keep access, apps, and infrastructure aligned - one operating story instead of split cloud vs on‑prem blame chains.</p>
+              </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Azure and hybrid platforms">
+                  <li><span class="skill-chip skill-chip--expertise">Azure Virtual Desktop</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Azure Networking</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Hybrid Connectivity</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Azure Policy · Governance</span></li>
+                </ul>
+              </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Azure and hybrid outcomes">
+                <li>AVD and connectivity shaped inside security boundaries - not VPN-shaped habits pasted onto cloud.</li>
+                <li>Lightweight governance—tags, guardrails, diagrams - that sponsors can follow across subscriptions.</li>
+                <li>Clear ownership between landing zones and endpoint policy - fewer ambiguous escalations; exceptions documented when they exist.</li>
+              </ul>
+            </article>
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-microsoft"></i></span>
+                <h3 class="skills-expertise-cell__title">Microsoft 365 Services</h3>
+                <p class="skills-expertise-cell__lede">Collaboration surfaces tuned to how teams actually work - governed Teams, mail, and files without forcing shadow routes.</p>
+              </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Microsoft 365 platforms">
+                  <li><span class="skill-chip skill-chip--expertise">Microsoft 365 admin</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Teams</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Exchange Online</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">SharePoint Online</span></li>
+                </ul>
+              </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Microsoft 365 outcomes">
+                <li>Defaults that steer sensitive work away from tool - hopping and informal data sprawl.</li>
+                <li>Tenant changes with change windows, comms, and rollback - releases that land without surprise Monday outages.</li>
+                <li>Service issues traced to tenant limits and settings - not endless device-only rabbit holes.</li>
+              </ul>
+            </article>
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+                <h3 class="skills-expertise-cell__title">Automation &amp; Scripting</h3>
+                <p class="skills-expertise-cell__lede">Versioned automation in place of brittle runbooks - repeatable execution, reviewable history, engineering time that scopes cleanly.</p>
+              </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Automation tooling">
+                  <li><span class="skill-chip skill-chip--expertise">PowerShell</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">GitHub</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Azure Automation</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">AI-assisted Tooling</span></li>
+                </ul>
+              </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Automation outcomes">
+                <li>Scripted enrollments, exports, and hygiene - explicit inputs and outputs every run.</li>
+                <li>Packaging and validation treated as code - review and version history that survive handover.</li>
+                <li>Targeted remediations on repeat failure modes - the pattern fixes the class, not only today’s ticket.</li>
+              </ul>
+            </article>
+            <article class="skills-expertise-cell">
+              <div class="skills-expertise-cell__top">
+                <span class="skills-expertise-cell__icon" aria-hidden="true"><i class="bi bi-hdd-network"></i></span>
+                <h3 class="skills-expertise-cell__title">Enterprise Ops &amp; Access</h3>
+                <p class="skills-expertise-cell__lede">Steady-state delivery - imaging, network access, and change rhythm - that scales from internal estate runbooks to scoped client work.</p>
+              </div>
+              <div class="skills-expertise-cell__stack">
+                <p class="skills-expertise-cell__stack-label" aria-hidden="true">Stack</p>
+                <ul class="skill-chip-list skills-expertise-cell__chips" aria-label="Operations and access platforms">
+                  <li><span class="skill-chip skill-chip--expertise">Network Configuration</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">802.1X · NAC</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">ITSM · Change</span></li>
+                  <li><span class="skill-chip skill-chip--expertise">Imaging · lifecycle</span></li>
+                </ul>
+              </div>
+              <ul class="skills-expertise-cell__impacts" aria-label="Enterprise operations outcomes">
+                <li>Wired and wireless authentication patterns that stay predictable during hardware churn and onboarding waves.</li>
+                <li>Imaging and asset standards mapped to ITSM cadence - known device state at handover.</li>
+                <li>Network access aligned with policy intent - control that holds across internal and project boundaries.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="resume-pair-bridge" aria-hidden="true">
-      <div class="container">
-        <div class="resume-pair-bridge__inner">
-          <span class="resume-pair-bridge__line"></span>
-          <span class="resume-pair-bridge__badge"><i class="bi bi-mortarboard-fill"></i></span>
-          <span class="resume-pair-bridge__line"></span>
+    <!-- Selected Work — curated showcase (5 programs); no archive filters -->
+    <section id="selected-work" class="portfolio portfolio-showcase portfolio-showcase--editorial portfolio-showcase--curated section section-stack alt-section-bg" aria-labelledby="selected-work-heading">
+
+      <div class="layout-container">
+        <header class="portfolio-showcase__intro section-title" data-aos="fade-up">
+          <h2 id="selected-work-heading" class="section-heading">
+            <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-patch-check-fill"></i></span>
+            <span class="section-heading__text">Selected Work</span>
+          </h2>
+          <p class="portfolio-showcase__lede">Five delivery programmes from real tenants—onboarding, endpoint governance, network trust, lifecycle automation, and licensed application control. Skim the cards for fit; open a case study when you want engineering depth.</p>
+        </header>
+
+        <div class="portfolio-showcase__panel section-showcase-panel flex flex-col gap-xl" data-aos="fade-up" data-aos-delay="40">
+
+        <div class="portfolio-showcase__featured">
+          <article class="portfolio-card portfolio-card--featured portfolio-card--case-cover portfolio-case-study portfolio-case-study--panel h-100" aria-labelledby="portfolio-case-datasnipper-title">
+            <div class="portfolio-case-study__split grid grid-cols-1 gap-0 lg:grid-cols-12">
+              <div class="portfolio-case-study__media min-w-0 lg:col-span-7">
+                <div class="portfolio-image portfolio-image--panel">
+                  <img src="assets/img/portfolio/cover-datasnipper.svg" class="img-fluid" alt="Featured case study visual for DataSnipper: spreadsheet-style window with cell grid, side task pane, and checklist rows—governed licensed add-in delivery." width="800" height="500" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/cover-datasnipper.svg" class="glightbox preview-link" data-gallery="portfolio-featured" title="Governed rollout — DataSnipper"><span class="visually-hidden">Preview cover visual</span><i class="bi bi-eye" aria-hidden="true"></i></a>
+                      <a href="portfolio-details.html" class="details-link" title="View case study: DataSnipper application entitlement and licensed rollout"><span class="visually-hidden">Case study</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-case-study__body-wrap min-w-0 lg:col-span-5">
+                <div class="portfolio-content portfolio-case-study__body">
+                  <p class="portfolio-case-study__eyebrow"><span class="category">Governed application delivery</span><span class="visually-hidden">.</span> <span class="portfolio-case-study__badge">Featured</span></p>
+                  <h3 id="portfolio-case-datasnipper-title" class="portfolio-case-study__title">
+                    <a class="portfolio-case-study__title-link" href="portfolio-details.html">DataSnipper · Application entitlement &amp; licensed rollout</a>
+                  </h3>
+                  <p class="portfolio-case-study__context">Licensed Excel add-in delivered with edition separation, Entra membership, and Intune assignment semantics.</p>
+                  <p class="portfolio-case-study__outcome">Phased BU rollout, honest uninstall paths, and an entitlement ledger finance can trust.</p>
+                  <p class="portfolio-case-study__meta" aria-label="Primary technologies">Intune · Entra ID · Packaging · Automation</p>
+                  <p class="portfolio-case-study__cta-row mb-0">
+                    <a href="portfolio-details.html" class="portfolio-case-study__cta">Open case study<span class="visually-hidden">: DataSnipper application entitlement and licensed rollout</span></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="portfolio-case-grid portfolio-case-grid--supporting portfolio-case-grid--panels grid grid-cols-1 gap-lg md:grid-cols-2 lg:gap-xl xl:gap-2xl" data-aos="fade-up" data-aos-delay="60">
+
+          <article class="portfolio-card portfolio-card--case-cover portfolio-card--supporting portfolio-case-study portfolio-case-study--panel flex h-full min-h-0 flex-col" aria-labelledby="portfolio-case-fortinac-title">
+              <div class="portfolio-image portfolio-image--panel">
+                <img src="assets/img/portfolio/cover-fortinac.svg" class="img-fluid" alt="Featured case study visual for FortiNAC: Ethernet port block, Wi‑Fi arcs, verified padlock, and trust path—802.1X wired and wireless access control." width="800" height="500" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-actions">
+                    <a href="assets/img/portfolio/cover-fortinac.svg" class="glightbox preview-link" data-gallery="portfolio-supporting" title="FortiNAC · firmwide 802.1X"><span class="visually-hidden">Preview cover visual</span><i class="bi bi-eye" aria-hidden="true"></i></a>
+                    <a href="portfolio-security.html" class="details-link" title="View case study: FortiNAC network access trust and firmwide cutover"><span class="visually-hidden">Case study</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content portfolio-case-study__body">
+                <p class="portfolio-case-study__eyebrow"><span class="category">Network access &amp; endpoint security</span></p>
+                <h3 id="portfolio-case-fortinac-title" class="portfolio-case-study__title">
+                  <a class="portfolio-case-study__title-link" href="portfolio-security.html">FortiNAC · Network access trust &amp; firmwide cutover</a>
+                </h3>
+                <p class="portfolio-case-study__context">Firmwide wired and wireless access with certificate-backed sessions and NAC policy in front of switching and Wi‑Fi.</p>
+                <p class="portfolio-case-study__outcome">Waved cutover so users stayed productive while the access boundary hardened—no big-bang outage narrative.</p>
+                <p class="portfolio-case-study__meta" aria-label="Primary technologies">FortiNAC · PKI · 802.1X · Endpoint readiness</p>
+                <p class="portfolio-case-study__cta-row mb-0">
+                  <a href="portfolio-security.html" class="portfolio-case-study__cta">Open case study<span class="visually-hidden">: FortiNAC network access trust and firmwide cutover</span></a>
+                </p>
+              </div>
+            </article>
+
+          <article class="portfolio-card portfolio-card--case-cover portfolio-card--supporting portfolio-case-study portfolio-case-study--panel flex h-full min-h-0 flex-col" aria-labelledby="portfolio-case-autopilot-firmwide-title">
+              <div class="portfolio-image portfolio-image--panel">
+                <img src="assets/img/portfolio/cover-autopilot.svg" class="img-fluid" alt="Featured case study visual for Autopilot: cloud-to-device link, laptop silhouette, and stepped enrollment arcs—zero-touch cloud provisioning." width="800" height="500" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-actions">
+                    <a href="assets/img/portfolio/cover-autopilot.svg" class="glightbox preview-link" data-gallery="portfolio-supporting" title="Autopilot — cloud-connected onboarding"><span class="visually-hidden">Preview cover visual</span><i class="bi bi-eye" aria-hidden="true"></i></a>
+                    <a href="portfolio-automation.html" class="details-link" title="View case study: Windows Autopilot zero-touch enterprise onboarding"><span class="visually-hidden">Case study</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content portfolio-case-study__body">
+                <p class="portfolio-case-study__eyebrow"><span class="category">Modern workplace &amp; provisioning</span></p>
+                <h3 id="portfolio-case-autopilot-firmwide-title" class="portfolio-case-study__title">
+                  <a class="portfolio-case-study__title-link" href="portfolio-automation.html">Windows Autopilot · Zero-touch enterprise onboarding</a>
+                </h3>
+                <p class="portfolio-case-study__context">Factory-to-productive Windows intake: cohort join design, ESP gates, and phased expansion without imaging queues.</p>
+                <p class="portfolio-case-study__outcome">Hardware lands in a known policy and app posture; remediation patterns keep enrollment waves moving.</p>
+                <p class="portfolio-case-study__meta" aria-label="Primary technologies">Autopilot · Intune · Hybrid / Entra join</p>
+                <p class="portfolio-case-study__cta-row mb-0">
+                  <a href="portfolio-automation.html" class="portfolio-case-study__cta">Open case study<span class="visually-hidden">: Windows Autopilot zero-touch enterprise onboarding</span></a>
+                </p>
+              </div>
+            </article>
+
+          <article class="portfolio-card portfolio-card--case-cover portfolio-card--supporting portfolio-case-study portfolio-case-study--panel flex h-full min-h-0 flex-col" aria-labelledby="portfolio-case-lifecycle-ops-title">
+              <div class="portfolio-image portfolio-image--panel">
+                <img src="assets/img/portfolio/cover-lifecycle-automation.svg" class="img-fluid" alt="Featured case study visual for automation: ticket card, three-stage pipeline with arrows, code-style angle brackets, and flow nodes—ITSM to orchestrated change." width="800" height="500" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-actions">
+                    <a href="assets/img/portfolio/cover-lifecycle-automation.svg" class="glightbox preview-link" data-gallery="portfolio-supporting" title="Automation — orchestration layers"><span class="visually-hidden">Preview cover visual</span><i class="bi bi-eye" aria-hidden="true"></i></a>
+                    <a href="portfolio-hybrid.html" class="details-link" title="View case study: Operational lifecycle automation from ticket to verified change"><span class="visually-hidden">Case study</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content portfolio-case-study__body">
+                <p class="portfolio-case-study__eyebrow"><span class="category">Operations engineering</span></p>
+                <h3 id="portfolio-case-lifecycle-ops-title" class="portfolio-case-study__title">
+                  <a class="portfolio-case-study__title-link" href="portfolio-hybrid.html">Lifecycle automation · From ticket to verified change</a>
+                </h3>
+                <p class="portfolio-case-study__context">ITSM intake through approval-gated orchestration into Graph-backed directory and endpoint change.</p>
+                <p class="portfolio-case-study__outcome">Joiner, licence, and cleanup batches run with throttled execution and evidence the service desk can defend.</p>
+                <p class="portfolio-case-study__meta" aria-label="Primary technologies">PowerShell · Power Automate · Microsoft Graph</p>
+                <p class="portfolio-case-study__cta-row mb-0">
+                  <a href="portfolio-hybrid.html" class="portfolio-case-study__cta">Open case study<span class="visually-hidden">: Operational lifecycle automation from ticket to verified change</span></a>
+                </p>
+              </div>
+            </article>
+
+          <article class="portfolio-card portfolio-card--case-cover portfolio-card--supporting portfolio-case-study portfolio-case-study--panel flex h-full min-h-0 flex-col" aria-labelledby="portfolio-case-intune-ops-title">
+              <div class="portfolio-image portfolio-image--panel">
+                <img src="assets/img/portfolio/cover-intune-operations.svg" class="img-fluid" alt="Featured case study visual for Intune: fleet of endpoint silhouettes, verified shield, policy checklist, and hub targeting—endpoint governance." width="800" height="500" loading="lazy">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-actions">
+                    <a href="assets/img/portfolio/cover-intune-operations.svg" class="glightbox preview-link" data-gallery="portfolio-supporting" title="Intune operations — fleet and identity atmosphere"><span class="visually-hidden">Preview cover visual</span><i class="bi bi-eye" aria-hidden="true"></i></a>
+                    <a href="portfolio-details2.html" class="details-link" title="View case study: Microsoft Intune enterprise endpoint control plane"><span class="visually-hidden">Case study</span><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-content portfolio-case-study__body">
+                <p class="portfolio-case-study__eyebrow"><span class="category">Endpoint operations</span></p>
+                <h3 id="portfolio-case-intune-ops-title" class="portfolio-case-study__title">
+                  <a class="portfolio-case-study__title-link" href="portfolio-details2.html">Microsoft Intune · Enterprise endpoint control plane</a>
+                </h3>
+                <p class="portfolio-case-study__context">Day-two fleet work: baselines, Win32 rings, compliance, enrollment health, and sync triage in one operating model.</p>
+                <p class="portfolio-case-study__outcome">Configuration and app truth stay aligned so drift shows up in telemetry before it floods the queue.</p>
+                <p class="portfolio-case-study__meta" aria-label="Primary technologies">Intune · Entra dynamic groups · Autopilot handoff</p>
+                <p class="portfolio-case-study__cta-row mb-0">
+                  <a href="portfolio-details2.html" class="portfolio-case-study__cta">Open case study<span class="visually-hidden">: Microsoft Intune enterprise endpoint control plane</span></a>
+                </p>
+              </div>
+            </article>
+
+        </div>
+
         </div>
       </div>
-    </div>
 
-    <section id="education" class="resume resume-education section py-5 alt-section-bg">
+    </section><!-- /Selected Work -->    <!-- Career Snapshot -->
+    <section id="career-snapshot" class="resume resume-experience section section-stack alt-section-bg-2" aria-labelledby="career-snapshot-heading">
 
-      <div class="container section-title" data-aos="fade-up">
+      <div class="layout-container section-title" data-aos="fade-up">
+        <h2 id="career-snapshot-heading" class="section-heading">
+          <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-briefcase-fill"></i></span>
+          <span class="section-heading__text">Career Snapshot</span>
+        </h2>
+        <p>Hybrid Microsoft enterprise estates today; academic-scale service operations and deskside foundations before that—timeline and impact written for recruiters, hiring managers, and technical reviewers skimming at different depths.</p>
+      </div>
+
+      <div class="layout-container experience-layout-outer" data-aos="fade-up" data-aos-delay="100">
+      <div class="experience-section">
+        <article class="experience-feature" data-aos="fade-up" data-aos-delay="120">
+          <div class="experience-feature__layout">
+            <header class="experience-feature__head">
+              <p class="experience-feature__eyebrow"><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Current role</p>
+              <h3 class="experience-feature__title">IT Support Specialist</h3>
+              <div class="experience-feature__meta">
+                <span class="experience-feature__company">Pitcher Partners</span>
+                <span class="experience-feature__period">May 2024 – Present</span>
+                <span class="experience-feature__env">Melbourne · Hybrid enterprise</span>
+              </div>
+            </header>
+            <div class="experience-feature__column">
+              <p class="experience-feature__context resume-context-rail">Supports a Microsoft-centric enterprise environment across endpoints, identity, packaging, and policy rollout, with a strong focus on reducing friction at scale.</p>
+              <ul class="experience-feature__impacts resume-detail-list" aria-label="Impact at Pitcher Partners">
+                <li>Standardised Autopilot, Intune, and compliance patterns across a 1,200-device estate to improve onboarding consistency and reduce manual touch.</li>
+                <li>Strengthened endpoint posture through policy-driven configuration, packaging, and staged rollout practices that are easier to support and audit.</li>
+                <li>Improved day-one readiness and ongoing device stability by refining app delivery, baseline tuning, and telemetry-led remediation workflows.</li>
+              </ul>
+              <ul class="experience-feature__tags" aria-label="Environment and stack">
+                <li><span class="experience-feature__tag">Microsoft Intune</span></li>
+                <li><span class="experience-feature__tag">Entra ID</span></li>
+                <li><span class="experience-feature__tag">Autopilot</span></li>
+                <li><span class="experience-feature__tag">Compliance &amp; packaging</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <div class="experience-archive" data-aos="fade-up" data-aos-delay="140">
+          <p class="experience-archive__label" id="experience-earlier-heading">Earlier roles</p>
+          <ul class="experience-past-grid" aria-labelledby="experience-earlier-heading">
+            <li class="experience-past-grid__cell">
+            <article class="experience-past-card">
+              <h4 class="experience-past-card__title">IT Service Desk Analyst</h4>
+              <p class="experience-past-card__meta">
+                <span class="experience-past-card__org">CompNow — RMIT University</span>
+                <span class="experience-past-card__dates">Feb 2022 – May 2024</span>
+              </p>
+              <p class="experience-past-card__env">Melbourne · Academic</p>
+              <p class="experience-past-card__context resume-context-rail resume-context-rail--compact">High-volume academic environment spanning walk-up and remote support, identity lifecycle, endpoint issues, and service operations during teaching-critical periods.</p>
+              <ul class="experience-past-card__bullets resume-detail-list resume-detail-list--compact" aria-label="Impact at CompNow — RMIT">
+                <li>Supported identity, mailbox, hardware, software, and access workflows across a busy university setting with clear escalation and service discipline.</li>
+                <li>Strong operational habits in triage, documentation, and user communication—shorter loopbacks and cleaner handovers across support queues.</li>
+              </ul>
+              <ul class="experience-past-card__tags" aria-label="Environment and stack">
+                <li><span class="experience-past-card__tag">Service operations</span></li>
+                <li><span class="experience-past-card__tag">Identity &amp; access</span></li>
+                <li><span class="experience-past-card__tag">Academic IT</span></li>
+              </ul>
+            </article>
+            </li>
+            <li class="experience-past-grid__cell">
+            <article class="experience-past-card">
+              <h4 class="experience-past-card__title">Desktop Support Engineer Intern</h4>
+              <p class="experience-past-card__meta">
+                <span class="experience-past-card__org">Angel Institute of Education</span>
+                <span class="experience-past-card__dates">Jun 2021 – Dec 2021</span>
+              </p>
+              <p class="experience-past-card__env">Melbourne</p>
+              <p class="experience-past-card__context resume-context-rail resume-context-rail--compact">Early enterprise support across endpoint troubleshooting, imaging, user support, and foundational administration tasks.</p>
+              <ul class="experience-past-card__bullets resume-detail-list resume-detail-list--compact" aria-label="Impact at Angel Institute of Education">
+                <li>Supported staff and lab endpoints across common Windows, peripheral, and application issues in a deskside support setting.</li>
+                <li>Foundational discipline in ticket handling, documentation, and Microsoft-adjacent administration under senior guidance.</li>
+              </ul>
+              <ul class="experience-past-card__tags" aria-label="Environment and stack">
+                <li><span class="experience-past-card__tag">Windows endpoints</span></li>
+                <li><span class="experience-past-card__tag">Imaging</span></li>
+                <li><span class="experience-past-card__tag">ITSM hygiene</span></li>
+              </ul>
+            </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="education" class="resume resume-education section section-stack alt-section-bg">
+
+      <div class="layout-container section-title education-section-title" data-aos="fade-up">
         <h2 class="section-heading">
           <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
           <span class="section-heading__text">Education</span>
         </h2>
-        <p>Postgraduate depth in networks and cyber security, plus leadership study and an engineering foundation that still informs how I debug and design.</p>
+        <p class="education-section-title__lede">Formal study behind the trade-offs I make in hybrid estates—network and security depth first, with leadership and engineering fundamentals that still shape how I troubleshoot and ship change.</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-12">
-            <div class="resume-wrapper">
-              <div class="resume-block" data-aos="fade-up">
-                <div class="resume-spotlight-card resume-spotlight-card--education">
-                  <p class="resume-eyebrow"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Study</p>
-                  <h2>Core credential</h2>
-                  <p class="lead">The master’s programme that grounds how I think about routing, segmentation, identity adjacent controls, and why “secure by default” is an architecture choice—not a bolt‑on.</p>
-
-                  <div class="timeline">
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-left">
-                      <h4 class="company">Swinburne University of Technology</h4>
-                      <span class="period">2016 – 2018</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Master of Science — Network Systems | Cyber Security</h3>
-                      <p class="description">Coursework and labs across advanced networking, security architecture, and systems administration—directly relevant to how I approach hybrid connectivity, Zero Trust patterns, and hardening in Microsoft‑centric estates today.</p>
-                    </div>
-                  </div>
-                  </div>
+      <div class="layout-container education-layout-outer" data-aos="fade-up" data-aos-delay="100">
+        <div class="education-section-inner">
+          <article class="education-feature" data-aos="fade-up" data-aos-delay="120">
+            <div class="education-feature__layout">
+              <header class="education-feature__head">
+                <p class="education-feature__eyebrow"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Primary credential</p>
+                <h3 class="education-feature__degree">Master of Science — Network Systems | Cyber Security</h3>
+                <div class="education-feature__facts">
+                  <p class="education-feature__institution">Swinburne University of Technology</p>
+                  <p class="education-feature__period"><span class="visually-hidden">Years: </span>2016 – 2018</p>
                 </div>
-
-                <div class="portfolio-disclosure-shell portfolio-disclosure-shell--education">
-                  <div class="portfolio-disclosure js-disclosure-animate">
-                    <button type="button" class="portfolio-disclosure__summary" id="btn-education-other" aria-expanded="false" aria-controls="panel-education-other">
-                      <span class="portfolio-disclosure__summary-icon" aria-hidden="true"><i class="bi bi-journal-bookmark"></i></span>
-                      <span class="portfolio-disclosure__summary-text">
-                        <span class="portfolio-disclosure__label portfolio-disclosure__label--closed">Earlier qualifications</span>
-                        <span class="portfolio-disclosure__label portfolio-disclosure__label--open">Hide</span>
-                      </span>
-                      <span class="portfolio-disclosure__summary-chevron" aria-hidden="true"><i class="bi bi-chevron-down"></i></span>
-                    </button>
-                    <div id="panel-education-other" class="portfolio-disclosure__panel" role="region" aria-labelledby="btn-education-other" hidden>
-                      <div class="portfolio-disclosure__body">
-                        <div class="timeline timeline--nested">
-                          <div class="timeline-item">
-                            <div class="timeline-left">
-                              <h4 class="company">Danford College</h4>
-                              <span class="period">2022 – 2024</span>
-                            </div>
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-right">
-                              <h3 class="position">Advanced Diploma (Leadership &amp; Management)</h3>
-                              <p class="description">Formal practice in leading small teams, planning under pressure, and communicating across technical and non‑technical stakeholders—skills I use when rolling out change, training cohorts, or coordinating project cutovers.</p>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-left">
-                              <h4 class="company">Maulana Abul Kalam Azad University of Technology</h4>
-                              <span class="period">2011 – 2015</span>
-                            </div>
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-right">
-                              <h3 class="position">Bachelor of Technology (Electronics &amp; Communication)</h3>
-                              <p class="description">Engineering fundamentals—signals, systems, and hardware logic—that still help when diagnosing odd endpoint behaviour, Wi‑Fi edge cases, or how physical and logical layers interact in modern workplaces.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </header>
+              <div class="education-feature__column">
+                <p class="education-feature__context resume-context-rail">Advanced networking and security coursework that maps to how I reason about segmentation, identity-adjacent controls, and hardening in Microsoft-centric environments—not compliance theatre.</p>
               </div>
             </div>
+          </article>
+
+          <div class="education-more" data-aos="fade-up" data-aos-delay="140">
+            <p class="education-more__label" id="education-more-heading">Also studied</p>
+            <ul class="education-more-grid" aria-labelledby="education-more-heading">
+              <li class="education-more-grid__cell">
+                <article class="education-compact-card">
+                  <h4 class="education-compact-card__title">Advanced Diploma (Leadership &amp; Management)</h4>
+                  <div class="education-compact-card__facts">
+                    <p class="education-compact-card__school">Danford College</p>
+                    <p class="education-compact-card__dates"><span class="visually-hidden">Years: </span>2022 – 2024</p>
+                  </div>
+                  <p class="education-compact-card__line resume-context-rail">Structured practice in prioritisation, stakeholder communication, and delivery under pressure—useful when coordinating rollouts and cutovers.</p>
+                </article>
+              </li>
+              <li class="education-more-grid__cell">
+                <article class="education-compact-card">
+                  <h4 class="education-compact-card__title">Bachelor of Technology (Electronics &amp; Communication)</h4>
+                  <div class="education-compact-card__facts">
+                    <p class="education-compact-card__school">Maulana Abul Kalam Azad University of Technology</p>
+                    <p class="education-compact-card__dates"><span class="visually-hidden">Years: </span>2011 – 2015</p>
+                  </div>
+                  <p class="education-compact-card__line resume-context-rail">Signals-and-systems thinking that still helps when endpoints behave oddly, wireless edge cases appear, or physical and logical layers need to line up.</p>
+                </article>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio portfolio-showcase section py-5 alt-section-bg" aria-labelledby="portfolio-heading">
 
-      <div class="container portfolio-showcase__intro section-title" data-aos="fade-up">
-        <h2 id="portfolio-heading" class="section-heading">
-          <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-patch-check-fill"></i></span>
-          <span class="section-heading__text">Proof in production</span>
-        </h2>
-        <p class="portfolio-showcase__lede">Programs that shipped in real tenants and device estates—identity, endpoints, automation, and hybrid. Pick a lane below, then dive into the narrative or the full visual.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
-
-          <div class="portfolio-filters-container">
-            <p id="portfolio-filters-label" class="visually-hidden">Filter projects by category</p>
-            <ul class="portfolio-filters isotope-filters" role="list" aria-labelledby="portfolio-filters-label">
-              <li role="none"><button type="button" class="filter-active" data-filter="*">All work</button></li>
-              <li role="none"><button type="button" data-filter=".filter-web">Modern device management</button></li>
-              <li role="none"><button type="button" data-filter=".filter-graphics">Security &amp; compliance</button></li>
-              <li role="none"><button type="button" data-filter=".filter-motion">Automation &amp; insights</button></li>
-              <li role="none"><button type="button" data-filter=".filter-brand">Hybrid infrastructure</button></li>
-            </ul>
-          </div>
-
-          <div class="row g-4 isotope-container">
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/Microsoft_Intune_headpic.jpg" class="img-fluid" alt="Autopilot & Intune" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/Microsoft_Intune_headpic.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-web" title="Autopilot &amp; Intune — zero-touch provisioning"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details2.html" class="details-link" title="View Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Modern device management</span>
-                  <h3>Windows Autopilot: zero-touch at scale</h3>
-                  <p class="portfolio-card__highlight">1,200+ devices on Autopilot + Intune baselines; typical laptop ready in under 30 minutes.</p>
-                  <p>Profiles, apps, and compliance wired so helpdesk stops re-imaging the same story every week.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/Compliance-vs.webp" class="img-fluid" alt="Conditional Access" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/Compliance-vs.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics" title="Conditional Access &amp; DLP overview"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-security.html" class="details-link" title="View Security &amp; Compliance Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Security &amp; compliance</span>
-                  <h3>Conditional Access + DLP: guardrails by default</h3>
-                  <p class="portfolio-card__highlight">Risky sign-ins and overshared data dropped once CA and DLP matched how teams actually work.</p>
-                  <p>Policies tuned for audit questions you can answer without a war room.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-motion">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/automated-remediation-benefits-mdr-500x300_WebThumb_Blog@2x.webp" class="img-fluid" alt="Endpoint Analytics" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/automated-remediation-benefits-mdr-500x300_WebThumb_Blog@2x.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion" title="Automated remediation &amp; endpoint analytics"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-automation.html" class="details-link" title="View Automation &amp; Insights Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Automation &amp; insights</span>
-                  <h3>Endpoint Analytics + auto-remediation</h3>
-                  <p class="portfolio-card__highlight">Telemetry-first playbooks cleared repeat break/fix patterns before they became tickets.</p>
-                  <p>Fewer incidents, shorter mean time to repair, and a backlog that stays ownable.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-brand">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/co-management.png" class="img-fluid" alt="Diagram illustrating co-management between SCCM and Intune" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/co-management.png" class="glightbox preview-link" data-gallery="portfolio-gallery-brand" title="Co-management: SCCM and Intune"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-hybrid.html" class="details-link" title="View Hybrid Infrastructure Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Hybrid infrastructure</span>
-                  <h3>Co-management: SCCM → Intune</h3>
-                  <p class="portfolio-card__highlight">Phased co-management so workloads move without a big-bang cutover.</p>
-                  <p>Better update coverage, clearer ownership, and less manual glue between config manager and cloud attach.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/what-is-microsoft-intune-og_173306.jpg" class="img-fluid" alt="Microsoft Intune app lifecycle and device management" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/what-is-microsoft-intune-og_173306.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-web" title="Intune app lifecycle at enterprise scale"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link" title="View Intune App Lifecycle Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Modern device management</span>
-                  <h3>Intune app lifecycle: enterprise scale</h3>
-                  <p class="portfolio-card__highlight">Packaging, rings, and telemetry so releases speed up without surprise Monday fires.</p>
-                  <p>Staged rollouts and feedback loops that app owners actually trust.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="assets/img/portfolio/corporate_security_operations_room_flat_vector_wall_screens_data.webp" class="img-fluid" alt="Security operations and monitoring concept" loading="lazy">
-                  <div class="portfolio-overlay">
-                    <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/compliance-vs-security.png" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics" title="Microsoft 365 security baseline"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-security.html" class="details-link" title="View Security &amp; Compliance Details"><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-content">
-                  <span class="category">Security &amp; compliance</span>
-                  <h3>Microsoft 365: secure by configuration</h3>
-                  <p class="portfolio-card__highlight">Baselines, DLP, and collaboration settings that raise the bar without blocking day-to-day work.</p>
-                  <p>Security posture you can explain to risk and to people in plain language.</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
 
     <!-- Testimonials / Recommendations -->
-    <section id="testimonials" class="testimonials testimonials-showcase section py-5 alt-section-bg-2" aria-labelledby="testimonials-heading">
+    <section id="testimonials" class="testimonials testimonials-showcase section section-stack alt-section-bg-2" aria-labelledby="testimonials-heading">
 
-      <div class="container testimonials-showcase__intro section-title" data-aos="fade-up">
-        <h2 id="testimonials-heading" class="section-heading">
-          <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-chat-heart-fill"></i></span>
-          <span class="section-heading__text">Recommendations</span>
-        </h2>
-        <p class="testimonials-showcase__lede">What managers and peers say about working with me—staying clear under pressure, translating between technical detail and business context, and shipping work that hands off without a second-guessing round.</p>
-      </div>
+      <div class="layout-container">
+        <header class="testimonials-showcase__intro section-title" data-aos="fade-up">
+          <h2 id="testimonials-heading" class="section-heading">
+            <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-chat-heart-fill"></i></span>
+            <span class="section-heading__text">Recommendations</span>
+          </h2>
+        </header>
 
-      <div class="container testimonials-showcase__shell" data-aos="fade-up" data-aos-delay="80">
+        <div class="testimonials-showcase__canvas px-0 sm:px-2 min-w-0" data-aos="fade-up" data-aos-delay="80">
 
-        <div class="testimonials-slider swiper init-swiper testimonials-showcase__swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "slidesPerView": 1,
-              "loop": true,
-              "speed": 650,
-              "autoplay": {
-                "delay": 5200,
-                "disableOnInteraction": false,
-                "pauseOnMouseEnter": true
-              },
-              "navigation": {
-                "nextEl": ".testimonials-showcase .testimonials-showcase__nav .swiper-button-next",
-                "prevEl": ".testimonials-showcase .testimonials-showcase__nav .swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".testimonials-showcase .testimonials-pagination",
-                "clickable": true
-              }
-            }
-          </script>
+        <div class="endorsements-collection">
+          <div class="endorsement-stage" data-endorsement-stage aria-labelledby="testimonials-heading">
+            <div class="endorsement-stage__toolbar">
+              <button type="button" class="endorsement-stage__btn" data-endorsement-prev aria-label="Show previous endorsement">
+                <i class="bi bi-chevron-left" aria-hidden="true"></i>
+              </button>
+              <p class="endorsement-stage__counter" aria-live="polite">
+                <span class="visually-hidden">Active endorsement </span><span data-endorsement-current>1</span><span class="visually-hidden"> of </span><span aria-hidden="true"> / </span><span data-endorsement-total>5</span><span class="visually-hidden"> total</span>
+              </p>
+              <button type="button" class="endorsement-stage__btn" data-endorsement-next aria-label="Show next endorsement">
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
 
-          <div class="swiper-wrapper">
-
-            <!-- Order: current PM (holistic) → delivery manager → IT support peer → systems engineer → L&D leadership -->
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>Technical strength, stakeholder clarity, and calm collaboration</h2>
-                    <p>
-                      I currently work with Mustaque and really enjoy collaborating with him. He brings a great mix of strong technical capability and easy, effective communication.
-                    </p>
-                    <p>
-                      Mustaque is excellent at working with vendors and internal stakeholders, and he has a knack for explaining technical topics in a clear, practical way. He&rsquo;s calm, approachable, and easy to work with, which makes a big difference when coordinating across teams or working through complex issues.
-                    </p>
-                    <p>
-                      On the technical side, Mustaque consistently delivers strong outcomes across application delivery, deployments, and automation. While much of the technical work happens behind the scenes, the results are clear&mdash;solutions that are reliable, scalable, and well thought through, with a strong focus on simplifying processes and reducing manual effort.
-                    </p>
-                    <p>
-                      What really stands out is how reliable and supportive he is as a team member. He follows through and works collaboratively to get the best outcome. This is reflected in the fact that he is frequently nominated for the Cheers for your Peers award and has won on multiple occasions&mdash;a great indicator of how much the team values his contribution and support.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/Amanda-Mak.png" class="profile-img" alt="Amanda Mak">
-                      <div class="profile-info">
-                        <h3>Amanda Mak</h3>
-                        <span>Project Manager | Continuous Improvement</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/person/Amanda-Mak.png" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
-                    </div>
+            <div class="endorsement-stage__viewport" tabindex="0" role="region" aria-label="Recommendations" data-endorsement-viewport>
+              <div class="endorsement-stage__row" data-endorsement-row>
+                <div class="endorsement-stage__slot endorsement-stage__slot--prev" data-endorsement-slot="prev" aria-label="Previous endorsement">
+            <article class="testimonial-item testimonial-card testimonials-showcase__card endorsement-stage__card h-100" data-endorsement-article data-endorsement-index="4" aria-labelledby="recommendation-heading-mehboob-hussain">
+              <header class="testimonial-card__masthead">
+                <h3 id="recommendation-heading-mehboob-hussain" class="testimonial-card__title">
+                  A Future-Ready Leader with Integrity, Drive, and Dedication
+                </h3>
+                <div class="testimonial-card__byline" role="group" aria-label="Recommender">
+                  <img src="assets/img/person/mahboob-hossain.png" class="testimonial-card__avatar" alt="" width="64" height="64" decoding="async" loading="lazy">
+                  <div class="testimonial-card__byline-text">
+                    <p class="testimonial-card__byline-name mb-0"><strong>Mehboob Hussain</strong></p>
+                    <p class="testimonial-card__byline-role mb-0"><span>L&D Business Partner | Thought Leader</span></p>
                   </div>
                 </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>Delivery discipline and clear stakeholder communication</h2>
-                    <p>
-                      I&rsquo;m pleased to recommend Mustaque based on our experience working together in a service delivery context. He brings strong technical judgment, clear communication with stakeholders, and consistent follow-through on commitments.
-                    </p>
-                    <p>
-                      His approach balances customer outcomes with operational reality&mdash;exactly what you want in complex IT delivery. I recommend him highly for environments that value professionalism and dependable execution.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/serle-harvey-stock.webp" class="profile-img" alt="Serle Harvey">
-                      <div class="profile-info">
-                        <h3>Serle Harvey</h3>
-                        <span>Service Delivery Manager | CompNow</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/person/serle-harvey-stock.webp" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
-                    </div>
+              </header>
+              <blockquote class="testimonial-card__quote mb-0">
+                <div class="testimonial-card__body">
+                  <p>
+                    Mustaque is a dilligent, hard working and attentive individual with a highly adaptable, quietly confident nature, highly perceptive, determined, goal-focused and motivated invidual.
+                  </p>
+                  <p>
+                    I believe he possess all of the qualities required to be an incredible leader in the future. Mustaque is principle focused, is outstanding at prioritising his tasks and works well under pressure and his true character full of dependability, comitment and passion emerges. His willingness to learn and develop is rare at PE and I truly believe he will be an great asset to any organisation he is employed by.
+                  </p>
+                </div>
+              </blockquote>
+            </article>
+                </div>
+                <div class="endorsement-stage__slot endorsement-stage__slot--active" data-endorsement-slot="active" aria-label="Active endorsement">
+            <article class="testimonial-item testimonial-card testimonials-showcase__card endorsement-stage__card h-100" data-endorsement-article data-endorsement-index="0" aria-labelledby="recommendation-heading-amanda-mak">
+              <header class="testimonial-card__masthead">
+                <h3 id="recommendation-heading-amanda-mak" class="testimonial-card__title">Technical strength, stakeholder clarity, and calm collaboration</h3>
+                <div class="testimonial-card__byline" role="group" aria-label="Recommender">
+                  <img src="assets/img/person/Amanda-Mak.png" class="testimonial-card__avatar" alt="" width="72" height="72" decoding="async" loading="lazy">
+                  <div class="testimonial-card__byline-text">
+                    <p class="testimonial-card__byline-name mb-0"><strong>Amanda Mak</strong></p>
+                    <p class="testimonial-card__byline-role mb-0"><span>Project Manager | Continuous Improvement</span></p>
                   </div>
                 </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>A Proven IT Support Expert and Emerging Leader</h2>
-                    <p>
-                      I wholeheartedly recommend Mustaque for his outstanding expertise in IT support Level 1 and 2.
-                      His depth of knowledge and experience is evident in his ability to address diverse challenges effectively.
-                      Mustaque impressively manages stakeholders with patience and professionalism, showcasing excellent interpersonal skills.
-                      His leadership extends to team management, where he excels in guiding and mentoring. Mustaque's proficiency extends to onboarding and training new employees, highlighting his commitment to fostering a skilled workforce.
-                    </p>
-                    <p>
-                      Additionally, his in-depth knowledge of networking further enhances his contributions to any IT environment. Mustaque is a valuable asset to any organization seeking a skilled and versatile IT professional.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/mukesh-tatavarty.jpg" class="profile-img" alt="Mukesh Tatavarty">
-                      <div class="profile-info">
-                        <h3>Mukesh Tatavarty</h3>
-                        <span>Bachelor of Networking | IT Service Desk Technician</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/mukesh-tatavarty.jpg" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
-                    </div>
+              </header>
+              <blockquote class="testimonial-card__quote mb-0">
+                <div class="testimonial-card__body">
+                  <p>
+                    I currently work with Mustaque and really enjoy collaborating with him. He brings a great mix of strong technical capability and easy, effective communication.
+                  </p>
+                  <p>
+                    Mustaque is excellent at working with vendors and internal stakeholders. He&rsquo;s calm, approachable, and easy to work with, which makes a big difference when coordinating across teams or working through complex issues.
+                  </p>
+                  <p>
+                    On the technical side, Mustaque consistently delivers strong outcomes across application delivery, deployments, and automation. The results are clear&mdash;solutions that are reliable, scalable, and well thought through, with a strong focus on simplifying processes and reducing manual effort.
+                  </p>
+                  <p>
+                    What really stands out is how reliable and supportive he is as a team member. This is reflected in the fact that he is frequently nominated for the Cheers for your Peers award and has won on multiple occasions&mdash;a great indicator of how much the team values his contribution and support.
+                  </p>
+                </div>
+              </blockquote>
+            </article>
+                </div>
+                <div class="endorsement-stage__slot endorsement-stage__slot--next" data-endorsement-slot="next" aria-label="Next endorsement">
+            <article class="testimonial-item testimonial-card testimonials-showcase__card endorsement-stage__card h-100" data-endorsement-article data-endorsement-index="1" aria-labelledby="recommendation-heading-serle-harvey">
+              <header class="testimonial-card__masthead">
+                <h3 id="recommendation-heading-serle-harvey" class="testimonial-card__title">Delivery discipline and clear stakeholder communication</h3>
+                <div class="testimonial-card__byline" role="group" aria-label="Recommender">
+                  <img src="assets/img/person/serle-harvey-stock.webp" class="testimonial-card__avatar" alt="" width="64" height="64" decoding="async" loading="lazy">
+                  <div class="testimonial-card__byline-text">
+                    <p class="testimonial-card__byline-name mb-0"><strong>Serle Harvey</strong></p>
+                    <p class="testimonial-card__byline-role mb-0"><span>Service Delivery Manager | CompNow</span></p>
                   </div>
                 </div>
-              </div>
-            </div><!-- End Testimonial Item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>Reliable expertise in networking, cloud, and Azure</h2>
-                    <p>
-                      I&rsquo;ve had the pleasure of working with Mustaque, and I can confidently say he is one of the most reliable and technically skilled professionals I&rsquo;ve come across in the networking and cloud space. His deep understanding of cloud infrastructure, combined with hands-on expertise in Microsoft Azure, makes him a key asset in any IT environment. Whether managing hybrid cloud environments or troubleshooting complex connectivity issues, Mustaque approaches every task with precision and professionalism.
-                    </p>
-                    <p>
-                      What stands out most is his proactive mindset&mdash;always eager to learn, share knowledge, and implement best practices that improve efficiency and security across systems. He is not only technically strong but also a great team player who brings positive energy to every project. I highly recommend Mustaque for any role or opportunity that values strong networking fundamentals, Azure expertise, and a genuine passion for technology.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/visheshprasad.jpg" class="profile-img" alt="Vishesh Donthi Prasad">
-                      <div class="profile-info">
-                        <h3>Vishesh Donthi Prasad</h3>
-                        <span>Systems Engineer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/person/visheshprasad.jpg" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
-                    </div>
-                  </div>
+              </header>
+              <blockquote class="testimonial-card__quote mb-0">
+                <div class="testimonial-card__body">
+                  <p>
+                    I&rsquo;m pleased to recommend Mustaque based on our experience working together in a service delivery context.
+                  </p>
+                  <p>He brings strong technical judgment, clear communication with stakeholders, and consistent follow-through on commitments.
+                  </p>
+                  <p>
+                    His approach balances customer outcomes with operational reality&mdash;exactly what you want in complex IT delivery. I recommend him highly for environments that value professionalism and dependable execution.
+                  </p>
+                </div>
+              </blockquote>
+            </article>
                 </div>
               </div>
-            </div><!-- End Testimonial Item -->
+            </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item testimonial-card">
-                <div class="row g-4 g-lg-0 align-items-stretch testimonial-card__row">
-                  <div class="col-lg-8 testimonial-card__col">
-                    <div class="testimonial-card__quote">
-                    <h2>
-                      A Future-Ready Leader with Integrity, Drive, and Dedication
-                    </h2>
-                    <p>
-                      Mustaque is a dilligent, hard working and attentive individual with a highly adaptable, quietly confident nature, highly perceptive, determined, goal-focused and motivated invidual.
-                    </p>
-                    <p>
-                      I believe he possess all of the qualities required to be an incredible leader in the future. Mustaque is principle focused, is outstanding at prioritising his tasks and works well under pressure and his true character full of dependability, comitment and passion emerges. His willingness to learn and develop is rare at PE and I truly believe he will be an great asset to any organisation he is employed by.
-                    </p>
-                    </div>
-                    <div class="profile d-flex align-items-center testimonial-card__profile">
-                      <img src="assets/img/person/mahboob-hossain.png" class="profile-img" alt="Mehboob Hussain">
-                      <div class="profile-info">
-                        <h3>Mehboob Hussain</h3>
-                        <span>L&D Business Partner | Thought Leader</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 d-none d-lg-block">
-                    <div class="featured-img-wrapper">
-                      <img src="assets/img/person/mahboob-hossain.png" class="featured-img" alt="" role="presentation" decoding="async" loading="lazy">
-                    </div>
+            <div class="endorsement-stage__staging" data-endorsement-staging aria-hidden="true">
+            <article class="testimonial-item testimonial-card testimonials-showcase__card endorsement-stage__card h-100" data-endorsement-article data-endorsement-index="2" aria-labelledby="recommendation-heading-mukesh-tatavarty">
+              <header class="testimonial-card__masthead">
+                <h3 id="recommendation-heading-mukesh-tatavarty" class="testimonial-card__title">Technical breadth and steady stakeholder leadership</h3>
+                <div class="testimonial-card__byline" role="group" aria-label="Recommender">
+                  <img src="assets/img/mukesh-tatavarty.jpg" class="testimonial-card__avatar" alt="" width="64" height="64" decoding="async" loading="lazy">
+                  <div class="testimonial-card__byline-text">
+                    <p class="testimonial-card__byline-name mb-0"><strong>Mukesh Tatavarty</strong></p>
+                    <p class="testimonial-card__byline-role mb-0"><span>Bachelor of Networking | IT Operations</span></p>
                   </div>
                 </div>
-              </div>
-            </div><!-- End Testimonial Item -->
+              </header>
+              <blockquote class="testimonial-card__quote mb-0">
+                <div class="testimonial-card__body">
+                  <p>
+                    I recommend Mustaque for his strong execution across enterprise IT delivery: he tackles diverse technical challenges with clarity,
+                    communicates calmly with stakeholders, and follows through on commitments. He handles responsibility with professionalism and supports colleagues through onboarding and knowledge transfer.
+                  </p>
+                  <p>
+                    His networking fundamentals strengthen his overall contributions. Mustaque is a valuable asset to organisations that want dependable, versatile enterprise IT capability.
+                  </p>
+                </div>
+              </blockquote>
+            </article>
 
+            <article class="testimonial-item testimonial-card testimonials-showcase__card endorsement-stage__card h-100" data-endorsement-article data-endorsement-index="3" aria-labelledby="recommendation-heading-vishesh-donthi-prasad">
+              <header class="testimonial-card__masthead">
+                <h3 id="recommendation-heading-vishesh-donthi-prasad" class="testimonial-card__title">Reliable expertise in networking, cloud, and Azure</h3>
+                <div class="testimonial-card__byline" role="group" aria-label="Recommender">
+                  <img src="assets/img/person/visheshprasad.jpg" class="testimonial-card__avatar" alt="" width="64" height="64" decoding="async" loading="lazy">
+                  <div class="testimonial-card__byline-text">
+                    <p class="testimonial-card__byline-name mb-0"><strong>Vishesh Donthi Prasad</strong></p>
+                    <p class="testimonial-card__byline-role mb-0"><span>Systems Engineer</span></p>
+                  </div>
+                </div>
+              </header>
+              <blockquote class="testimonial-card__quote mb-0">
+                <div class="testimonial-card__body">
+                  <p>
+                    I&rsquo;ve had the pleasure of working with Mustaque, and I can confidently say he is one of the most reliable and technically skilled professionals I&rsquo;ve come across in the networking and cloud space. His deep understanding of cloud infrastructure, combined with hands-on expertise in Microsoft Azure, makes him a key asset in any IT environment. Whether managing hybrid cloud environments or troubleshooting complex connectivity issues, Mustaque approaches every task with precision and professionalism.
+                  </p>
+                  <p>
+                    What stands out most is his proactive mindset&mdash;always eager to learn, share knowledge, and implement best practices that improve efficiency and security across systems. He is not only technically strong but also a great team player who brings positive energy to every project. I highly recommend Mustaque for any role or opportunity that values strong networking fundamentals, Azure expertise, and a genuine passion for technology.
+                  </p>
+                </div>
+              </blockquote>
+            </article>
+            </div>
           </div>
-
-          <div class="testimonials-showcase__nav swiper-navigation w-100 d-flex flex-wrap align-items-center justify-content-center gap-2 gap-md-3">
-            <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous recommendation"></div>
-            <div class="swiper-pagination testimonials-pagination" aria-label="Recommendation slides"></div>
-            <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next recommendation"></div>
-          </div>
-
         </div>
 
+        </div>
       </div>
 
     </section><!-- /Testimonials Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services services-showcase section py-5 alt-section-bg" aria-labelledby="services-heading">
+    <section id="services" class="services services-showcase section section-stack alt-section-bg" aria-labelledby="services-heading">
 
-      <div class="container section-title">
-        <h2 id="services-heading" class="section-heading">
-          <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-grid-1x2-fill"></i></span>
-          <span class="section-heading__text">Services</span>
-        </h2>
-        <p class="services-showcase__lede">
-          Three focused ways I help teams move faster and stay secure.
-        </p>
-      </div>
+      <div class="layout-container">
+        <header class="section-title">
+          <h2 id="services-heading" class="section-heading">
+            <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-grid-1x2-fill"></i></span>
+            <span class="section-heading__text">Services</span>
+          </h2>
+          <p class="services-showcase__lede">
+            Each engagement type below names a business outcome first (faster onboarding, lower support load, clearer security posture) and stays concrete enough for engineers to scope—fixed slices, not vague “keep the lights on.”
+          </p>
+        </header>
 
-      <div class="container">
+        <div class="services-showcase__panel section-showcase-panel flex flex-col gap-lg">
 
-        <div class="row align-items-stretch g-4 g-lg-5">
-          <div class="col-lg-4 mb-2 mb-lg-0">
-            <div class="services-showcase__intro">
-              <p class="services-showcase__kicker">How I work with teams</p>
-              <h3 class="services__intro-title">Designed operations, not hero shifts</h3>
-              <p class="services-showcase__copy">
-                Clear outcomes, practical implementation, and handover your team can own.
-              </p>
-              <ul class="services-showcase__bullets" aria-label="Typical engagement focus">
-                <li>Clear baselines and guardrails before flashy features</li>
-                <li>Plain-language comms for stakeholders who don’t live in portals</li>
-                <li>Handover notes, not “tribal knowledge in one head”</li>
-              </ul>
-              <a href="#contact" class="btn services-showcase__cta">Discuss your roadmap</a>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="row g-4">
+        <header class="services-showcase__intro services-showcase__intro--banner">
+          <p class="services-showcase__kicker">For hiring teams, clients, and internal leads</p>
+          <h3 class="services__intro-title">Scoped outcomes—not endless “general support”</h3>
+          <p class="services-showcase__copy">
+            Each card maps cleanly to how teams hire—Intune and modern workplace engineering, identity uplift, packaging and waves, governed automation—while still reading as reduced onboarding time, lower ticket load, and clearer audit posture for non-technical sponsors.
+            Tooling depth for technical reviewers sits mostly in Capability Stack; here the emphasis is delegable slices with explicit outcomes.
+          </p>
+          <a href="#contact" class="btn services-showcase__cta">Discuss scope</a>
+        </header>
 
-              <div class="col-md-6">
-                <article class="service-item service-card">
-                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
-                  <h3>Modern endpoint management</h3>
-                  <p class="service-card__tagline">Intune · Autopilot · compliance you can explain</p>
-                  <p>
-                    Intune baselines, app delivery, and compliance controls that stay stable in production.
-                  </p>
+        <p id="services-offers-heading" class="services-showcase__cards-heading visually-hidden">Engagement types</p>
+        <div class="services-showcase__cards grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-6" aria-labelledby="services-offers-heading">
+
+                <article class="service-item service-card h-full">
+                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-pc-display-horizontal"></i></span>
+                  <h3>Modern endpoint &amp; Intune operating model</h3>
+                  <p class="service-card__summary">Get laptops to a predictable, secure baseline faster and keep them there—fewer surprise breakages and clearer answers when auditors ask what the fleet is supposed to look like.</p>
+                  <ul class="service-card__points">
+                    <li>Enrollment and ESP friction reviews with targeted fixes (less day-one help-desk load)</li>
+                    <li>Compliance and configuration profile passes with plain-language “why this setting” notes</li>
+                    <li>Handover documentation your ops team can run without vendor lock-in on one person</li>
+                  </ul>
                 </article>
-              </div>
 
-              <div class="col-md-6">
-                <article class="service-item service-card">
-                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-cloud-arrow-up"></i></span>
-                  <h3>Cloud migration &amp; identity</h3>
-                  <p class="service-card__tagline">Entra ID · M365 · access that matches risk</p>
-                  <p>
-                    Conditional Access and identity architecture that improves security without hurting user flow.
-                  </p>
+                <article class="service-item service-card h-full">
+                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+                  <h3>App packaging, deployment &amp; lifecycle waves</h3>
+                  <p class="service-card__summary">Roll out software updates with pilots and success gates—so the business gets new versions without weekend war rooms or silent partial failures across the estate.</p>
+                  <ul class="service-card__points">
+                    <li>Win32 / LOB packaging, detection logic, and uninstall paths that behave in production</li>
+                    <li>Ringed deployments with cohort-based success criteria (not vanity percentages)</li>
+                    <li>Rollback and comms posture agreed before blast radius widens</li>
+                  </ul>
                 </article>
-              </div>
 
-              <div class="col-md-6">
-                <article class="service-item service-card">
-                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-code-square"></i></span>
-                  <h3>Automation &amp; PowerShell</h3>
-                  <p class="service-card__tagline">Less ticket churn, more signal</p>
-                  <p>
-                    Repeatable scripts and remediation playbooks that reduce manual effort and recurring issues.
-                  </p>
+                <article class="service-item service-card h-full">
+                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-shield-lock"></i></span>
+                  <h3>Identity, access &amp; Microsoft 365 uplift (scoped)</h3>
+                  <p class="service-card__summary">Strengthen sign-in and data access for Microsoft 365 without locking out real workflows—security uplift your executives can follow in one page.</p>
+                  <ul class="service-card__points">
+                    <li>Conditional Access reviews grounded in how teams actually sign in and work</li>
+                    <li>Device join and posture choices that line up with your Intune operating model</li>
+                    <li>Tenant-side hygiene in bounded chunks (where they touch laptops and accounts), not nebulous “security transformation” decks</li>
+                  </ul>
                 </article>
-              </div>
 
-              <div class="col-md-6">
-                <article class="service-item service-card">
-                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></span>
-                  <h3>Enterprise app lifecycle</h3>
-                  <p class="service-card__tagline">SCCM + Intune · staged rollouts</p>
-                  <p>
-                    Packaging, pilot rings, and rollback-ready releases so app updates stay controlled and predictable.
-                  </p>
+                <article class="service-item service-card h-full">
+                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-terminal"></i></span>
+                  <h3>Automation, scripting &amp; remediation engineering</h3>
+                  <p class="service-card__summary">Replace high-touch manual batches with governed automation—same outcome every run, less engineer time on copy-paste, clearer evidence for ITSM and audit.</p>
+                  <ul class="service-card__points">
+                    <li>PowerShell for exports, hygiene batches, and guardrail checks with logged inputs/outputs</li>
+                    <li>Intune remediations wired to signals you already collect</li>
+                    <li>Power Automate–style orchestration where approvals and throttling matter—scoped pipelines, not “rewrite the whole integration layer”</li>
+                  </ul>
                 </article>
-              </div>
 
-            </div>
-          </div>
+                <article class="service-item service-card h-full md:col-span-2 md:mx-auto md:max-w-xl">
+                  <span class="service-card__icon" aria-hidden="true"><i class="bi bi-clipboard-data"></i></span>
+                  <h3>Technical advisory &amp; environment review</h3>
+                  <p class="service-card__summary">A structured read before you fund a programme or write a job description—what is risky today, what to fix first, and what “good” looks like in 90 days.</p>
+                  <ul class="service-card__points">
+                    <li>Endpoint and identity posture read-out with gap list sized to your headcount</li>
+                    <li>Prioritised backlog you can hand to internal staff or vendors</li>
+                    <li>Concrete artifacts (settings, sequences, risks)—not generic strategy slides</li>
+                  </ul>
+                </article>
+
         </div>
 
+        </div>
       </div>
 
     </section><!-- /Services Section -->
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq faq-showcase section py-5 alt-section-bg-2" aria-labelledby="faq-heading">
+    <section id="faq" class="faq faq-showcase section section-stack alt-section-bg-2" aria-labelledby="faq-heading">
 
-      <div class="container">
+      <div class="layout-container">
         <div class="section-title">
           <h2 id="faq-heading" class="section-heading">
             <span class="section-heading__icon" aria-hidden="true"><i class="bi bi-patch-question-fill"></i></span>
             <span class="section-heading__text">Frequently asked questions</span>
           </h2>
-          <p class="faq-showcase__lede">Quick answers on how I work, what I’m good for, and what it’s like to collaborate—from first message to delivery.</p>
+          <p class="faq-showcase__lede">Scope, fit, and logistics—kept short so you can decide whether to use the rest of the site.</p>
         </div>
 
         <div class="faq-showcase__panel">
           <div class="faq-container">
 
+            <div class="faq-showcase__group" role="group" aria-labelledby="faq-group-fit-heading">
+              <h3 id="faq-group-fit-heading" class="faq-showcase__group-title">Hiring &amp; role fit</h3>
+
               <div class="faq-item faq-active">
                 <button type="button" class="faq-question" aria-expanded="true" aria-controls="faq1" id="faq1-label">
-                  <span class="faq-question-text">What kind of problems can you help me solve?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">What kind of Microsoft and endpoint work do you focus on?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq1" role="region" aria-labelledby="faq1-label">
                   <p>
-                    I’m most useful when there’s a clear gap between how your environment behaves today and how you need it to work.
-                    That can mean:
+                    Intune-heavy estates, compliance baselines, app packaging and delivery, Autopilot/onboarding, and Entra-adjacent controls where devices and policies meet.
+                    I script with PowerShell when repeat work or drift is the real problem—less often for one-off break-fix unless it unlocks a wider fix.
                   </p>
-                  <ul>
-                    <li>Cleaning up device and app management with Intune / Autopilot.</li>
-                    <li>Designing or tightening Conditional Access and Microsoft 365 security.</li>
-                    <li>Automating noisy, repetitive IT tasks with PowerShell.</li>
-                    <li>Helping define practical rollout plans for new tools or changes.</li>
-                  </ul>
                 </div>
               </div>
 
               <div class="faq-item">
                 <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-label">
-                  <span class="faq-question-text">I'm not tech-savvy—can I still reach out to you?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">Are you open to full-time roles and to freelance or consulting?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq2" role="region" aria-labelledby="faq2-label">
                   <p>
-                    Absolutely. You don’t need to speak in acronyms or diagrams. We’ll talk in terms of outcomes:
-                    what’s slowing people down, what should be safer, and what a “good day” would look like.
-                    From there I translate that into technical steps.
+                    Yes to both: permanent roles where modern workplace and endpoint hygiene are core, and scoped freelance or contract help when the outcome and window are explicit.
+                    I’m not chasing vague “fractional IT” retainers without a defined slice of work.
                   </p>
                 </div>
               </div>
 
               <div class="faq-item">
                 <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-label">
-                  <span class="faq-question-text">What's your general approach when taking on a new task or project?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">What usually fits—and what usually doesn’t?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq3" role="region" aria-labelledby="faq3-label">
                   <p>
-                    I start by listening and mapping the problem in plain language. From there I break work into
-                    small, testable steps, agree on what “good” looks like, and only then touch production.
-                    The goal is calm, predictable change rather than big, surprising jumps.
+                    Fits: staged rollouts, packaging or policy passes, posture tuning, telemetry-led remediation patterns, making Intune estates easier to support and audit.
+                    Poor fit: greenfield app development, deep data-platform or pure network architecture—outside what this portfolio is built around.
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div class="faq-showcase__group" role="group" aria-labelledby="faq-group-work-heading">
+              <h3 id="faq-group-work-heading" class="faq-showcase__group-title">Working together</h3>
 
               <div class="faq-item">
                 <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-label">
-                  <span class="faq-question-text">Can I connect with you just to brainstorm or explore an idea?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">People here aren’t Microsoft engineers—is that a problem?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq4" role="region" aria-labelledby="faq4-label">
                   <p>
-                    Yes. Some of the best work starts as a rough idea or a “this feels harder than it should” moment.
-                    I’m happy to brainstorm options, sense‑check a plan, or help you prioritise where to start.
+                    No. Start from what’s broken or risky in plain language; I’ll map it to settings, sequences, and rollback.
+                    You’ll get trade-offs spelled out without needing to live inside the admin consoles yourself.
                   </p>
                 </div>
               </div>
 
               <div class="faq-item">
                 <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5-label">
-                  <span class="faq-question-text">What drives your passion about working with Technology today?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">How do you run a project or collaboration?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq5" role="region" aria-labelledby="faq5-label">
                   <p>
-                    I like when technology quietly removes friction for people – faster logons, fewer tickets,
-                    clearer guardrails. The pace of change means there’s always a better pattern to discover
-                    and share, especially around modern workplace and identity.
+                    Short written brief, agreed success criteria, then small batches with checkpoints—not big-bang surprises.
+                    Async works when expectations and dates are on the page; I’m Melbourne-based and fine with remote or hybrid when overlap is agreed.
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div class="faq-showcase__group" role="group" aria-labelledby="faq-group-delivery-heading">
+              <h3 id="faq-group-delivery-heading" class="faq-showcase__group-title">Delivery &amp; risk</h3>
 
               <div class="faq-item">
                 <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq6" id="faq6-label">
-                  <span class="faq-question-text">What do you enjoy doing when you're not working with Technology?</span>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
+                  <span class="faq-question-text">How do you treat production change?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
                 <div class="faq-content" id="faq6" role="region" aria-labelledby="faq6-label">
                   <p>
-                    Outside of tech I split my time between staying active and being creative – fitness, cricket,
-                    PC gaming, and experimenting with photography and videography. It’s a good balance to the
-                    structured world of IT.
+                    Pilot cohorts, measurable pass/fail, and a credible back-out before you widen scope.
+                    Packaging and policies get checked against real device profiles—not only a clean lab image.
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div class="faq-showcase__group" role="group" aria-labelledby="faq-group-next-heading">
+              <h3 id="faq-group-next-heading" class="faq-showcase__group-title">Next step</h3>
+
+              <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq7" id="faq7-label">
+                  <span class="faq-question-text">Best way to get in touch?</span>
+                  <i class="faq-toggle bi bi-chevron-right" aria-hidden="true"></i>
+                </button>
+                <div class="faq-content" id="faq7" role="region" aria-labelledby="faq7-label">
+                  <p>
+                    Email or the form on this page; LinkedIn is fine for hiring-led intros.
+                    Flag hiring vs freelance in the subject and note if something is time-sensitive—that’s enough to triage without a polished deck.
+                  </p>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -1319,79 +1160,120 @@
     </section><!-- /Faq Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact contact-showcase section py-5 alt-section-bg" aria-labelledby="contact-heading">
+    <section id="contact" class="contact contact-showcase section section-stack alt-section-bg" aria-labelledby="contact-heading">
 
-      <div class="container">
+      <div class="layout-container">
 
-        <div class="row g-5 align-items-stretch">
-          <div class="col-lg-6">
+        <div class="contact-showcase__panel section-showcase-panel flex flex-col gap-xl">
+
+        <header class="contact-showcase__intro">
+          <h2 id="contact-heading" class="section-category mb-3"><i class="bi bi-send-fill" aria-hidden="true"></i> Contact</h2>
+          <p class="display-5 mb-3 contact-showcase__primary-line">Let’s talk—whether you’re hiring or scoping work</p>
+          <p class="lead mb-3 contact-showcase__lede">I’m glad to hear from recruiters and hiring teams about permanent roles, and from leads who need focused help on Microsoft endpoints, identity adjacency, or rollout discipline. A little context goes a long way; you don’t need a polished brief to start.</p>
+          <p class="contact-showcase__expectation mb-0 text-body-secondary">I usually reply within a few business days—sooner if you flag a deadline or live incident in the subject line.</p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-lg lg:grid-cols-12 lg:items-stretch lg:gap-xl">
+          <div class="min-w-0 lg:col-span-5">
             <div class="content contact-showcase__aside">
-              <div class="section-category mb-3"><i class="bi bi-send-fill" aria-hidden="true"></i> Contact</div>
-              <h2 id="contact-heading" class="display-5 mb-3">Tell me what you’re trying to fix or ship</h2>
-              <p class="lead mb-4 contact-showcase__lede">A short note on context, timeline, and whether this is exploratory or deadline-driven is enough—I’ll respond as soon as I can. For urgent production issues, mention that in the subject.</p>
 
-              <div class="contact-info mt-4">
-                <a href="mailto:mynameismustaq@gmail.com" class="info-item d-flex align-items-start mb-3 text-decoration-none">
-                  <i class="bi bi-envelope-at flex-shrink-0" aria-hidden="true"></i>
-                  <div>
-                    <span class="label d-block">Email</span>
-                    <span class="value">mynameismustaq@gmail.com</span>
-                  </div>
-                </a>
+              <div class="contact-showcase__channels mb-4">
+                <h3 class="contact-showcase__aside-title h6 text-uppercase mb-3">Ways to reach me</h3>
+                <ul class="list-unstyled contact-showcase__channel-list mb-0">
+                  <li class="mb-3">
+                    <a href="mailto:mynameismustaq@gmail.com" class="contact-showcase__channel contact-showcase__channel--primary flex items-start no-underline">
+                      <span class="contact-showcase__channel-icon flex-shrink-0" aria-hidden="true"><i class="bi bi-envelope-at"></i></span>
+                      <span class="contact-showcase__channel-body">
+                        <span class="contact-showcase__channel-label d-block">Email</span>
+                        <span class="contact-showcase__channel-value">mynameismustaq@gmail.com</span>
+                        <span class="contact-showcase__channel-hint d-block small text-body-secondary">Best for introductions and project details</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="https://www.linkedin.com/in/mustaquehalder/" class="contact-showcase__channel flex items-start no-underline" rel="noopener noreferrer" target="_blank">
+                      <span class="contact-showcase__channel-icon flex-shrink-0" aria-hidden="true"><i class="bi bi-linkedin"></i></span>
+                      <span class="contact-showcase__channel-body">
+                        <span class="contact-showcase__channel-label d-block">LinkedIn</span>
+                        <span class="contact-showcase__channel-value">Profile &amp; experience</span>
+                        <span class="contact-showcase__channel-hint d-block small text-body-secondary">Strong fit for hiring conversations</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="mb-0">
+                    <a href="https://github.com/MustaqueH" class="contact-showcase__channel flex items-start no-underline" rel="noopener noreferrer" target="_blank">
+                      <span class="contact-showcase__channel-icon flex-shrink-0" aria-hidden="true"><i class="bi bi-github"></i></span>
+                      <span class="contact-showcase__channel-body">
+                        <span class="contact-showcase__channel-label d-block">GitHub</span>
+                        <span class="contact-showcase__channel-value">Code &amp; snippets</span>
+                        <span class="contact-showcase__channel-hint d-block small text-body-secondary">Useful context alongside a message</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-                <a href="tel:+61489172584" class="info-item d-flex align-items-start mb-3 text-decoration-none">
-                  <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
+              <div class="contact-showcase__location-note mb-4 p-3 rounded border" role="note" aria-label="Location">
+                <div class="flex items-start gap-2">
+                  <i class="bi bi-geo-alt flex-shrink-0 mt-1" aria-hidden="true"></i>
                   <div>
-                    <span class="label d-block">Phone</span>
-                    <span class="value">+61 489 172 584</span>
-                  </div>
-                </a>
-
-                <div class="info-item d-flex align-items-start mb-3">
-                  <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
-                  <div>
-                    <span class="label d-block">Location</span>
-                    <span class="value">220 Chapel Road, Keysborough VIC 3173 · Melbourne, Australia</span>
+                    <span class="contact-showcase__location-label d-block small fw-semibold text-uppercase text-body-secondary mb-1">Based in</span>
+                    <p class="mb-0 small">Melbourne, Australia · Comfortable with hybrid and remote-first engagements where time zones align.</p>
                   </div>
                 </div>
-
-                <a href="https://maps.app.goo.gl/btxsdXxFYEwedovm6" class="map-link d-inline-flex align-items-center" rel="noopener noreferrer" target="_blank">
-                  Open in Google Maps
-                  <i class="bi bi-box-arrow-up-right ms-2" aria-hidden="true"></i>
-                </a>
               </div>
+
+              <div class="contact-showcase__audiences" aria-labelledby="contact-audiences-heading">
+                <h3 id="contact-audiences-heading" class="contact-showcase__aside-title h6 text-uppercase mb-3">What to mention</h3>
+                <dl class="contact-showcase__audience-dl mb-0">
+                  <div class="contact-showcase__audience-row mb-3 pb-3 border-bottom">
+                    <dt class="small fw-semibold mb-1">Hiring &amp; recruitment</dt>
+                    <dd class="small text-body-secondary mb-0">Role title or stack, contract type, timeline, and how you’d like to follow up.</dd>
+                  </div>
+                  <div class="contact-showcase__audience-row mb-0">
+                    <dt class="small fw-semibold mb-1">Freelance &amp; consulting</dt>
+                    <dd class="small text-body-secondary mb-0">Problem in plain language, environment (e.g. Intune-heavy estate), rough window, and any fixed dates.</dd>
+                  </div>
+                </dl>
+              </div>
+
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="contact-form card contact-showcase__form">
-              <div class="card-body p-4 p-lg-5">
-                <h3 class="contact-showcase__form-title h5 mb-4">Send a message</h3>
+          <div class="min-w-0 lg:col-span-7">
+            <div class="contact-form card contact-showcase__form h-full">
+              <div class="card-body flex flex-col p-4 lg:p-12">
+                <div class="mb-4">
+                  <h3 class="contact-showcase__form-title h5 mb-2">Send a message</h3>
+                  <p class="contact-showcase__form-lede small text-body-secondary mb-0">Same fields for every enquiry—use the subject line to signal hiring vs project work so nothing gets lost.</p>
+                </div>
 
-                <form action="forms/contact.php" method="post" class="php-email-form" aria-label="Contact form">
-                  <div class="row gy-3">
+                <form action="forms/contact.php" method="post" class="php-email-form flex flex-1 flex-col" aria-label="Contact form">
+                  <div class="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
 
-                    <div class="col-12">
-                      <label class="form-label visually-hidden" for="contact-name">Your name</label>
-                      <input type="text" name="name" id="contact-name" class="form-control" placeholder="Name" required autocomplete="name">
+                    <div class="min-w-0">
+                      <label class="form-label" for="contact-name">Name</label>
+                      <input type="text" name="name" id="contact-name" class="form-control" placeholder="Your name" required autocomplete="name">
                     </div>
 
-                    <div class="col-12">
-                      <label class="form-label visually-hidden" for="contact-email">Email</label>
-                      <input type="email" class="form-control" name="email" id="contact-email" placeholder="Email" required autocomplete="email">
+                    <div class="min-w-0">
+                      <label class="form-label" for="contact-email">Email</label>
+                      <input type="email" class="form-control" name="email" id="contact-email" placeholder="you@company.com" required autocomplete="email">
                     </div>
 
-                    <div class="col-12">
-                      <label class="form-label visually-hidden" for="contact-subject">Subject</label>
-                      <input type="text" class="form-control" name="subject" id="contact-subject" placeholder="Subject (e.g. Intune rollout, CA review)" required>
+                    <div class="md:col-span-2">
+                      <label class="form-label" for="contact-subject">Subject</label>
+                      <input type="text" class="form-control" name="subject" id="contact-subject" placeholder="e.g. Hiring — Endpoint engineer · or · Freelance — Intune rollout review" required>
+                      <div class="form-text" id="contact-subject-hint">A word like <strong>hiring</strong>, <strong>role</strong>, or <strong>project</strong> in the subject helps me prioritise.</div>
                     </div>
 
-                    <div class="col-12">
-                      <label class="form-label visually-hidden" for="contact-message">Message</label>
-                      <textarea class="form-control" name="message" id="contact-message" rows="5" placeholder="What would you like to achieve? Any dates or constraints?" required></textarea>
+                    <div class="md:col-span-2">
+                      <label class="form-label" for="contact-message">Message</label>
+                      <textarea class="form-control" name="message" id="contact-message" rows="6" placeholder="A few sentences on context, what you need, and any dates or constraints." required aria-describedby="contact-message-hint"></textarea>
+                      <div class="form-text" id="contact-message-hint">No need for sensitive IDs or attachments here—keep it high level.</div>
                     </div>
 
-                    <div class="col-12 text-center pt-2">
+                    <div class="mt-auto pt-2 md:col-span-2">
                       <div class="loading">Loading</div>
                       <div class="error-message"></div>
                       <div class="sent-message">Your message has been sent. Thank you!</div>
@@ -1408,57 +1290,63 @@
 
         </div>
 
+        </div>
       </div>
 
     </section><!-- /Contact Section -->
 
   </main>
 
-  <footer id="footer" class="footer footer-showcase" role="contentinfo">
-    <div class="container footer-content footer-showcase__inner">
-      <div class="footer-showcase__brand text-center text-lg-start mb-4 mb-lg-0">
-        <p class="footer-showcase__name sitename mb-1">Mustaque Halder</p>
-        <p class="footer-showcase__tagline mb-0">IT &amp; modern workplace · Intune · Entra ID · Melbourne</p>
+  <footer id="footer" class="footer footer-showcase footer-showcase--signature" role="contentinfo">
+    <div class="layout-container footer-showcase__inner">
+      <div class="footer-showcase__primary">
+        <div class="footer-showcase__brand">
+          <p class="footer-showcase__name sitename">Mustaque Halder</p>
+          <p class="footer-showcase__role">Systems engineer · Microsoft endpoints &amp; identity</p>
+          <p class="footer-showcase__pitch">Estate rollouts, automation, and hybrid operations—documented to hand off without guesswork.</p>
+          <p class="footer-showcase__locale">Melbourne, Australia</p>
+        </div>
+
+        <div class="footer-showcase__aside">
+          <nav class="footer-showcase__nav" aria-label="Sections on this page">
+            <ul class="footer-showcase__nav-list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#profile">Profile</a></li>
+              <li><a href="#capability-stack">Stack</a></li>
+              <li><a href="#selected-work">Work</a></li>
+              <li><a href="#career-snapshot">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-showcase__connect">
+            <p id="footer-connect-label" class="footer-showcase__connect-label">Connect</p>
+            <ul class="footer-showcase__profiles-list" aria-labelledby="footer-connect-label">
+              <li><a href="mailto:mynameismustaq@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/mustaquehalder/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/MustaqueH" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <nav class="footer-nav footer-showcase__nav text-center" aria-label="Footer navigation">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#services">Services</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="social-links d-flex justify-content-center justify-content-lg-end flex-wrap" aria-label="Social profiles">
-        <a href="https://x.com/iammustaq" class="twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/iammustaq/" class="facebook" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/immustaq/" class="instagram" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/MustaqueH" title="GitHub" class="github" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      </div>
-
-      <div class="footer-showcase__meta text-center">
-        <p class="copyright mb-2 mb-lg-1">
-          © <span id="footer-year">2025</span> <strong class="px-1 sitename">Mustaque Halder</strong> · All rights reserved
+      <div class="footer-showcase__utility">
+        <p class="footer-showcase__copyright copyright mb-0">
+          <small>© <span id="footer-year">2025</span> <span class="sitename">Mustaque Halder</span></small>
         </p>
-        <p class="footer-showcase__note small text-muted mb-2">Built for clarity and fast loads—no tracking on this static portfolio.</p>
-        <p class="credits mb-0">
-          Template basis <a href="https://bootstrapmade.com/">BootstrapMade</a> · customised content &amp; layout
+        <p class="footer-showcase__note mb-0"><small>Static site · no tracking · built for fast loads.</small></p>
+        <p class="footer-showcase__credits credits mb-0">
+          <small>Based on <a href="https://bootstrapmade.com/">BootstrapMade</a> · customised layout &amp; content</small>
         </p>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top flex items-center justify-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS (defer). Bootstrap.bundle removed — unused; nav is custom in main.js. -->
   <script src="assets/vendor/php-email-form/validate.js" defer></script>
   <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
 
   <!-- Main JS (GLightbox + Swiper injected when sections near viewport) -->
   <script type="module" src="assets/js/main.js"></script>

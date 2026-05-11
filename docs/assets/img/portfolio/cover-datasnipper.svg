@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ds-chrome" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d4a52"/>
+      <stop offset="40%" stop-color="#157c88"/>
+      <stop offset="100%" stop-color="#0f7669"/>
+    </linearGradient>
+    <linearGradient id="ds-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#157c88" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="ds-vignette" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#157c88" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#134e56" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ds-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M0 0 H32 V32" stroke="#5eead4" stroke-opacity="0.12" stroke-width="0.75"/>
+    </pattern>
+    <mask id="ds-soft">
+      <rect width="800" height="500" fill="url(#ds-maskGrad)"/>
+    </mask>
+    <radialGradient id="ds-maskGrad" cx="50%" cy="46%" r="78%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="58%" stop-color="#fff" stop-opacity="0.82"/>
+      <stop offset="88%" stop-color="#fff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ds-ambient" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <g mask="url(#ds-soft)">
+    <rect width="800" height="500" fill="url(#ds-vignette)"/>
+    <rect width="800" height="500" fill="url(#ds-grid)" opacity="0.55"/>
+    <path d="M-40 420 L840 80" stroke="#5eead4" stroke-opacity="0.06" stroke-width="80" filter="url(#ds-ambient)"/>
+    <!-- Topic: high-contrast workbook / governed add-in -->
+    <g transform="translate(148 88)">
+      <rect x="-3" y="-3" width="374" height="266" rx="10" fill="none" stroke="#5eead4" stroke-opacity="0.22" stroke-width="2"/>
+      <rect x="0" y="0" width="368" height="260" rx="8" fill="rgba(15,23,42,0.35)" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="0" y="0" width="368" height="40" rx="8" fill="url(#ds-chrome)"/>
+      <path d="M0 32 H368" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.5"/>
+      <circle cx="20" cy="20" r="4" fill="#f87171" fill-opacity="0.85"/>
+      <circle cx="38" cy="20" r="4" fill="#fbbf24" fill-opacity="0.9"/>
+      <circle cx="56" cy="20" r="4" fill="#4ade80" fill-opacity="0.85"/>
+      <rect x="12" y="48" width="40" height="22" rx="3" fill="rgba(15,23,42,0.5)" stroke="#5eead4" stroke-opacity="0.5" stroke-width="1.25"/>
+      <rect x="58" y="48" width="302" height="22" rx="3" fill="rgba(94,234,212,0.08)" stroke="#5eead4" stroke-opacity="0.4" stroke-width="1"/>
+      <rect x="276" y="76" width="84" height="176" rx="5" fill="rgba(21,124,136,0.22)" stroke="#5eead4" stroke-opacity="0.45" stroke-width="1.25"/>
+      <path d="M288 96 H348 M288 118 H332 M288 140 H340 M288 162 H320 M288 184 H336" stroke="#5eead4" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round"/>
+      <g transform="translate(12 76)">
+        <rect width="252" height="176" fill="rgba(2,6,23,0.25)" stroke="#157c88" stroke-opacity="0.55" stroke-width="1.25"/>
+        <g stroke="#5eead4" stroke-opacity="0.28" stroke-width="0.9">
+          <path d="M32 0 V176"/><path d="M64 0 V176"/><path d="M96 0 V176"/><path d="M128 0 V176"/><path d="M160 0 V176"/><path d="M192 0 V176"/><path d="M224 0 V176"/>
+          <path d="M0 32 H252"/><path d="M0 64 H252"/><path d="M0 96 H252"/><path d="M0 128 H252"/><path d="M0 160 H252"/>
+        </g>
+        <rect width="28" height="176" fill="rgba(21,124,136,0.2)"/>
+        <path d="M8 32 H22 M8 64 H22 M8 96 H22 M8 128 H22 M8 160 H22" stroke="#5eead4" stroke-opacity="0.55" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <rect x="12" y="76" width="252" height="176" fill="url(#ds-sheen)" opacity="0.35"/>
+      <g transform="translate(28 96)">
+        <path d="M6 6 L10 11 L20 2" stroke="#5eead4" stroke-opacity="0.75" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0 32 H64 M0 48 H52 M0 64 H58" stroke="#157c88" stroke-opacity="0.65" stroke-width="1.35" stroke-linecap="round"/>
+      </g>
+      <path d="M8 268 L8 284 M360 268 L360 284 M8 8 L-8 8 M360 8 L376 8" stroke="#5eead4" stroke-opacity="0.35" stroke-width="2" stroke-linecap="square"/>
+    </g>
+    <g opacity="0.85" stroke="#5eead4" stroke-opacity="0.2" stroke-width="1">
+      <path d="M520 96 L580 56"/><path d="M540 120 L600 88"/><path d="M560 144 L620 108"/>
+    </g>
+  </g>
+</svg>

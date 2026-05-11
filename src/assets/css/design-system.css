@@ -1,0 +1,68 @@
+/**
+ * Layout shell + section rhythm — consumes design tokens (loads after design-tokens.css).
+ */
+
+.layout-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--layout-max-lg);
+  padding-left: var(--space-base);
+  padding-right: var(--space-base);
+}
+
+@media (min-width: 641px) {
+  .layout-container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+}
+
+@media (min-width: 1025px) {
+  .layout-container {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+  }
+}
+
+/* Vertical section rhythm — token-backed clamp */
+.section:not(#hero):not(.section-stack) {
+  padding-block: clamp(var(--space-2xl), 4vw + var(--space-base), calc(var(--space-3xl) - var(--space-sm)));
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.section.section-stack {
+  padding-block: clamp(var(--space-2xl), 2.5vw + var(--space-xl), var(--space-3xl));
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .section.section-stack {
+    padding-block: clamp(calc(var(--space-2xl) + var(--space-sm)), 2vw + var(--space-2xl), calc(var(--space-3xl) + var(--space-base)));
+  }
+}
+
+@media (min-width: 1025px) {
+  .section.section-stack {
+    padding-block: clamp(calc(var(--space-3xl) - var(--space-sm)), 1.5vw + calc(var(--space-2xl) + var(--space-base)), calc(var(--space-3xl) + var(--space-lg)));
+  }
+}
+
+.section.section-stack--tight {
+  padding-block: clamp(var(--space-2xl), 2vw + var(--space-lg), calc(var(--space-3xl) - var(--space-lg)));
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .section.section-stack--tight {
+    padding-block: clamp(calc(var(--space-2xl) + var(--space-xs)), 1.5vw + var(--space-2xl), calc(var(--space-3xl) - var(--space-base)));
+  }
+}
+
+@media (min-width: 1025px) {
+  .section.section-stack--tight {
+    padding-block: clamp(var(--space-3xl), 1.25vw + var(--space-2xl), calc(var(--space-3xl) + var(--space-sm)));
+  }
+}

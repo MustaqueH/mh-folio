@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="fn-burst" cx="55%" cy="44%" r="55%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.28"/>
+      <stop offset="45%" stop-color="#157c88" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fn-beam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#157c88" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#5eead4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#157c88" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="fn-soft">
+      <rect width="800" height="500" fill="url(#fn-maskGrad)"/>
+    </mask>
+    <radialGradient id="fn-maskGrad" cx="50%" cy="46%" r="78%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="0.8"/>
+      <stop offset="90%" stop-color="#fff" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fn-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g mask="url(#fn-soft)">
+    <rect width="800" height="500" fill="url(#fn-burst)"/>
+    <path d="M40 300 Q400 120 760 280" stroke="url(#fn-beam)" stroke-width="28" stroke-linecap="round" opacity="0.7" filter="url(#fn-glow)"/>
+    <g fill="none" stroke="#157c88" stroke-opacity="0.35" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M100 360 L180 280 L260 300 L340 220 L420 240 L500 200 L580 220 L660 180"/>
+      <circle cx="180" cy="280" r="5" fill="#5eead4" fill-opacity="0.5" stroke="#5eead4" stroke-opacity="0.8"/>
+      <circle cx="340" cy="220" r="5" fill="#5eead4" fill-opacity="0.45" stroke="#5eead4" stroke-opacity="0.75"/>
+      <circle cx="500" cy="200" r="6" fill="#157c88" fill-opacity="0.6" stroke="#5eead4" stroke-opacity="0.9"/>
+      <circle cx="660" cy="180" r="5" fill="#5eead4" fill-opacity="0.4" stroke="#5eead4" stroke-opacity="0.7"/>
+    </g>
+    <!-- Port + Wi‑Fi + lock — bold -->
+    <g transform="translate(228 152)">
+      <rect x="0" y="0" width="96" height="72" rx="8" fill="rgba(15,23,42,0.45)" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2" filter="url(#fn-glow)"/>
+      <rect x="14" y="14" width="68" height="44" rx="4" fill="none" stroke="#157c88" stroke-opacity="0.55" stroke-width="1.25"/>
+      <g fill="#5eead4" fill-opacity="0.75">
+        <rect x="24" y="24" width="11" height="9" rx="1.5"/><rect x="39" y="24" width="11" height="9" rx="1.5"/><rect x="54" y="24" width="11" height="9" rx="1.5"/><rect x="69" y="24" width="11" height="9" rx="1.5"/>
+        <rect x="24" y="37" width="11" height="9" rx="1.5"/><rect x="39" y="37" width="11" height="9" rx="1.5"/><rect x="54" y="37" width="11" height="9" rx="1.5"/><rect x="69" y="37" width="11" height="9" rx="1.5"/>
+      </g>
+      <path d="M48 62 V84 L56 92 L64 84 V62" stroke="#5eead4" stroke-opacity="0.7" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(380 100)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M80 100 Q80 48 128 48 Q176 48 176 100" stroke="#5eead4" stroke-opacity="0.55" stroke-width="3"/>
+      <path d="M56 100 Q56 28 128 28 Q200 28 200 100" stroke="#157c88" stroke-opacity="0.6" stroke-width="2.5"/>
+      <path d="M32 100 Q32 8 128 8 Q224 8 224 100" stroke="#5eead4" stroke-opacity="0.4" stroke-width="2"/>
+      <circle cx="128" cy="100" r="5" fill="#5eead4" fill-opacity="0.85" stroke="none"/>
+    </g>
+    <g transform="translate(520 188)">
+      <path d="M36 12 C36 12 20 12 20 26 V44 C20 54 26 58 36 58 H60 C70 58 76 54 76 44 V26 C76 12 60 12 60 12" fill="rgba(15,23,42,0.5)" stroke="#5eead4" stroke-opacity="0.7" stroke-width="2" filter="url(#fn-glow)"/>
+      <path d="M30 26 H66" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="48" cy="42" r="8" fill="none" stroke="#5eead4" stroke-opacity="0.65" stroke-width="1.75"/>
+      <path d="M43 42 L46 46 L55 36" stroke="#5eead4" stroke-opacity="0.85" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M120 400 H320 M500 400 H680" stroke="#5eead4" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="10 14"/>
+  </g>
+</svg>

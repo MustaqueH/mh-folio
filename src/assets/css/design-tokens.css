@@ -1,0 +1,118 @@
+/**
+ * Design token architecture — central source for spacing, typography, layout widths,
+ * radius, elevation, and breakpoint-aligned rhythm. Tailwind theme.extend maps to these.
+ */
+
+:root {
+  /* —— Spacing scale (strict 8-step; px → rem) —— */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 0.75rem; /* 12px */
+  --space-base: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
+
+  /* —— Typography scale (fluid clamp) —— */
+  --fs-display: clamp(1.85rem, 0.55vw + 1.45rem, 3.15rem);
+  --lh-display: 1.11;
+  --ls-display: -0.03em;
+
+  --fs-headline: clamp(1.62rem, 1.9vw + 0.85rem, 2.45rem);
+  --lh-headline: 1.18;
+  --ls-headline: -0.022em;
+
+  --fs-subhead: clamp(1.05rem, 0.32vw + 0.92rem, 1.2rem);
+  --lh-subhead: 1.55;
+  --ls-subhead: -0.01em;
+
+  --fs-body: clamp(0.96rem, 0.22vw + 0.9rem, 1.0625rem);
+  --lh-body: 1.72;
+
+  --fs-small: clamp(0.8125rem, 0.18vw + 0.76rem, 0.875rem);
+  --lh-small: 1.55;
+
+  /* Aliases for prose / UI (map to scale roles) */
+  --fs-lede: clamp(1.02rem, 0.32vw + 0.94rem, 1.125rem);
+  --lh-lede: 1.78;
+
+  /* —— Font stacks (weights: Roboto 400/500/700, Noto Sans 400–700, Questrial 400 — match Google Fonts link in HTML) —— */
+  --font-family-body: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-heading: "Questrial", system-ui, sans-serif;
+  --font-family-ui: "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* —— Layout widths (max-content bands; use with width:100%; margin-inline:auto) —— */
+  --layout-max-xs: 40rem; /* 640px */
+  --layout-max-sm: 48rem; /* 768px */
+  --layout-max-md: 64rem; /* 1024px */
+  --layout-max-lg: 80rem; /* 1280px — primary site canvas */
+  --layout-max-xl: 90rem; /* 1440px */
+
+  /* Hero: copy + portrait band — narrower than site canvas so 60/40 feels intentional, not edge-to-edge */
+  --hero-inner-max: 76rem; /* ~1216px */
+
+  /* —— Grid / section rhythm (reference values for CSS; Tailwind uses spacing tokens) —— */
+  --grid-gap-default: var(--space-lg);
+  --grid-gap-section: var(--space-xl);
+
+  /* —— Border radius —— */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+
+  /* —— Elevation (theme-aware; color-mix keeps dark/light coherent) —— */
+  --shadow-elev-0: none;
+
+  --shadow-elev-1:
+    0 1px 0 color-mix(in srgb, #fff, transparent 46%) inset,
+    0 14px 40px color-mix(in srgb, var(--heading-color), transparent 93%);
+
+  --shadow-elev-2:
+    0 1px 0 color-mix(in srgb, #fff, transparent 34%) inset,
+    0 22px 56px color-mix(in srgb, var(--heading-color), transparent 88%),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 58%);
+
+  --shadow-elev-3:
+    0 24px 60px color-mix(in srgb, var(--heading-color), transparent 88%),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 85%);
+
+  /* —— Hero shell (min-heights + safe-area padding) —— */
+  --hero-min-md: clamp(460px, min(68svh, 74vh), 780px);
+  --hero-min-lg: clamp(560px, min(78svh, 82vh), 880px);
+  --hero-min-short: clamp(400px, min(64svh, 70vh), 720px);
+
+  --hero-pad-top-mobile: max(var(--space-lg), 6svh);
+  --hero-pad-bottom-mobile: max(var(--space-lg), 6svh);
+  --hero-pad-top-md: max(var(--space-2xl), calc(env(safe-area-inset-top) + var(--space-xl)));
+  --hero-pad-bottom-md: clamp(var(--space-2xl), 4.2vh, var(--space-3xl));
+  --hero-pad-top-lg: max(var(--space-2xl), calc(env(safe-area-inset-top) + var(--space-xl)));
+  --hero-pad-bottom-lg: clamp(var(--space-2xl), 4vh, calc(var(--space-3xl) + var(--space-sm)));
+
+  /* —— Motion (shared easing + durations — prefer over ad-hoc ms values) —— */
+  --motion-duration-short: 0.2s;
+  --motion-duration-base: 0.3s;
+  --motion-duration-relaxed: 0.42s;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* —— Surfaces —— */
+  --border-subtle: 1px solid color-mix(in srgb, var(--heading-color), transparent 86%);
+}
+
+:root[data-theme='dark'] {
+  --shadow-elev-1:
+    0 1px 0 color-mix(in srgb, #fff, transparent 92%) inset,
+    0 18px 48px color-mix(in srgb, var(--heading-color), transparent 94%);
+
+  --shadow-elev-2:
+    0 1px 0 color-mix(in srgb, #fff, transparent 34%) inset,
+    0 26px 64px color-mix(in srgb, var(--heading-color), transparent 88%),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 52%),
+    0 0 42px color-mix(in srgb, var(--accent-color), transparent 94%);
+
+  --shadow-elev-3:
+    0 24px 60px color-mix(in srgb, var(--heading-color), transparent 88%),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 85%);
+}

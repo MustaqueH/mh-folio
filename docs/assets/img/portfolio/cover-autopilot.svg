@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ap-pillar" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#157c88" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#157c88" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#5eead4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.12"/>
+    </linearGradient>
+    <radialGradient id="ap-halo" cx="50%" cy="38%" r="45%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#157c88" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="ap-soft">
+      <rect width="800" height="500" fill="url(#ap-maskGrad)"/>
+    </mask>
+    <radialGradient id="ap-maskGrad" cx="50%" cy="44%" r="78%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="58%" stop-color="#fff" stop-opacity="0.78"/>
+      <stop offset="92%" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ap-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g mask="url(#ap-soft)">
+    <ellipse cx="400" cy="160" rx="280" cy="140" fill="url(#ap-halo)"/>
+    <rect x="348" y="32" width="104" height="436" fill="url(#ap-pillar)" opacity="0.9"/>
+    <!-- Cloud → device -->
+    <g transform="translate(300 64)" filter="url(#ap-glow)">
+      <path d="M52 48 C36 48 28 62 32 76 C22 78 16 92 26 102 C30 108 40 108 50 106 C54 116 70 118 86 112 C102 118 122 108 124 92 C128 74 114 60 96 60 C92 44 72 40 52 48Z" fill="rgba(15,23,42,0.5)" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2"/>
+      <path d="M58 108 L58 132 M48 120 H68" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+      <path d="M58 132 L108 132 L108 220" stroke="#5eead4" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="8 7"/>
+      <circle cx="82" cy="168" r="3" fill="#5eead4" fill-opacity="0.7"/><circle cx="82" cy="188" r="3" fill="#5eead4" fill-opacity="0.5"/><circle cx="82" cy="208" r="3" fill="#5eead4" fill-opacity="0.35"/>
+    </g>
+    <g transform="translate(302 228)">
+      <path d="M28 156 L148 156 L162 178 L14 178 Z" fill="rgba(21,124,136,0.28)" stroke="#5eead4" stroke-opacity="0.65" stroke-width="1.75"/>
+      <path d="M14 178 L162 178 L172 200 L4 200 Z" fill="rgba(15,23,42,0.45)" stroke="#157c88" stroke-opacity="0.55" stroke-width="1.5"/>
+      <path d="M4 200 L172 200 L162 6 L14 6 Z" fill="rgba(2,6,23,0.2)" stroke="#5eead4" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M22 6 L154 6 L144 56 L32 56 Z" fill="rgba(94,234,212,0.12)" stroke="#fff" stroke-opacity="0.25" stroke-width="1"/>
+      <rect x="52" y="24" width="72" height="4" rx="1" fill="#5eead4" fill-opacity="0.45"/>
+      <g transform="translate(82 200)" fill="none" stroke="#5eead4" stroke-opacity="0.65" stroke-width="2.5" stroke-linecap="round">
+        <path d="M0 36 A36 36 0 0 1 64 26"/>
+        <path d="M8 46 A46 46 0 0 1 74 34"/>
+        <path d="M16 56 A56 56 0 0 1 84 42"/>
+        <circle cx="0" cy="36" r="4" fill="#5eead4" fill-opacity="0.9" stroke="none"/>
+      </g>
+    </g>
+    <g transform="translate(400 200)" fill="none" stroke-linecap="round">
+      <circle r="96" stroke="#157c88" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="22 16"/>
+      <circle r="118" stroke="#5eead4" stroke-opacity="0.28" stroke-width="1.25" stroke-dasharray="12 20"/>
+      <circle r="140" stroke="#5eead4" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="6 24"/>
+    </g>
+    <g stroke="#5eead4" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round">
+      <path d="M400 96 L400 48"/><path d="M376 72 L424 72"/><path d="M388 60 L412 84"/>
+    </g>
+  </g>
+</svg>

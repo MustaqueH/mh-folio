@@ -1,81 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var light = localStorage.getItem('theme') === 'light';
+        document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
+        document.documentElement.style.backgroundColor = light ? '#f5f7fa' : '#090c11';
+        function syncBody() {
+          if (!document.body) return;
+          if (light) document.body.classList.remove('dark-background');
+        }
+        syncBody();
+        document.addEventListener('DOMContentLoaded', syncBody, { once: true });
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = '#090c11';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./assets/css/critical.css" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Co-management: SCCM → Intune – Portfolio details</title>
-  <meta name="description" content="Phased co-management between Configuration Manager and Intune for safer cloud attach and workload transition.">
+  <title>IT automation · Operational lifecycle execution · Case study</title>
+  <meta name="description" content="Lifecycle &amp; ITSM automation (PowerShell / orchestration). Request-governed automation: ITSM intake through approval-gated orchestration to Graph-backed execution, covering identity and endpoint hygiene, licence motion, and auditable closure at enterprise volume.">
 
-  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.DZapI9-Z.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.9k_9j--m.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.h_HeIYeA.png">
   <link rel="manifest" href="./assets/webmanifest/site.BwHFeIBa.webmanifest">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <script type="module" crossorigin src="./assets/js/main-BP5rAxIJ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/css/main.krLN31fA.css">
+  <!-- Styles: main.css + Tailwind (bundled via assets/js/main.js) -->
+  <link rel="stylesheet" crossorigin href="./assets/css/main.B_WHwLK9.css">
+  <script type="module" crossorigin src="./assets/js/main-CnR8Gyzt.js"></script>
 </head>
-
-<body class="portfolio-details-page dark-background">
-  <script>
-    (function () {
-      try {
-        if (localStorage.getItem('theme') === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.body.classList.remove('dark-background');
-        }
-      } catch (e) { /* ignore */ }
-    })();
-  </script>
+<body class="portfolio-details-page case-study-page dark-background">
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <header id="header" class="header">
-    <div class="header-outer container-fluid container-xl d-flex align-items-center justify-content-between flex-nowrap gap-2 gap-md-3">
-
-      <div class="header-container position-relative d-flex align-items-center justify-content-between flex-grow-1 min-w-0 gap-2">
-
-        <div class="header-brand d-flex align-items-center gap-2 min-w-0 flex-grow-1">
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <h1 class="sitename pattern-fill logo-heading" data-text="MUSTAQUE">MUSTAQUE</h1>
-          </a>
-          <div class="header-social-links header-social-links--with-brand d-flex d-xl-none align-items-center flex-shrink-0" aria-label="Social profiles">
-            <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
+    <div class="layout-container header-shell">
+      <div class="header-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-wordmark logo-heading">Mustaque</span>
+        </a>
       </div>
 
       <nav id="navmenu" class="navmenu navmenu--rail" aria-label="Primary navigation">
         <ul id="primary-nav-list">
           <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#resume">Resume</a></li>
-          <li><a href="index.html#portfolio" class="active">Portfolio</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#profile">Profile</a></li>
+          <li><a href="index.html#capability-stack">Stack</a></li>
+          <li><a href="index.html#selected-work" class="active">Work</a></li>
+          <li><a href="index.html#career-snapshot">Experience</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header-end d-flex align-items-center flex-shrink-0 gap-1 gap-sm-2">
-        <div class="header-social-links header-social-links--desktop-bar d-none d-xl-flex" aria-label="Social profiles">
+      <div class="header-actions">
+        <div class="header-social-links" aria-label="Social profiles">
           <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
           <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
@@ -91,143 +83,317 @@
             </span>
           </label>
         </div>
-
       </div>
-
     </div>
   </header>
 
   <main id="main" class="main" tabindex="-1">
+    <article class="case-study">
 
-    <div class="page-title enhanced-bg" data-aos="fade-up">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="index.html#portfolio">Portfolio</a></li>
-            <li class="breadcrumb-item active current">Co-management: SCCM → Intune</li>
-          </ol>
-        </nav>
-      </div>
-      <div class="title-wrapper">
-        <h1>Co-management: SCCM → Intune</h1>
-        <p>Phased cloud attach so workloads move without a risky big-bang—clear ownership between config manager and Intune.</p>
-      </div>
-    </div>
-
-    <section id="portfolio-details" class="portfolio-details section glass-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <a href="assets/img/portfolio/co-management.png" class="glightbox" data-gallery="hybrid-gallery" title="Co-management architecture">
-              <img src="./assets/img/co-management.Dxwdg2Ky.png" class="img-fluid mb-4 rounded" alt="Diagram of co-management between SCCM and Microsoft Intune" loading="lazy">
-            </a>
-            <a href="assets/img/portfolio/SCCM_CB_1709_Co_Management_Setup_4.jpg" class="glightbox" data-gallery="hybrid-gallery" title="Co-management setup">
-              <img src="./assets/img/SCCM_CB_1709_Co_Management_Setup_4.N-zt4ufR.jpg" class="img-fluid mb-4 rounded" alt="Configuration Manager co-management configuration reference" loading="lazy">
-            </a>
-            <a href="assets/img/portfolio/AVDalsTerminalserverAlternative-b001.jpg" class="glightbox" data-gallery="hybrid-gallery" title="Hybrid cloud &amp; VDI context">
-              <img src="./assets/img/AVDalsTerminalserverAlternative-b001.Dv4RaIr_.jpg" class="img-fluid mb-4 rounded" alt="Hybrid cloud and virtual desktop infrastructure concept" loading="lazy">
-            </a>
+      <header id="case-study-hero" class="cs-hero project-hero enhanced-bg" aria-labelledby="case-study-title">
+        <div class="layout-container cs-hero__container">
+          <div class="cs-hero__crumbs breadcrumbs">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#selected-work">Work</a></li>
+                <li class="breadcrumb-item active current" aria-current="page">Lifecycle automation · service chain</li>
+              </ol>
+            </nav>
           </div>
-          <div class="col-lg-6">
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description glass-card">
-                <span class="badge bg-primary mb-2"><i class="bi bi-cloud-arrow-up me-1"></i> Hybrid infrastructure</span>
-                <h2 class="mb-3">Same estate, clearer handover</h2>
-                <h5 class="text-muted mb-4">Co-management lets you attach Intune to existing SCCM-managed devices so you can shift workloads—compliance, apps, Windows Update—with testing and rollback.</h5>
-                <p>
-                  I focus on making the split intentional: which workloads stay on CM first, which move to Intune next, and how compliance and reporting stay trustworthy during the transition. That usually means enrollment alignment, collection and AAD group mapping, and cutover plans that operations can actually run without surprise gaps in patch or app coverage.
-                </p>
+          <div class="cs-hero__grid">
+            <div class="cs-hero__primary">
+              <p class="cs-hero__eyebrow case-study-tag mb-0"><i class="bi bi-gear-wide-connected me-1" aria-hidden="true"></i> Service-chain automation · Identity &amp; endpoints</p>
+              <h1 id="case-study-title" class="cs-hero__title">Operational lifecycle automation</h1>
+              <p class="cs-hero__lead">High-volume joiner, licence, and cleanup paths were consuming engineering time on <strong>repeatable decisions</strong>. The objective was a <strong>request-bound execution chain</strong>—from approved intent through verified change—so routine motion carried <strong>evidence by default</strong> instead of tribal runbooks.</p>
+              <p class="cs-hero__support">The layer sat <strong>between ITSM and the tenant</strong>: orchestration enforced gates, execution hosts applied bulk and edge mutations against Graph-backed truth, and outputs fed <strong>closure, audit, and reporting</strong>—closing the loop between service desk intake and what actually changed in identity and on devices.</p>
+              <div class="cs-hero__actions case-study-hero__links flex flex-wrap gap-2">
+                <a href="index.html#selected-work" class="btn-visit">All work</a>
+                <a href="index.html#contact" class="case-study-hero__cta--ghost">Discuss similar scope</a>
+              </div>
+            </div>
+            <aside class="cs-hero__aside" aria-label="Programme facts">
+              <p class="cs-hero__aside-title">Programme facts</p>
+              <dl>
+                <div><dt>Chain role</dt><dd>Intake → approve → execute → close</dd></div>
+                <div><dt>Mutation scope</dt><dd>Entra directory · Windows endpoints</dd></div>
+                <div><dt>Orchestration</dt><dd>Workflow gates · throttled batches</dd></div>
+                <div><dt>Attestation</dt><dd>Ticket correlation · exports</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </header>
 
-                <div class="portfolio-sections">
-                  <div class="portfolio-section-card" data-aos="fade-up">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-bullseye"></i> Objectives</h4>
-                    <ul>
-                      <li>Enable cloud attach without destabilising existing CM processes.</li>
-                      <li>Improve update and compliance coverage with a single joined device story.</li>
-                      <li>Reduce long-term operational overhead as Intune takes suitable workloads.</li>
-                    </ul>
-                  </div>
+      <div class="cs-sheet case-study__body case-study-canvas portfolio-details section glass-bg" data-aos="fade-up">
+        <div class="layout-container cs-sheet__container">
+          <section class="case-study-section" aria-label="Case study narrative">
+            <div class="cs-layout">
+              <div class="cs-layout__main">
+                <div class="cs-prose">
+                  <p class="cs-prose__kicker">Delivery context</p>
+                  <p class="cs-prose__lede" id="doc-start-heading">Day-to-day IT was carrying <strong>high volumes of repetitive work</strong>—joiners and leavers, licence churn, stale devices, and recurring “health” tickets—through consoles and spreadsheets. The same actions were executed differently by shift, region, or engineer, which made <strong>audit and access reviews painful</strong> and kept teams <strong>reactive</strong>. The programme objective was an <strong>automation-backed lifecycle layer</strong>: fewer manual touches on routine paths, <strong>consistent outcomes</strong>, and evidence that every change could be traced to an approved request or governed runbook.</p>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-context" aria-labelledby="chapter-context-heading">
+                    <span class="cs-chapter__label">01 · Imperative</span>
+                    <h2 id="chapter-context-heading" class="cs-chapter__title">From reactive support to engineered operations</h2>
+                    <p class="cs-chapter__lede">Manual execution did not fail loudly—it failed <strong>quietly and unevenly</strong>: delayed licence recovery, inconsistent offboarding steps, device objects left behind, and remediation scripts that only ran when someone remembered. That overhead consumed capacity that should have gone to <strong>platform hardening and incident prevention</strong>. Automation was positioned as <strong>operational engineering</strong>: encode the right sequence once, enforce approvals where risk demanded it, and measure throughput and error classes like any other production system.</p>
+                    <div class="cs-chapter__body">
+                      <p class="cs-callout mb-0"><strong>Operating principle:</strong> if a task repeats on a cadence, touches identity or entitlement, or requires the same validation every time, it belongs in a <strong>governed pipeline</strong>—not in tribal knowledge.</p>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-person-gear"></i> Responsibilities</h4>
-                    <ul>
-                      <li>Planned co-management prerequisites, PKI/HTTPS, and client settings for a clean attach.</li>
-                      <li>Staged workload shifts (e.g. compliance, resource access policies) with validation gates.</li>
-                      <li>Aligned CM collections and Entra groups so targeting stays understandable for admins.</li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-governance" aria-labelledby="chapter-governance-heading">
+                    <span class="cs-chapter__label">02 · Architecture</span>
+                    <h2 id="chapter-governance-heading" class="cs-chapter__title">How PowerShell, Power Automate, ITSM, and Graph connect</h2>
+                    <p class="cs-chapter__lede">The architecture was deliberately <strong>layered</strong>: ITSM remained the <strong>system of record for intent</strong> (who asked, who approved, what was in scope). Power Automate carried <strong>orchestration and branching</strong>—timeouts, retries, human steps, and notifications. PowerShell (Azure Automation / hybrid workers where applicable) executed <strong>bulk and edge operations</strong> against Entra ID, Intune, Exchange Online, and on-box endpoints via Graph and module surfaces. Microsoft Graph supplied <strong>normalised read/write paths</strong> so automation did not fork into one-off REST variants per engineer.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-card-grid" role="list">
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">Request</h3>
+                          <p class="mb-0">Service requests, HR feeds, or security tasks landed as <strong>typed records</strong> with mandatory fields—reducing ambiguous “please fix user X” work.</p>
+                        </div>
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">Approval → execution</h3>
+                          <p class="mb-0">Power Automate enforced <strong>approval gates</strong> before any privileged action; successful runs stamped <strong>correlation IDs</strong> back to the ticket.</p>
+                        </div>
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">Logging → reporting</h3>
+                          <p class="mb-0">Structured logs fed <strong>scheduled exports</strong>, Excel operational views, and admin dashboards—so leadership saw <strong>throughput and failure rates</strong>, not anecdote.</p>
+                        </div>
+                      </div>
+                      <figure class="cs-figure cs-figure--diagram">
+                        <a href="assets/img/portfolio/diagram-automation.svg" class="glightbox" data-gallery="case-ops-automation" title="Reference schematic — telemetry and automation loop">
+                          <img src="assets/img/portfolio/diagram-automation.svg" width="800" height="500" alt="Schematic: signals feeding governed automation and verification loop" loading="lazy">
+                        </a>
+                        <figcaption>Reference loop—request intake, governed execution, and verification; illustrative, not a tenant-specific architecture diagram.</figcaption>
+                      </figure>
+                    </div>
+                  </section>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-rollout" aria-labelledby="chapter-rollout-heading">
+                    <span class="cs-chapter__label">03 · Use cases</span>
+                    <h2 id="chapter-rollout-heading" class="cs-chapter__title">Where automation replaced manual runbooks</h2>
+                    <p class="cs-chapter__lede">Use cases were chosen for <strong>volume, risk, and repeatability</strong>—not because they were easy demos. Each pattern shared the same skeleton: <strong>inputs validated</strong>, <strong>least-privilege execution</strong>, <strong>idempotent effect</strong>, and <strong>verifiable end state</strong>.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-columns cs-columns--two">
+                        <div>
+                          <p class="cs-miniheading">Identity &amp; lifecycle</p>
+                          <ul class="case-study-list mb-0">
+                            <li><strong>Onboarding / offboarding:</strong> staged group membership, licence alignment, mailbox and resource handling driven from HR or ITSM triggers.</li>
+                            <li><strong>Licence assignment &amp; recovery:</strong> role- and group-based SKU moves with explicit removal paths when eligibility dropped.</li>
+                            <li><strong>Stale object hygiene:</strong> disabled accounts, orphaned devices, and cleanup candidates surfaced on a schedule with controlled deletion windows.</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <p class="cs-miniheading">Endpoint &amp; service health</p>
+                          <ul class="case-study-list mb-0">
+                            <li><strong>Device cleanup:</strong> Intune/Entra reconciliation for retired assets and naming drift.</li>
+                            <li><strong>Remediation packs:</strong> recurring compliance and health checks with bounded blast radius.</li>
+                            <li><strong>Software triggers:</strong> install/remove flows tied to approval or entitlement change—not ad hoc RDP sessions.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card glass-highlight" data-aos="fade-up" data-aos-delay="200">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-hammer"></i> Technologies &amp; tools</h4>
-                    <ul class="tech-badges mb-2 d-flex flex-wrap gap-2 list-unstyled">
-                      <li><span class="badge bg-info text-dark">Microsoft Intune</span></li>
-                      <li><span class="badge bg-info text-dark">Configuration Manager</span></li>
-                      <li><span class="badge bg-info text-dark">Entra ID / Hybrid join</span></li>
-                      <li><span class="badge bg-info text-dark">Cloud Management Gateway</span></li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-automation" aria-labelledby="chapter-automation-heading">
+                    <span class="cs-chapter__label">04 · Governance</span>
+                    <h2 id="chapter-automation-heading" class="cs-chapter__title">Approvals, logging, and safe execution patterns</h2>
+                    <p class="cs-chapter__lede">Production automation fails organisations when <strong>privilege is easy but evidence is weak</strong>. The control model required <strong>approval before mutation</strong> for destructive or wide-reaching actions, <strong>append-only audit trails</strong> (ITSM + runbook logs + Graph activity where relevant), and <strong>pre-flight validation</strong>—tenant context, target scope, and “dry run” counts for bulk updates.</p>
+                    <div class="cs-chapter__body">
+                      <ul class="case-study-list mb-0">
+                        <li><strong>Idempotent scripts:</strong> safe to re-run after partial failure; exit codes mapped to ticket states for operator clarity.</li>
+                        <li><strong>Error handling:</strong> Power Automate branches for Graph throttling, transient 5xx, and partial batch failures—with bounded retries and explicit escalation.</li>
+                        <li><strong>Fallback:</strong> manual break-glass paths remained documented; automation narrowed routine volume, not accountability.</li>
+                      </ul>
+                    </div>
+                  </section>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-lifecycle" aria-labelledby="chapter-lifecycle-heading">
+                    <span class="cs-chapter__label">05 · Impact</span>
+                    <h2 id="chapter-lifecycle-heading" class="cs-chapter__title">Operational results at estate scale</h2>
+                    <p class="cs-chapter__lede">Impact was measured in <strong>throughput, defect rate, and time returned to engineering</strong>—not “lines of PowerShell written.” The estate gained a <strong>repeatable lifecycle fabric</strong> that scaled with headcount changes and audit cycles.</p>
+                    <div class="cs-chapter__body">
+                      <ul class="case-study-list mb-0">
+                        <li><strong>Lower manual load</strong> on recurring joiner/leaver and licence reconciliation paths.</li>
+                        <li><strong>Higher consistency</strong> in how standard changes were applied across regions and shifts.</li>
+                        <li><strong>Faster request closure</strong> for well-typed automation-backed tickets.</li>
+                        <li><strong>Fewer human errors</strong> on routine bulk updates through validation gates.</li>
+                        <li><strong>Stronger auditability</strong>—approvals, execution logs, and outputs tied to records.</li>
+                        <li><strong>Scalable model</strong> for adding new runbooks without reinventing integration each time.</li>
+                      </ul>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card glass-highlight" data-aos="fade-up" data-aos-delay="300">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-stars"></i> Impact &amp; outcomes</h4>
-                    <ul class="ps-3 impact-list list-unstyled">
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Safer path to Intune than lift-and-shift re-enrollment for large estates.</li>
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Better visibility and consistency once key workloads landed in the right tool.</li>
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Less duplicate effort between CM and cloud for the same device.</li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-coordination" aria-labelledby="chapter-coordination-heading">
+                    <span class="cs-chapter__label">06 · Engineering</span>
+                    <h2 id="chapter-coordination-heading" class="cs-chapter__title">Challenges and production constraints</h2>
+                    <p class="cs-chapter__lede">Graph and cloud APIs introduce <strong>throttling, pagination, and consent boundaries</strong> that naive scripts ignore until a Monday morning bulk job fails halfway. Power Automate adds its own failure modes—connector auth drift, action limits, and workflow design that obscures retries. Cross-system dependencies meant <strong>ordering mattered</strong>: licence before app, group before policy, directory write before Intune sync expectations.</p>
+                    <div class="cs-chapter__body">
+                      <p class="mb-0">Engineering time went into <strong>batch sizing</strong>, <strong>backoff strategies</strong>, <strong>secret rotation</strong>, <strong>module pinning</strong>, and <strong>test tenants / pilot cohorts</strong>—so production runs degraded gracefully instead of leaving half-updated populations. Script reliability across heterogeneous endpoints required <strong>defensive parameterisation</strong> and explicit support for “skipped” outcomes where hardware or OS build blocked a step.</p>
+                    </div>
+                  </section>
+
+                  <section class="cs-chapter" id="chapter-outcomes" aria-labelledby="chapter-outcomes-heading">
+                    <span class="cs-chapter__label">07 · Maturity</span>
+                    <h2 id="chapter-outcomes-heading" class="cs-chapter__title">Sustained automation as an operating capability</h2>
+                    <p class="cs-chapter__lede">The programme left behind <strong>owned runbooks</strong>, <strong>versioned automation assets</strong>, and <strong>integration contracts</strong> between ITSM, orchestration, and Graph-backed execution—so new scenarios extended the pattern instead of spawning shadow tools.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-outcomes" role="region" aria-label="Key outcomes">
+                        <h3 class="cs-outcomes__title">What stuck</h3>
+                        <ul class="cs-outcomes__list">
+                          <li>A <strong>single lifecycle narrative</strong> from request to verified outcome—visible to ops, security, and audit.</li>
+                          <li><strong>Repeatable integration seams</strong> between ITSM, Power Automate, and PowerShell execution hosts.</li>
+                          <li><strong>Production discipline</strong>—throttling-aware batches, approvals, and fallbacks treated as part of the design, not afterthoughts.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
 
-              <div class="portfolio-info mt-5 glass-card">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category</strong>: Hybrid infrastructure</li>
-                  <li><strong>Scope</strong>: Co-managed enterprise</li>
-                  <li><strong>Project window</strong>: Phased migration</li>
-                  <li><a href="index.html#portfolio" class="btn-visit align-self-start">Back to portfolio</a></li>
-                </ul>
-              </div>
+              <aside class="cs-layout__rail" aria-label="Reference sidebar">
+                <div class="cs-rail">
+                  <nav class="cs-rail__section" aria-labelledby="rail-nav-heading">
+                    <h3 id="rail-nav-heading" class="cs-rail__heading">On this page</h3>
+                    <ul class="cs-rail__nav">
+                      <li><a href="#chapter-context">Imperative</a></li>
+                      <li><a href="#chapter-governance">Architecture</a></li>
+                      <li><a href="#chapter-rollout">Use cases</a></li>
+                      <li><a href="#chapter-automation">Governance</a></li>
+                      <li><a href="#chapter-lifecycle">Impact</a></li>
+                      <li><a href="#chapter-coordination">Engineering</a></li>
+                      <li><a href="#chapter-outcomes">Maturity</a></li>
+                    </ul>
+                  </nav>
+                  <section class="cs-rail__section" aria-labelledby="rail-facts-heading">
+                    <h3 id="rail-facts-heading" class="cs-rail__heading">Snapshot</h3>
+                    <dl class="cs-rail__dl">
+                      <div><dt>Discipline</dt><dd>IT automation &amp; lifecycle</dd></div>
+                      <div><dt>Workload</dt><dd>Graph · ITSM · orchestration</dd></div>
+                      <div><dt>Cadence</dt><dd>Design → pilot → expand</dd></div>
+                      <div><dt>Stack</dt><dd>M365 · Entra · Power Platform</dd></div>
+                    </dl>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-deploy-heading">
+                    <h3 id="rail-deploy-heading" class="cs-rail__heading">Lifecycle flow</h3>
+                    <p class="cs-rail__text">Request in ITSM, approval in Power Automate, execution via PowerShell against Graph and service APIs, structured logging, then reporting and ticket closure with evidence.</p>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-phases-heading">
+                    <h3 id="rail-phases-heading" class="cs-rail__heading">Execution chain</h3>
+                    <ol class="cs-rail__ol">
+                      <li>Intake &amp; classify</li>
+                      <li>Approve &amp; scope</li>
+                      <li>Run &amp; verify</li>
+                      <li>Log &amp; report</li>
+                    </ol>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-assign-heading">
+                    <h3 id="rail-assign-heading" class="cs-rail__heading">Control points</h3>
+                    <ul class="cs-rail__tags">
+                      <li><span class="cs-rail__tag">ITSM</span> System of record for intent.</li>
+                      <li><span class="cs-rail__tag">Flow</span> Orchestration &amp; human gates.</li>
+                      <li><span class="cs-rail__tag">Run</span> Idempotent bulk execution.</li>
+                    </ul>
+                  </section>
+                  <section class="cs-rail__section cs-rail__section--highlight" aria-labelledby="rail-impact-heading">
+                    <h3 id="rail-impact-heading" class="cs-rail__heading">Highlights</h3>
+                    <ul class="cs-rail__impact">
+                      <li>Governed request-to-execution lifecycle.</li>
+                      <li>Graph-aware batching and error handling.</li>
+                      <li>Audit-friendly logging and exports.</li>
+                    </ul>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-stack-heading">
+                    <h3 id="rail-stack-heading" class="cs-rail__heading">Technologies</h3>
+                    <ul class="cs-rail__stack" aria-label="Technologies">
+                      <li>PowerShell</li>
+                      <li>Power Automate</li>
+                      <li>Microsoft Graph</li>
+                      <li>Entra ID</li>
+                    </ul>
+                  </section>
+                  <div class="cs-rail__section cs-rail__actions">
+                    <a href="index.html#selected-work" class="cs-rail__btn">All work</a>
+                    <a href="index.html#contact" class="cs-rail__btn cs-rail__btn--ghost">Contact</a>
+                  </div>
+                </div>
+              </aside>
             </div>
+          </section>
+
+          <nav class="case-study-pager case-study-pager--after-split" aria-label="Adjacent case studies">
+            <div class="glass-card case-study-pager__surface">
+              <a href="portfolio-automation.html" class="case-study-pager__btn case-study-pager__btn--prev">
+                <span class="case-study-pager__btn-label">Previous project</span>
+                <span class="case-study-pager__btn-title"><i class="bi bi-arrow-left me-1"></i>Autopilot + Intune</span>
+                <span class="case-study-pager__btn-desc">ESP · firmwide rollout · zero-touch</span>
+              </a>
+              <div class="case-study-pager__center">
+                <a href="index.html#selected-work" class="case-study-pager__btn case-study-pager__btn--hub">All work</a>
+              </div>
+              <a href="portfolio-details2.html" class="case-study-pager__btn case-study-pager__btn--next">
+                <span class="case-study-pager__btn-label">Next project</span>
+                <span class="case-study-pager__btn-title">Intune operations<i class="bi bi-arrow-right ms-1"></i></span>
+                <span class="case-study-pager__btn-desc">Compliance · apps · fleet tuning</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer id="footer" class="footer footer-showcase footer-showcase--signature" role="contentinfo">
+    <div class="layout-container footer-showcase__inner">
+      <div class="footer-showcase__primary">
+        <div class="footer-showcase__brand">
+          <p class="footer-showcase__name sitename">Mustaque Halder</p>
+          <p class="footer-showcase__role">Enterprise IT · Modern workplace &amp; endpoints · M365 &amp; Intune · Systems administration</p>
+          <p class="footer-showcase__pitch">Estate rollouts, automation, and hybrid operations—documented to hand off without guesswork.</p>
+          <p class="footer-showcase__locale">Melbourne, Australia</p>
+        </div>
+        <div class="footer-showcase__aside">
+          <nav class="footer-showcase__nav" aria-label="Site sections">
+            <ul class="footer-showcase__nav-list">
+              <li><a href="index.html#hero">Home</a></li>
+              <li><a href="index.html#profile">Profile</a></li>
+              <li><a href="index.html#capability-stack">Stack</a></li>
+              <li><a href="index.html#selected-work">Work</a></li>
+              <li><a href="index.html#career-snapshot">Experience</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-showcase__connect">
+            <p id="footer-connect-label" class="footer-showcase__connect-label">Connect</p>
+            <ul class="footer-showcase__profiles-list" aria-labelledby="footer-connect-label">
+              <li><a href="mailto:mynameismustaq@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/mustaquehalder/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/MustaqueH" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-nav text-center mb-2">
-        <a href="index.html#hero">Home</a> |
-        <a href="index.html#about">About</a> |
-        <a href="index.html#portfolio">Portfolio</a> |
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="copyright text-center">
-        <p>© <strong class="px-1 sitename">Mustaque Halder</strong> All Rights Reserved</p>
+      <div class="footer-showcase__utility">
+        <p class="footer-showcase__copyright copyright mb-0">
+          <small>© <span id="footer-year">2026</span> <span class="sitename">Mustaque Halder</span></small>
+        </p>
+        <p class="footer-showcase__note mb-0"><small>Static site · no tracking · built for fast loads.</small></p>
+        <p class="footer-showcase__credits credits mb-0">
+          <small>Based on <a href="https://bootstrapmade.com/">BootstrapMade</a> · customised layout &amp; content</small>
+        </p>
       </div>
     </div>
   </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top flex items-center justify-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 </body>
-
 </html>

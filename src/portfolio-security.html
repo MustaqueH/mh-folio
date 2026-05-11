@@ -1,85 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Security &amp; compliance – Portfolio details</title>
-  <meta name="description" content="Conditional Access, DLP, and Microsoft 365 baseline hardening for measurable risk reduction and calmer audits.">
+  <title>FortiNAC · Network access trust &amp; firmwide cutover · Case study</title>
+  <meta name="description" content="Network trust &amp; access boundary engineering (FortiNAC). Firmwide wired and wireless access hardened with certificate-backed sessions, policy enforcement, endpoint readiness and remediation, and cutovers that preserved uptime while tightening the trust boundary.">
 
-  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
   <link rel="manifest" href="assets/img/site.webmanifest">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Styles: main.css + Tailwind (bundled via assets/js/main.js) -->
 </head>
-
-<body class="portfolio-details-page dark-background">
-  <script>
-    (function () {
-      try {
-        if (localStorage.getItem('theme') === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.body.classList.remove('dark-background');
-        }
-      } catch (e) { /* ignore */ }
-    })();
-  </script>
+<body class="portfolio-details-page case-study-page dark-background">
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <header id="header" class="header">
-    <div class="header-outer container-fluid container-xl d-flex align-items-center justify-content-between flex-nowrap gap-2 gap-md-3">
-
-      <div class="header-container position-relative d-flex align-items-center justify-content-between flex-grow-1 min-w-0 gap-2">
-
-        <div class="header-brand d-flex align-items-center gap-2 min-w-0 flex-grow-1">
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <h1 class="sitename pattern-fill logo-heading" data-text="MUSTAQUE">MUSTAQUE</h1>
-          </a>
-          <div class="header-social-links header-social-links--with-brand d-flex d-xl-none align-items-center flex-shrink-0" aria-label="Social profiles">
-            <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
+    <div class="layout-container header-shell">
+      <div class="header-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-wordmark logo-heading">Mustaque</span>
+        </a>
       </div>
 
       <nav id="navmenu" class="navmenu navmenu--rail" aria-label="Primary navigation">
         <ul id="primary-nav-list">
           <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#resume">Resume</a></li>
-          <li><a href="index.html#portfolio" class="active">Portfolio</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#profile">Profile</a></li>
+          <li><a href="index.html#capability-stack">Stack</a></li>
+          <li><a href="index.html#selected-work" class="active">Work</a></li>
+          <li><a href="index.html#career-snapshot">Experience</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header-end d-flex align-items-center flex-shrink-0 gap-1 gap-sm-2">
-        <div class="header-social-links header-social-links--desktop-bar d-none d-xl-flex" aria-label="Social profiles">
-          <a href="https://x.com/iammustaq" class="twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.facebook.com/iammustaq/" class="facebook" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/immustaq/" class="instagram" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://github.com/MustaqueH" class="github" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <div class="header-social-links" aria-label="Social profiles">
+          <a href="https://x.com/iammustaq" class="twitter" rel="noopener noreferrer" target="_blank" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/iammustaq/" class="facebook" rel="noopener noreferrer" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/immustaq/" class="instagram" rel="noopener noreferrer" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/MustaqueH" class="github" rel="noopener noreferrer" target="_blank" title="GitHub" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/mustaquehalder/" class="linkedin" rel="noopener noreferrer" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
         <div class="theme-toggle" title="Toggle dark/light mode">
           <input type="checkbox" id="theme-switch" class="theme-switch" checked aria-label="Toggle color theme">
@@ -90,137 +62,308 @@
             </span>
           </label>
         </div>
-
       </div>
-
     </div>
   </header>
 
   <main id="main" class="main" tabindex="-1">
+    <article class="case-study">
 
-    <div class="page-title enhanced-bg" data-aos="fade-up">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="index.html#portfolio">Portfolio</a></li>
-            <li class="breadcrumb-item active current">Security &amp; compliance</li>
-          </ol>
-        </nav>
-      </div>
-      <div class="title-wrapper">
-        <h1>Security &amp; compliance programs</h1>
-        <p>Identity-first access, data protection, and tenant baselines that improve posture without making day-to-day work painful.</p>
-      </div>
-    </div>
-
-    <section id="portfolio-details" class="portfolio-details section glass-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <a href="assets/img/portfolio/Compliance-vs.webp" class="glightbox" data-gallery="security-gallery" title="Compliance vs security balance">
-              <img src="assets/img/portfolio/Compliance-vs.webp" class="img-fluid mb-4 rounded" alt="Illustration contrasting compliance and security in cybersecurity" loading="lazy">
-            </a>
-            <a href="assets/img/portfolio/compliance-vs-security.png" class="glightbox" data-gallery="security-gallery" title="Compliance and security striking the right balance">
-              <img src="assets/img/portfolio/compliance-vs-security.png" class="img-fluid mb-4 rounded" alt="Diagram on balancing compliance and security requirements" loading="lazy">
-            </a>
-            <a href="assets/img/portfolio/corporate_security_operations_room_flat_vector_wall_screens_data.webp" class="glightbox" data-gallery="security-gallery" title="Security operations concept">
-              <img src="assets/img/portfolio/corporate_security_operations_room_flat_vector_wall_screens_data.webp" class="img-fluid mb-4 rounded" alt="Security operations monitoring concept illustration" loading="lazy">
-            </a>
+      <header id="case-study-hero" class="cs-hero project-hero enhanced-bg" aria-labelledby="case-study-title">
+        <div class="layout-container cs-hero__container">
+          <div class="cs-hero__crumbs breadcrumbs">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html#selected-work">Work</a></li>
+                <li class="breadcrumb-item active current" aria-current="page">FortiNAC · access boundary</li>
+              </ol>
+            </nav>
           </div>
-          <div class="col-lg-6">
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description glass-card">
-                <span class="badge bg-primary mb-2"><i class="bi bi-shield-lock me-1"></i> Identity · Data · M365</span>
-                <h2 class="mb-3">Two programs, one thread</h2>
-                <h5 class="text-muted mb-4">The portfolio cards here point to the same detail page because both bodies of work ran together—conditional access and DLP on one side, Microsoft 365 tenant hardening on the other.</h5>
-                <p>
-                  I design guardrails that match how people actually sign in, share files, and collaborate. That means Conditional Access and MFA policies that reduce risky sign-ins without locking out whole regions, DLP rules that stop real data sprawl instead of blocking every attachment, and M365 settings that auditors can trace back to a clear baseline.
-                </p>
+          <div class="cs-hero__grid">
+            <div class="cs-hero__primary">
+              <p class="cs-hero__eyebrow case-study-tag mb-0"><i class="bi bi-hdd-network me-1" aria-hidden="true"></i> Access boundary engineering · Wired &amp; wireless estate</p>
+              <h1 id="case-study-title" class="cs-hero__title">Network access trust &amp; firmwide cutover</h1>
+              <p class="cs-hero__lead">LAN and WLAN needed <strong>identity-bound device trust</strong> without freezing the business during migration—tightening attach while <strong>preserving uptime</strong> and replacing brittle shared-secret habits with <strong>cryptographic sessions the estate could operate</strong>.</p>
+              <p class="cs-hero__support">Engineering covered PKI and client trust material, endpoint readiness and remediation so auth could succeed first time, FortiNAC policy behaviour in front of switching and wireless control paths, and <strong>wave-based cutover discipline</strong> so risk dropped without drama at the desk.</p>
+              <div class="cs-hero__actions case-study-hero__links flex flex-wrap gap-2">
+                <a href="index.html#selected-work" class="btn-visit">All work</a>
+                <a href="index.html#contact" class="case-study-hero__cta--ghost">Discuss similar scope</a>
+              </div>
+            </div>
+            <aside class="cs-hero__aside" aria-label="Programme facts">
+              <p class="cs-hero__aside-title">Programme facts</p>
+              <dl>
+                <div><dt>Cutover discipline</dt><dd>Waved migration · no big-bang outage</dd></div>
+                <div><dt>Session posture</dt><dd>Certificate-backed attach · wired &amp; Wi‑Fi</dd></div>
+                <div><dt>Policy enforcement</dt><dd>FortiNAC core · RADIUS integration</dd></div>
+                <div><dt>Endpoint readiness</dt><dd>Agent continuity · remediation paths</dd></div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </header>
 
-                <div class="portfolio-sections">
-                  <div class="portfolio-section-card" data-aos="fade-up">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-shield-check"></i> Conditional Access &amp; DLP</h4>
-                    <ul>
-                      <li>Named locations, trusted devices, and session controls aligned to risk tiers—not one-size “block everything” policies.</li>
-                      <li>DLP for Teams, SharePoint, and Exchange tuned to sensitive labels and business workflows.</li>
-                      <li>Guest and partner access lifecycle so external sharing stays reviewable.</li>
-                    </ul>
-                  </div>
+      <div class="cs-sheet case-study__body case-study-canvas portfolio-details section glass-bg" data-aos="fade-up">
+        <div class="layout-container cs-sheet__container">
+          <section class="case-study-section" aria-label="Case study narrative">
+            <div class="cs-layout">
+              <div class="cs-layout__main">
+                <div class="cs-prose">
+                  <p class="cs-prose__kicker">Delivery context</p>
+                  <p class="cs-prose__lede" id="doc-start-heading">This was <strong>infrastructure and security engineering at estate scale</strong>: every laptop and desktop had to present trustworthy credentials to the LAN and WLAN, without carving out permanent exceptions that would undermine the whole model. Success meant certificates issued and renewed predictably, endpoints configured so authentication could succeed the first time, and operations stayed boring during cutovers—<strong>no big-bang outages dressed up as progress</strong>.</p>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-context" aria-labelledby="chapter-context-heading">
+                    <span class="cs-chapter__label">01 · Imperative</span>
+                    <h2 id="chapter-context-heading" class="cs-chapter__title">When the network stops trusting ports by default</h2>
+                    <p class="cs-chapter__lede">Legacy “plug and work” access could not coexist with the firm’s risk posture. The programme replaced implicit trust with <strong>device-based authentication</strong> on both wired and wireless paths—one coherent story for auditors and operators.</p>
+                    <div class="cs-chapter__body">
+                      <p>The constraint was operational, not theoretical: <strong>users had to remain productive</strong> while switches, controllers, and endpoints absorbed new policy. That pushed sequencing, pilots, and rollback thinking to the front—alongside technical depth on TLS-based authentication and certificate lifecycle.</p>
+                      <p class="cs-callout mb-0"><strong>Zero downtime</strong> was not a slogan; it shaped how changes were batched, validated, and communicated so secure access came online without a service-disruption narrative.</p>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-microsoft"></i> Microsoft 365: secure by configuration</h4>
-                    <ul>
-                      <li>Baseline configuration for Teams, SharePoint, and OneDrive with safe external sharing defaults.</li>
-                      <li>Defender and identity integration where it improves signal without duplicating admin work.</li>
-                      <li>Documentation and evidence packs that shorten audit conversations.</li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-governance" aria-labelledby="chapter-governance-heading">
+                    <span class="cs-chapter__label">02 · Architecture</span>
+                    <h2 id="chapter-governance-heading" class="cs-chapter__title">EAP-TLS, FortiNAC trust material, and device enrollment</h2>
+                    <p class="cs-chapter__lede"><strong>EAP-TLS</strong> anchored authentication: endpoints prove identity with certificates, not shared secrets floating across the estate. Standing that up required disciplined PKI choreography—FortiNAC’s own trust anchors and the <strong>device enrollment certificates</strong> clients actually present.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-columns cs-columns--two">
+                        <div>
+                          <p class="cs-miniheading">FortiNAC certificate plane</p>
+                          <ul class="case-study-list mb-0">
+                            <li><strong>Primary &amp; secondary certificates</strong> deployed so policy evaluation and administrative functions rested on explicit, rotation-aware trust—not improvised imports.</li>
+                            <li>Alignment between NAC expectations and what supplicants could present during EAP exchanges.</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <p class="cs-miniheading">Device credentials</p>
+                          <ul class="case-study-list mb-0">
+                            <li><strong>Enrollment certificates</strong> issued and bound to identity intent for machine authentication flows.</li>
+                            <li>Design emphasis on renewal and breakage modes—where authentication silently fails when PKI drifts.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <figure class="cs-figure cs-figure--diagram">
+                        <a href="assets/img/portfolio/diagram-fortinac-8021x.svg" class="glightbox" data-gallery="case-fortinac" title="Reference schematic — endpoint to FortiNAC and access paths">
+                          <img src="assets/img/portfolio/diagram-fortinac-8021x.svg" width="800" height="500" alt="Schematic: endpoint authenticating with EAP-TLS through FortiNAC toward wired switch and wireless access paths" loading="lazy">
+                        </a>
+                        <figcaption>Reference flow—device-based TLS authentication through FortiNAC toward wired and wireless enforcement; illustrative, not a literal topology.</figcaption>
+                      </figure>
+                    </div>
+                  </section>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-rollout" aria-labelledby="chapter-rollout-heading">
+                    <span class="cs-chapter__label">03 · Readiness</span>
+                    <h2 id="chapter-rollout-heading" class="cs-chapter__title">Endpoint posture before enforcement turns strict</h2>
+                    <p class="cs-chapter__lede">802.1X fails loudly for users when supplicants, adapters, or OS posture disagree with policy. The programme treated <strong>endpoint readiness</strong> as a first-class deliverable—validation gates before segments inherited mandatory authentication.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-card-grid" role="list">
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">Configuration baseline</h3>
+                          <p>Wired and wireless profiles, trust stores, and supplicant behaviour tuned so EAP-TLS could complete without desk-level improvisation.</p>
+                        </div>
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">Validation discipline</h3>
+                          <p>Readiness checks across cohorts so failures clustered into fixable patterns instead of opening silent bypass exceptions.</p>
+                        </div>
+                        <div class="cs-card" role="listitem">
+                          <h3 class="cs-card__title">User-visible friction</h3>
+                          <p>Communications and sequencing aimed at <strong>minimizing disruption</strong>—authentication changed; work patterns did not become a lottery.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card glass-highlight" data-aos="fade-up" data-aos-delay="200">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-hammer"></i> Technologies &amp; tools</h4>
-                    <ul class="tech-badges mb-2 d-flex flex-wrap gap-2 list-unstyled">
-                      <li><span class="badge bg-info text-dark">Entra ID</span></li>
-                      <li><span class="badge bg-info text-dark">Conditional Access</span></li>
-                      <li><span class="badge bg-info text-dark">Microsoft Purview DLP</span></li>
-                      <li><span class="badge bg-info text-dark">Microsoft 365</span></li>
-                      <li><span class="badge bg-info text-dark">Defender for Cloud Apps</span></li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-automation" aria-labelledby="chapter-automation-heading">
+                    <span class="cs-chapter__label">04 · Reliability</span>
+                    <h2 id="chapter-automation-heading" class="cs-chapter__title">Remediation scripting, services, and Persistent Agent</h2>
+                    <p class="cs-chapter__lede">At scale, manual touch-up does not survive the second week. Engineering focused on <strong>repeatable remediation</strong>, dependable local agents, and boot-time behaviour that keeps authentication plumbing alive.</p>
+                    <div class="cs-chapter__body">
+                      <ul class="case-study-list">
+                        <li><strong>Remediation scripting</strong> to correct misconfiguration drift and accelerate closure of readiness gaps picked up during validation.</li>
+                        <li><strong>Three required services</strong> engineered to <strong>always start at boot</strong>—eliminating a class of intermittent failures that masquerade as “random Wi‑Fi issues.”</li>
+                        <li><strong>FortiNAC Persistent Agent</strong> deployed so posture and continuity lived on the endpoint—not only at the moment of network attach.</li>
+                      </ul>
+                      <p class="mb-0">Together, these moves shifted the programme from “configured” to <strong>operationally reliable</strong> under real reboot cycles, patches, and firmware churn.</p>
+                    </div>
+                  </section>
 
-                  <div class="section-divider-glass"></div>
+                  <section class="cs-chapter" id="chapter-lifecycle" aria-labelledby="chapter-lifecycle-heading">
+                    <span class="cs-chapter__label">05 · Execution</span>
+                    <h2 id="chapter-lifecycle-heading" class="cs-chapter__title">Firmwide rollout with zero-downtime discipline</h2>
+                    <p class="cs-chapter__lede">Expansion followed waves that respected change appetite: prove stability, absorb lessons, widen coverage. The objective was <strong>firmwide secure access enablement</strong> without trading away uptime narratives.</p>
+                    <div class="cs-chapter__body">
+                      <p>Coverage extended across <strong>wired and wireless</strong> concurrently where architecture allowed, with checkpoints so controllers, switches, and NAC policy stayed in sync. Roll-forward decisions leaned on readiness telemetry—not optimism.</p>
+                      <p class="cs-callout mb-0"><strong>Rollout quality</strong> meant predictable behaviour per site cluster: the same authentication story in the boardroom VLAN as on the floor SSIDs—without bespoke per-floor hacks.</p>
+                    </div>
+                  </section>
 
-                  <div class="portfolio-section-card glass-highlight" data-aos="fade-up" data-aos-delay="300">
-                    <div class="section-accent"></div>
-                    <h4><i class="bi bi-stars"></i> Impact &amp; outcomes</h4>
-                    <ul class="ps-3 impact-list list-unstyled">
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Fewer risky sign-ins and clearer break-glass paths when policies need exceptions.</li>
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Reduced accidental oversharing and better visibility into guest and link-based access.</li>
-                      <li><i class="bi bi-check-circle-fill text-success me-1"></i>Stronger audit narrative: baselines, owners, and change history people can follow.</li>
-                    </ul>
-                  </div>
+                  <section class="cs-chapter" id="chapter-coordination" aria-labelledby="chapter-coordination-heading">
+                    <span class="cs-chapter__label">06 · Coordination</span>
+                    <h2 id="chapter-coordination-heading" class="cs-chapter__title">Network, security, and endpoint teams on one critical path</h2>
+                    <p class="cs-chapter__lede">NAC programmes fail in handoffs. This delivery kept <strong>operational coordination</strong> explicit: infrastructure owned cut windows and path diversity; security owned trust outcomes; endpoint engineering owned remediation throughput.</p>
+                    <div class="cs-chapter__body">
+                      <p class="mb-0">Decision logs tied certificate changes, policy toggles, and pilot expansions together—so root cause after incidents pointed to systems, not ambiguity about who approved a variance.</p>
+                    </div>
+                  </section>
+
+                  <section class="cs-chapter" id="chapter-outcomes" aria-labelledby="chapter-outcomes-heading">
+                    <span class="cs-chapter__label">07 · Impact</span>
+                    <h2 id="chapter-outcomes-heading" class="cs-chapter__title">Security and operational outcomes</h2>
+                    <p class="cs-chapter__lede">The programme delivered a harder trust boundary on both Ethernet and Wi‑Fi: certificate-backed authentication, consistent FortiNAC enforcement, and endpoints engineered to stay auth-ready—not a paper policy layered on a permissive LAN.</p>
+                    <div class="cs-chapter__body">
+                      <div class="cs-outcomes" role="region" aria-label="Key outcomes">
+                        <h3 class="cs-outcomes__title">Operational results</h3>
+                        <ul class="cs-outcomes__list">
+                          <li><strong>Device-authenticated access</strong> normalized across wired and wireless infrastructure.</li>
+                          <li><strong>EAP-TLS</strong> with enrolled device certificates—reducing shared-secret exposure and raising cryptographic assurance.</li>
+                          <li><strong>FortiNAC Persistent Agent</strong> and service reliability investments—fewer fragile “works until reboot” outcomes.</li>
+                          <li><strong>Zero-downtime posture</strong> preserved productivity while secure access became the default.</li>
+                        </ul>
+                      </div>
+                      <p class="mb-0 mt-3">Framed end-to-end, this reads as <strong>enterprise secure access modernization</strong>: endpoint readiness, PKI discipline, and staged execution—not a narrow networking ticket.</p>
+                    </div>
+                  </section>
                 </div>
               </div>
 
-              <div class="portfolio-info mt-5 glass-card">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category</strong>: Security &amp; compliance</li>
-                  <li><strong>Scope</strong>: Enterprise tenant(s)</li>
-                  <li><strong>Project window</strong>: Ongoing program work</li>
-                  <li><a href="index.html#portfolio" class="btn-visit align-self-start">Back to portfolio</a></li>
-                </ul>
-              </div>
+              <aside class="cs-layout__rail" aria-label="Reference sidebar">
+                <div class="cs-rail">
+                  <nav class="cs-rail__section" aria-labelledby="rail-nav-heading">
+                    <h3 id="rail-nav-heading" class="cs-rail__heading">On this page</h3>
+                    <ul class="cs-rail__nav">
+                      <li><a href="#chapter-context">Access imperative</a></li>
+                      <li><a href="#chapter-governance">Auth &amp; certificates</a></li>
+                      <li><a href="#chapter-rollout">Endpoint readiness</a></li>
+                      <li><a href="#chapter-automation">Remediation &amp; PA</a></li>
+                      <li><a href="#chapter-lifecycle">Firmwide execution</a></li>
+                      <li><a href="#chapter-coordination">Coordination</a></li>
+                      <li><a href="#chapter-outcomes">Outcomes</a></li>
+                    </ul>
+                  </nav>
+                  <section class="cs-rail__section" aria-labelledby="rail-facts-heading">
+                    <h3 id="rail-facts-heading" class="cs-rail__heading">Snapshot</h3>
+                    <dl class="cs-rail__dl">
+                      <div><dt>Discipline</dt><dd>Infrastructure &amp; endpoint security</dd></div>
+                      <div><dt>Workload</dt><dd>802.1X · EAP-TLS · FortiNAC</dd></div>
+                      <div><dt>Cadence</dt><dd>Pilot → firmwide waves</dd></div>
+                      <div><dt>Constraint</dt><dd>Zero-downtime mandate</dd></div>
+                    </dl>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-deploy-heading">
+                    <h3 id="rail-deploy-heading" class="cs-rail__heading">Technical spine</h3>
+                    <p class="cs-rail__text">Device-based authentication to wired and wireless infrastructure via FortiNAC; TLS-based EAP; enrollment certificates on endpoints; Persistent Agent for continuity.</p>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-phases-heading">
+                    <h3 id="rail-phases-heading" class="cs-rail__heading">Rollout shape</h3>
+                    <ol class="cs-rail__ol">
+                      <li>Trust material &amp; enrollment foundations</li>
+                      <li>Endpoint readiness &amp; remediation burn-down</li>
+                      <li>Pilot sites &amp; controller alignment</li>
+                      <li>Firmwide enablement &amp; steady-state</li>
+                    </ol>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-assign-heading">
+                    <h3 id="rail-assign-heading" class="cs-rail__heading">Engineering threads</h3>
+                    <ul class="cs-rail__tags">
+                      <li><span class="cs-rail__tag">PKI</span> FortiNAC &amp; device certs.</li>
+                      <li><span class="cs-rail__tag">802.1X</span> Wired + wireless.</li>
+                      <li><span class="cs-rail__tag">Endpoint</span> Services · PA · scripts.</li>
+                    </ul>
+                  </section>
+                  <section class="cs-rail__section cs-rail__section--highlight" aria-labelledby="rail-impact-heading">
+                    <h3 id="rail-impact-heading" class="cs-rail__heading">Highlights</h3>
+                    <ul class="cs-rail__impact">
+                      <li>Certificate-backed EAP-TLS at estate scale.</li>
+                      <li>Operational reliability—not best-effort supplicants.</li>
+                      <li>Coordinated zero-downtime execution.</li>
+                    </ul>
+                  </section>
+                  <section class="cs-rail__section" aria-labelledby="rail-stack-heading">
+                    <h3 id="rail-stack-heading" class="cs-rail__heading">Technologies</h3>
+                    <ul class="cs-rail__stack" aria-label="Technologies">
+                      <li>FortiNAC</li>
+                      <li>802.1X · RADIUS</li>
+                      <li>EAP-TLS</li>
+                      <li>Windows endpoints</li>
+                      <li>Persistent Agent</li>
+                    </ul>
+                  </section>
+                  <div class="cs-rail__section cs-rail__actions">
+                    <a href="index.html#selected-work" class="cs-rail__btn">All work</a>
+                    <a href="index.html#contact" class="cs-rail__btn cs-rail__btn--ghost">Contact</a>
+                  </div>
+                </div>
+              </aside>
             </div>
+          </section>
+
+          <nav class="case-study-pager case-study-pager--after-split" aria-label="Adjacent case studies">
+            <div class="glass-card case-study-pager__surface">
+              <a href="portfolio-details.html" class="case-study-pager__btn case-study-pager__btn--prev">
+                <span class="case-study-pager__btn-label">Previous project</span>
+                <span class="case-study-pager__btn-title"><i class="bi bi-arrow-left me-1"></i>DataSnipper</span>
+                <span class="case-study-pager__btn-desc">Governed rollout · licensed add-in</span>
+              </a>
+              <div class="case-study-pager__center">
+                <a href="index.html#selected-work" class="case-study-pager__btn case-study-pager__btn--hub">All work</a>
+              </div>
+              <a href="portfolio-automation.html" class="case-study-pager__btn case-study-pager__btn--next">
+                <span class="case-study-pager__btn-label">Next project</span>
+                <span class="case-study-pager__btn-title">Autopilot + Intune<i class="bi bi-arrow-right ms-1"></i></span>
+                <span class="case-study-pager__btn-desc">ESP · firmwide rollout · zero-touch</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer id="footer" class="footer footer-showcase footer-showcase--signature" role="contentinfo">
+    <div class="layout-container footer-showcase__inner">
+      <div class="footer-showcase__primary">
+        <div class="footer-showcase__brand">
+          <p class="footer-showcase__name sitename">Mustaque Halder</p>
+          <p class="footer-showcase__role">Enterprise IT · Modern workplace &amp; endpoints · M365 &amp; Intune · Systems administration</p>
+          <p class="footer-showcase__pitch">Estate rollouts, automation, and hybrid operations—documented to hand off without guesswork.</p>
+          <p class="footer-showcase__locale">Melbourne, Australia</p>
+        </div>
+        <div class="footer-showcase__aside">
+          <nav class="footer-showcase__nav" aria-label="Site sections">
+            <ul class="footer-showcase__nav-list">
+              <li><a href="index.html#hero">Home</a></li>
+              <li><a href="index.html#profile">Profile</a></li>
+              <li><a href="index.html#capability-stack">Stack</a></li>
+              <li><a href="index.html#selected-work">Work</a></li>
+              <li><a href="index.html#career-snapshot">Experience</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-showcase__connect">
+            <p id="footer-connect-label" class="footer-showcase__connect-label">Connect</p>
+            <ul class="footer-showcase__profiles-list" aria-labelledby="footer-connect-label">
+              <li><a href="mailto:mynameismustaq@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/mustaquehalder/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/MustaqueH" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-nav text-center mb-2">
-        <a href="index.html#hero">Home</a> |
-        <a href="index.html#about">About</a> |
-        <a href="index.html#portfolio">Portfolio</a> |
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="copyright text-center">
-        <p>© <strong class="px-1 sitename">Mustaque Halder</strong> All Rights Reserved</p>
+      <div class="footer-showcase__utility">
+        <p class="footer-showcase__copyright copyright mb-0">
+          <small>© <span id="footer-year">2026</span> <span class="sitename">Mustaque Halder</span></small>
+        </p>
+        <p class="footer-showcase__note mb-0"><small>Static site · no tracking · built for fast loads.</small></p>
+        <p class="footer-showcase__credits credits mb-0">
+          <small>Based on <a href="https://bootstrapmade.com/">BootstrapMade</a> · customised layout &amp; content</small>
+        </p>
       </div>
     </div>
   </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top flex items-center justify-center" title="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -230,5 +373,4 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </body>
-
 </html>

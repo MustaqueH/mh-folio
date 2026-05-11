@@ -2,17 +2,46 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 // import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';  // ← commented out
 
+/** FOUC + theme flash: sync data-theme before paint; load critical.css before Vite-injected module entry. */
+function foucHeadPlugin() {
+  const earlyBoot = `  <script>
+    (function () {
+      try {
+        var light = localStorage.getItem('theme') === 'light';
+        document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
+        document.documentElement.style.backgroundColor = light ? '#f5f7fa' : '#090c11';
+        function syncBody() {
+          if (!document.body) return;
+          if (light) document.body.classList.remove('dark-background');
+        }
+        syncBody();
+        document.addEventListener('DOMContentLoaded', syncBody, { once: true });
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = '#090c11';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./assets/css/critical.css" />`;
+
+  return {
+    name: 'fouc-early-theme-critical-css',
+    transformIndexHtml(html) {
+      let out = html.replace(/<meta\s+charset=["']utf-8["']\s*\/?>/i, (m) => `${m}\n${earlyBoot}`);
+      out = out.replace(
+        /(<script[^>]*\btype\s*=\s*["']module["'][^>]*>\s*<\/script>)\s*\n?\s*(<link\b[^>]*\brel\s*=\s*["']stylesheet["'][^>]*>)/i,
+        '$2\n  $1'
+      );
+      return out;
+    }
+  };
+}
+
 export default defineConfig({
   root: 'src',
   publicDir: resolve(__dirname, 'src/public'),
   base: './',  // ← relative paths for any static host
-  plugins: [
-    //  ViteImageOptimizer({
-    //    png: { quality: 80 },
-    //    jpeg: { quality: 80 },
-    //    webp: { lossless: true }
-    //  })
-    ],
+  plugins: [foucHeadPlugin()],
   build: {
     outDir: '../docs',
     emptyOutDir: true,

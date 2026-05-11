@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ca-bg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#157c88" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#3da8b8" stop-opacity="0.04"/>
+    </linearGradient>
+    <pattern id="ca-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#ca-bg)"/>
+  <rect width="800" height="500" fill="url(#ca-grid)" opacity="0.45"/>
+  <!-- signals -->
+  <rect x="88" y="104" width="124" height="72" rx="8" stroke="#3da8b8" stroke-width="2" fill="#fff" fill-opacity="0.9"/>
+  <path d="M124 132h52M124 152h36" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+  <text x="150" y="96" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Signals</text>
+  <rect x="88" y="200" width="124" height="72" rx="8" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.9"/>
+  <circle cx="124" cy="228" r="6" fill="#157c88" fill-opacity="0.35"/>
+  <circle cx="152" cy="236" r="8" fill="#157c88" fill-opacity="0.5"/>
+  <circle cx="176" cy="224" r="5" fill="#3da8b8" fill-opacity="0.55"/>
+  <rect x="88" y="296" width="124" height="72" rx="8" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.9"/>
+  <path d="M118 332h64M118 352h48" stroke="#157c88" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+  <!-- converge -->
+  <path d="M212 140h56M212 236h56M212 332h56" stroke="#94a3b8" stroke-opacity="0.45" stroke-width="1.5"/>
+  <path d="M268 236h28l16 8-16 8h-28" stroke="#157c88" stroke-width="2" fill="none"/>
+  <!-- policy gate -->
+  <path d="M388 176l104 52v168l-104 52-104-52V228l104-52z" stroke="#157c88" stroke-width="2.5" fill="#fff" fill-opacity="0.92"/>
+  <path d="M352 272h72M388 236v72" stroke="#157c88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="388" cy="272" r="22" stroke="#3da8b8" stroke-width="2" fill="#fff"/>
+  <path d="M380 272h16M388 264v16" stroke="#157c88" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="388" y="148" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Policy gate</text>
+  <!-- outcomes -->
+  <path d="M508 244h44l12 10 12-10h44" stroke="#157c88" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <rect x="588" y="168" width="148" height="96" rx="10" stroke="#157c88" stroke-width="2" fill="#fff" fill-opacity="0.88"/>
+  <path d="M632 212l24 24 48-48" stroke="#157c88" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="662" y="156" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Allow</text>
+  <rect x="588" y="284" width="148" height="96" rx="10" stroke="#2e3848" stroke-opacity="0.35" stroke-width="1.75" fill="#fff" fill-opacity="0.85"/>
+  <path d="M632 328l48 48M680 328l-48 48" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <text x="662" y="272" fill="#2e3848" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Block / remediate</text>
+  <!-- DLP strip -->
+  <rect x="108" y="408" width="584" height="56" rx="8" stroke="#3da8b8" stroke-width="1.75" fill="#fff" fill-opacity="0.88"/>
+  <path d="M132 428h140M132 448h200" stroke="#157c88" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  <circle cx="120" cy="436" r="5" fill="#3da8b8"/>
+  <text x="420" y="398" fill="#2e3848" fill-opacity="0.5" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Data protection layer (labels, DLP)</text>
+</svg>

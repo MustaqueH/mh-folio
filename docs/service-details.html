@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var light = localStorage.getItem('theme') === 'light';
+        document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
+        document.documentElement.style.backgroundColor = light ? '#f5f7fa' : '#090c11';
+        function syncBody() {
+          if (!document.body) return;
+          if (light) document.body.classList.remove('dark-background');
+        }
+        syncBody();
+        document.addEventListener('DOMContentLoaded', syncBody, { once: true });
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.style.backgroundColor = '#090c11';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./assets/css/critical.css" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Service Details - EasyFolio Bootstrap Template</title>
   <meta name="description" content="">
@@ -12,10 +31,10 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="./assets/img/apple-touch-icon.DZapI9-Z.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+  <!-- Fonts (aligned with index — Roboto 400/500/700, Noto 400–700, Questrial 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Questrial&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +43,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS File -->
+  <!-- Styles: main.css + Tailwind (bundled via assets/js/main.js) -->
 
   <!-- =======================================================
   * Template Name: EasyFolio
@@ -33,21 +53,23 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <script type="module" crossorigin src="./assets/js/main-BP5rAxIJ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/css/main.krLN31fA.css">
+  <link rel="stylesheet" crossorigin href="./assets/css/main.B_WHwLK9.css">
+  <script type="module" crossorigin src="./assets/js/main-CnR8Gyzt.js"></script>
 </head>
 
 <body class="service-details-page">
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header sticky-top flex items-center">
+    <div class="layout-container header-shell relative flex w-full flex-wrap items-center justify-between gap-3">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">EasyFolio</h1>
-      </a>
+      <div class="header-brand">
+        <a href="index.html" class="logo">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename mb-0">EasyFolio</h1>
+        </a>
+      </div>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -77,11 +99,13 @@
         </ul>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <div class="header-social-links">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
 
     </div>
@@ -108,13 +132,13 @@
     </div><!-- End Page Title -->
 
     <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <section id="service-details" class="service-details section section-stack">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="layout-container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
 
-          <div class="col-lg-8">
+          <div class="min-w-0 lg:col-span-8">
             <div class="service-details-slider swiper init-swiper">
               <script type="application/json" class="swiper-config">
                 {
@@ -131,7 +155,7 @@
                   }
                 }
               </script>
-              <div class="swiper-wrapper align-items-center">
+              <div class="swiper-wrapper items-center">
                 <div class="swiper-slide">
                   <img src="./assets/img/services-1.DywD0LZ9.webp" alt="" class="img-fluid" loading="lazy">
                 </div>
@@ -145,7 +169,7 @@
               <div class="swiper-pagination"></div>
             </div>
 
-            <div class="content mt-5">
+            <div class="content mt-10">
               <h3>Digital Marketing Solutions</h3>
               <p>
                 Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka. Aut quiatem. Ut earum tempore quidem qui recusandae distinctio quo.
@@ -154,28 +178,28 @@
                 Et officiis id est ad voluptates sint quia architecto aut soluta eum voluptatum rerum illo mara. Ut earum tempore quidem qui recusandae distinctio quo. Veniam maiores eos cumque distinctio.
               </p>
 
-              <div class="features mt-4">
-                <div class="row gy-4">
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-box d-flex align-items-center">
+              <div class="features mt-6">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box flex items-center">
                       <i class="bi bi-check"></i>
                       <h4>Search Engine Optimization</h4>
                     </div>
                   </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-box d-flex align-items-center">
+                  <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box flex items-center">
                       <i class="bi bi-check"></i>
                       <h4>Social Media Marketing</h4>
                     </div>
                   </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-box d-flex align-items-center">
+                  <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box flex items-center">
                       <i class="bi bi-check"></i>
                       <h4>Content Marketing Strategy</h4>
                     </div>
                   </div>
-                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-box d-flex align-items-center">
+                  <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-box flex items-center">
                       <i class="bi bi-check"></i>
                       <h4>Email Marketing Campaigns</h4>
                     </div>
@@ -183,13 +207,13 @@
                 </div>
               </div>
 
-              <p class="mt-4">
+              <p class="mt-6">
                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
               </p>
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="min-w-0 lg:col-span-4">
             <div class="service-info">
               <h4>Service Information</h4>
               <div class="info-item">
@@ -209,7 +233,7 @@
               </div>
             </div>
 
-            <div class="related-services mt-5">
+            <div class="related-services mt-10">
               <h4>Related Services</h4>
               <div class="service-item">
                 <i class="bi bi-bar-chart"></i>
@@ -239,11 +263,11 @@
 
   <footer id="footer" class="footer">
 
-    <div class="container">
+    <div class="layout-container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">EasyFolio</strong> <span>All Rights Reserved</span></p>
       </div>
-      <div class="social-links d-flex justify-content-center">
+      <div class="social-links flex justify-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
@@ -261,7 +285,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top flex items-center justify-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/php-email-form/validate.js"></script>

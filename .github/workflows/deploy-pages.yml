@@ -1,4 +1,4 @@
-# Build with Vite and publish ./dist to GitHub Pages (project site, e.g. /mh-folio/)
+# Build with Vite and publish ./docs to GitHub Pages (project site, e.g. /mh-folio/)
 name: Deploy to GitHub Pages
 
 on:
@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: docs
 
   deploy:
     needs: build

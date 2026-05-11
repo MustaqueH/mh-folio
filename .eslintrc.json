@@ -3,6 +3,14 @@
     "browser": true,
     "es2021": true
   },
+  "globals": {
+    "AOS": "readonly",
+    "GLightbox": "readonly",
+    "Swiper": "readonly",
+    "imagesLoaded": "readonly",
+    "Isotope": "readonly",
+    "initSwiperWithCustomPagination": "readonly"
+  },
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -10,7 +18,7 @@
   },
   "rules": {
     "indent": ["error", 2],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "no-unused-vars": "warn"

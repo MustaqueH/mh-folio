@@ -10,21 +10,28 @@
 
   <!-- Main sections -->
   <url>
-    <loc>https://yourdomain.com/index.html#about</loc>
+    <loc>https://yourdomain.com/index.html#profile</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/index.html#resume</loc>
+    <loc>https://yourdomain.com/index.html#capability-stack</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/index.html#portfolio</loc>
+    <loc>https://yourdomain.com/index.html#selected-work</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/index.html#career-snapshot</loc>
     <lastmod>2024-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

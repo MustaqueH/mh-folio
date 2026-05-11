@@ -1,0 +1,873 @@
+/*--------------------------------------------------------------
+# Case study system — enterprise editorial layout
+Scope: body.case-study-page.portfolio-details-page
+--------------------------------------------------------------*/
+
+body.case-study-page.portfolio-details-page {
+  --cs-gutter-outer: clamp(1rem, 3vw, 2rem);
+  --cs-max: min(1264px, calc(100vw - var(--cs-gutter-outer) * 2));
+  --cs-prose: 100%;
+  --cs-rail-col: minmax(15.5rem, 17rem);
+  --cs-layout-gap: clamp(1.15rem, 2.2vw, 1.65rem);
+  --cs-gutter: clamp(0.5rem, 1.75vw, 1rem);
+  --cs-rail-pad-x: clamp(1rem, 1.85vw, 1.25rem);
+  --cs-rail-pad-y: clamp(1.1rem, 2.2vw, 1.5rem);
+  /* Vertical rhythm: major section vs tight in-section */
+  --cs-space-major: clamp(1.65rem, 3.2vw, 2.15rem);
+  --cs-space-section: clamp(1.15rem, 2.4vw, 1.55rem);
+  --cs-space-block: clamp(0.65rem, 1.5vw, 0.95rem);
+  --cs-read: 100%;
+}
+
+/* ----- Hero — layout / viewport bands / grid: Tailwind on portfolio markup ----- */
+.case-study-page .cs-hero.project-hero.enhanced-bg {
+  box-sizing: border-box;
+}
+
+.case-study-page .cs-hero.project-hero.enhanced-bg::before {
+  opacity: 0.22;
+  background:
+    radial-gradient(ellipse 52% 40% at 10% 0%, color-mix(in srgb, var(--accent-color) 10%, transparent), transparent 55%),
+    radial-gradient(ellipse 42% 34% at 94% 8%, color-mix(in srgb, var(--accent-cyan) 7%, transparent), transparent 52%);
+}
+
+.case-study-page.portfolio-details-page .cs-hero__container.layout-container {
+  max-width: var(--cs-max);
+  width: 100%;
+  margin-inline: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.case-study-page .cs-hero__crumbs {
+  margin-bottom: clamp(0.85rem, 2vw, 1.15rem);
+}
+
+.case-study-page .cs-hero__primary {
+  min-width: 0;
+}
+
+.case-study-page .cs-hero__eyebrow {
+  margin-bottom: 0.55rem;
+}
+
+.case-study-page .cs-hero__title {
+  font-size: var(--fs-headline);
+  font-weight: 600;
+  letter-spacing: var(--ls-headline);
+  line-height: var(--lh-headline);
+  margin: 0 0 0.72rem;
+  max-width: var(--cs-prose);
+  font-feature-settings: "liga" 1, "kern" 1;
+  color: var(--heading-color);
+}
+
+.case-study-page .cs-hero__lead {
+  font-size: var(--fs-lede);
+  line-height: var(--lh-lede);
+  font-weight: 500;
+  margin: 0;
+  max-width: var(--cs-prose);
+  color: color-mix(in srgb, var(--default-color), transparent 4%);
+}
+
+.case-study-page .cs-hero__support {
+  margin: 0.78rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.58;
+  max-width: var(--cs-prose);
+  color: color-mix(in srgb, var(--default-color), transparent 11%);
+}
+
+.case-study-page .cs-hero__actions.case-study-hero__links {
+  margin-top: 1.05rem !important;
+  justify-content: flex-start !important;
+  gap: 0.55rem 0.85rem !important;
+}
+
+.case-study-page .cs-hero__aside {
+  min-width: 0;
+  position: relative;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border-radius: calc(var(--cs-panel-r) + 2px);
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 18%);
+  background: color-mix(in srgb, var(--surface-color), transparent 38%);
+  box-shadow: 0 1px 0 color-mix(in srgb, #fff, transparent 94%) inset;
+}
+
+.case-study-page .cs-hero__aside-title {
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 0.72rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 12%);
+}
+
+.case-study-page .cs-hero__aside dl {
+  margin: 0;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.case-study-page .cs-hero__aside dl > div {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.case-study-page .cs-hero__aside dt {
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+.case-study-page .cs-hero__aside dd {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: color-mix(in srgb, var(--heading-color), transparent 4%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-hero__aside {
+  background: color-mix(in srgb, var(--surface-color), #fff 3.5%);
+  border-color: color-mix(in srgb, var(--cs-line), transparent 12%);
+  box-shadow: 0 1px 0 color-mix(in srgb, #fff, transparent 96%) inset;
+}
+
+:root[data-theme="dark"] .case-study-page .cs-hero__lead {
+  color: color-mix(in srgb, var(--default-color), transparent 7%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-hero__support {
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-hero.project-hero.enhanced-bg .breadcrumb-item,
+:root[data-theme="dark"] .case-study-page .cs-hero.project-hero.enhanced-bg .breadcrumb-item a {
+  color: color-mix(in srgb, var(--default-color), transparent 11%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-hero.project-hero.enhanced-bg .breadcrumb-item.active {
+  color: color-mix(in srgb, var(--heading-color), transparent 5%);
+}
+
+/* Sheet: calmer band behind narrative */
+.case-study-page .cs-sheet.portfolio-details.glass-bg {
+  padding-block: clamp(1.35rem, 2.8vw, 2rem);
+  padding-inline: 0;
+}
+
+.portfolio-details-page.case-study-page .case-study-canvas.portfolio-details.glass-bg::before {
+  opacity: 0.14 !important;
+}
+
+.case-study-page.portfolio-details-page article.case-study .cs-sheet.portfolio-details.glass-bg > .cs-sheet__container {
+  counter-reset: cs-section;
+}
+
+.case-study-page.portfolio-details-page .portfolio-details.glass-bg > .layout-container.cs-sheet__container {
+  max-width: var(--cs-max);
+  width: 100%;
+  margin-inline: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.case-study-page .cs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--cs-rail-col);
+  gap: var(--cs-layout-gap);
+  align-items: stretch;
+}
+
+.case-study-page .cs-layout__main {
+  min-width: 0;
+  padding-inline-end: 0;
+}
+
+.case-study-page .cs-layout__rail {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+/* Continuous editorial column */
+.case-study-page .cs-prose {
+  padding-inline-start: var(--cs-gutter);
+  box-sizing: border-box;
+  border-left: 1px solid color-mix(in srgb, var(--cs-line), transparent 55%);
+  padding-left: clamp(0.85rem, 2vw, 1.15rem);
+  margin-left: 0;
+}
+
+.case-study-page .cs-prose__kicker {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent-color), transparent 8%);
+  margin: 0 0 var(--cs-space-block);
+}
+
+.case-study-page .cs-prose__lede {
+  font-size: var(--fs-lede);
+  line-height: var(--lh-lede);
+  color: color-mix(in srgb, var(--default-color), transparent 4%);
+  margin: 0 0 var(--cs-space-major);
+  padding-bottom: var(--cs-space-section);
+  border-bottom: 1px solid color-mix(in srgb, var(--cs-line), transparent 22%);
+  max-width: var(--cs-read);
+}
+
+.case-study-page .cs-prose__lede--draft {
+  color: color-mix(in srgb, var(--default-color), transparent 9%);
+  border-bottom-style: dashed;
+}
+
+/* Chapters: tighter coupling, clearer hierarchy */
+.case-study-page .cs-chapter {
+  scroll-margin-top: calc(var(--header-mobile-stack-h) + 20px);
+  padding-top: var(--cs-space-section);
+  margin-top: var(--cs-space-major);
+  border-top: 1px solid color-mix(in srgb, var(--cs-line), transparent 45%);
+}
+
+.case-study-page .cs-chapter:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.case-study-page .cs-chapter__label {
+  display: block;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent-color), transparent 10%);
+  margin-bottom: 0.35rem;
+}
+
+.case-study-page .cs-chapter__title {
+  font-size: var(--fs-subhead);
+  font-weight: 600;
+  letter-spacing: var(--ls-subhead);
+  line-height: var(--lh-subhead);
+  margin: 0 0 0.48rem;
+  max-width: var(--cs-read);
+  color: var(--heading-color);
+}
+
+.case-study-page .cs-chapter__lede {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: color-mix(in srgb, var(--default-color), transparent 7%);
+  margin: 0 0 0.58rem;
+  max-width: var(--cs-read);
+}
+
+.case-study-page .cs-chapter__body {
+  max-width: var(--cs-read);
+}
+
+.case-study-page .cs-chapter__body > p {
+  margin-bottom: 0.62rem;
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+}
+
+.case-study-page .cs-chapter__body > p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-page .cs-chapter__body > ul.case-study-list {
+  margin: 0 0 0.62rem;
+  padding-left: 1.15rem;
+  max-width: var(--cs-read);
+}
+
+.case-study-page .cs-chapter__body > ul.case-study-list:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-page .cs-callout {
+  margin-top: var(--cs-space-block);
+  padding: 0.72rem 0.88rem;
+  border-radius: calc(var(--cs-panel-r) + 1px);
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 28%);
+  background: color-mix(in srgb, var(--surface-color), var(--heading-color) 2.5%);
+  font-size: 0.875rem;
+  line-height: 1.52;
+}
+
+.case-study-page .cs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.62rem;
+  margin-top: var(--cs-space-block);
+}
+
+.case-study-page .cs-card {
+  padding: 0.78rem 0.88rem;
+  border-radius: calc(var(--cs-panel-r) + 1px);
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 22%);
+  background: color-mix(in srgb, var(--surface-color), var(--heading-color) 1.5%);
+}
+
+.case-study-page .cs-card__title {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  margin: 0 0 0.38rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 8%);
+}
+
+.case-study-page .cs-card p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.48;
+  color: color-mix(in srgb, var(--default-color), transparent 8%);
+}
+
+.case-study-page .cs-columns {
+  display: grid;
+  gap: 0.85rem 1.1rem;
+  margin-top: var(--cs-space-block);
+}
+
+@media (min-width: 768px) {
+  .case-study-page .cs-columns--two {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.case-study-page .cs-miniheading {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--heading-color), transparent 14%);
+  margin-bottom: 0.38rem;
+}
+
+.case-study-page .cs-highlight {
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+  font-size: 0.84em;
+  font-weight: 600;
+  padding: 0.08em 0.32em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: color-mix(in srgb, var(--heading-color), transparent 6%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-highlight {
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+}
+
+/* Main-column outcomes (mirrors rail tone, owns narrative closure) */
+.case-study-page .cs-outcomes {
+  margin-top: var(--cs-space-block);
+  padding: var(--cs-space-section) var(--cs-space-section);
+  border-radius: calc(var(--cs-panel-r) + 3px);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 72%);
+  background: color-mix(in srgb, var(--surface-color), var(--accent-color) 4%);
+}
+
+.case-study-page .cs-outcomes__title {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 0.62rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 8%);
+}
+
+.case-study-page .cs-outcomes__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.case-study-page .cs-outcomes__list li {
+  position: relative;
+  padding-left: 1.05rem;
+  font-size: 0.88rem;
+  line-height: 1.48;
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+}
+
+.case-study-page .cs-outcomes__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--accent-color), transparent 12%);
+}
+
+body.case-study-page.portfolio-details-page #footer.footer-showcase .footer-showcase__inner.layout-container {
+  max-width: var(--cs-max);
+  width: 100%;
+  margin-inline: auto;
+}
+
+.case-study-page .cs-figure {
+  margin: var(--cs-space-section) 0 0;
+  padding: clamp(0.55rem, 1.35vw, 0.85rem);
+  border-radius: calc(var(--cs-panel-r) + 3px);
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 24%);
+  background: color-mix(in srgb, var(--surface-color), var(--heading-color) 2.8%);
+}
+
+.case-study-page .cs-figure--diagram {
+  margin-top: var(--cs-space-section);
+  padding: clamp(0.72rem, 1.65vw, 1rem);
+}
+
+.case-study-page .cs-figure a.glightbox {
+  display: block;
+}
+
+.case-study-page .cs-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--cs-panel-r));
+}
+
+.case-study-page .cs-figure figcaption {
+  margin-top: 0.52rem;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+/* ----- Rail ----- */
+.case-study-page .cs-rail {
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  padding: var(--cs-rail-pad-y) var(--cs-rail-pad-x);
+  border-radius: calc(var(--cs-panel-r) + 3px);
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 18%);
+  background: color-mix(in srgb, var(--surface-color), transparent 4%);
+  box-shadow: 0 1px 0 color-mix(in srgb, #fff, transparent 96%) inset;
+}
+
+:root[data-theme="dark"] .case-study-page .cs-rail {
+  background: color-mix(in srgb, var(--surface-color), #fff 2.8%);
+  border-color: color-mix(in srgb, var(--cs-line), transparent 12%);
+  box-shadow: 0 1px 0 color-mix(in srgb, #fff, transparent 97%) inset;
+}
+
+.case-study-page .cs-rail__section {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--cs-line), transparent 32%);
+}
+
+.case-study-page .cs-rail__section:first-child {
+  padding-top: 0;
+}
+
+.case-study-page .cs-rail__section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.case-study-page .cs-rail__heading {
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin: 0 0 0.48rem;
+  color: color-mix(in srgb, var(--heading-color), transparent 12%);
+}
+
+.case-study-page .cs-rail__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+}
+
+.case-study-page .cs-rail__nav a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.38;
+  text-decoration: none;
+  color: color-mix(in srgb, var(--default-color), transparent 4%);
+  padding: 0.12rem 0;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.case-study-page .cs-rail__nav a:hover {
+  color: var(--accent-color);
+}
+
+.case-study-page .cs-rail__nav a:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent-color), transparent 35%);
+  outline-offset: 2px;
+}
+
+.case-study-page .cs-rail__dl {
+  margin: 0;
+  display: grid;
+  gap: 0.52rem;
+}
+
+.case-study-page .cs-rail__dl > div {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.case-study-page .cs-rail__dl dt {
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 22%);
+}
+
+.case-study-page .cs-rail__dl dd {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--heading-color), transparent 4%);
+}
+
+.case-study-page .cs-rail__text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.52;
+  color: color-mix(in srgb, var(--default-color), transparent 7%);
+}
+
+.case-study-page .cs-rail__ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+  line-height: 1.48;
+  color: color-mix(in srgb, var(--default-color), transparent 6%);
+}
+
+.case-study-page .cs-rail__ol li {
+  margin-bottom: 0.32rem;
+  padding-left: 0.1rem;
+}
+
+.case-study-page .cs-rail__ol li:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-page .cs-rail__tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.case-study-page .cs-rail__tags li {
+  font-size: 0.78rem;
+  line-height: 1.42;
+  color: color-mix(in srgb, var(--default-color), transparent 6%);
+}
+
+.case-study-page .cs-rail__tag {
+  display: inline-block;
+  min-width: 4.75rem;
+  margin-right: 0.35rem;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent-color), transparent 8%);
+}
+
+.case-study-page .cs-rail__section--highlight {
+  background: color-mix(in srgb, var(--surface-color), var(--accent-color) 4.5%);
+  margin-inline: calc(-1 * var(--cs-rail-pad-x));
+  padding-inline: var(--cs-rail-pad-x);
+  padding-block: 0.82rem;
+  margin-top: auto;
+  border-radius: calc(var(--cs-panel-r) + 1px);
+  border-bottom: none !important;
+}
+
+.case-study-page .cs-rail__impact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.case-study-page .cs-rail__impact li {
+  position: relative;
+  padding-left: 0.95rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+}
+
+.case-study-page .cs-rail__impact li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--accent-color), transparent 18%);
+}
+
+.case-study-page .cs-rail__stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.case-study-page .cs-rail__stack li {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.28rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--cs-line), transparent 18%);
+  background: color-mix(in srgb, var(--surface-color), var(--heading-color) 2.5%);
+  color: color-mix(in srgb, var(--heading-color), transparent 6%);
+}
+
+.case-study-page .cs-rail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 0.85rem !important;
+  margin-top: 0.15rem;
+  border-top: 1px solid color-mix(in srgb, var(--cs-line), transparent 26%) !important;
+}
+
+.case-study-page .cs-rail__btn {
+  flex: 1 1 auto;
+  min-width: 6.75rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.48rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 38%);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transition:
+    filter var(--motion-duration-short) var(--ease-standard),
+    border-color var(--motion-duration-short) var(--ease-standard),
+    color var(--motion-duration-short) var(--ease-standard);
+}
+
+.case-study-page .cs-rail__btn:hover {
+  filter: brightness(1.05);
+  color: var(--contrast-color);
+}
+
+.case-study-page .cs-rail__btn--ghost {
+  background: transparent;
+  color: color-mix(in srgb, var(--default-color), transparent 5%);
+  border-color: var(--cs-line-strong);
+}
+
+.case-study-page .cs-rail__btn--ghost:hover {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 35%);
+  color: var(--accent-color);
+  filter: none;
+}
+
+.case-study-page .case-study-pager.case-study-pager--after-split {
+  margin-top: var(--cs-space-major) !important;
+  margin-bottom: var(--space-md);
+  padding-top: var(--cs-space-section);
+  border-top: 1px solid color-mix(in srgb, var(--cs-line), transparent 24%);
+}
+
+/* Pager + footer: motion and hairlines aligned with global tokens */
+body.case-study-page.portfolio-details-page .case-study-pager__surface.glass-card {
+  border-color: color-mix(in srgb, var(--heading-color), transparent 86%);
+  transition:
+    border-color var(--motion-duration-short) var(--ease-standard),
+    box-shadow var(--motion-duration-base) var(--ease-standard);
+}
+
+body.case-study-page.portfolio-details-page .case-study-pager .case-study-pager__btn {
+  transition:
+    background-color var(--motion-duration-short) var(--ease-standard),
+    color var(--motion-duration-short) var(--ease-standard),
+    border-color var(--motion-duration-short) var(--ease-standard);
+}
+
+body.case-study-page.portfolio-details-page .case-study-pager .case-study-pager__btn--hub {
+  transition:
+    background-color var(--motion-duration-short) var(--ease-standard),
+    color var(--motion-duration-short) var(--ease-standard),
+    box-shadow var(--motion-duration-base) var(--ease-standard),
+    filter var(--motion-duration-short) var(--ease-standard);
+}
+
+body.case-study-page.portfolio-details-page #footer.footer-showcase {
+  margin-top: var(--space-lg);
+  border-top: 1px solid color-mix(in srgb, var(--cs-line), transparent 35%);
+  transition: border-color var(--motion-duration-short) var(--ease-standard);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-chapter__body > p,
+:root[data-theme="dark"] .case-study-page .cs-chapter__lede {
+  color: color-mix(in srgb, var(--default-color), transparent 6%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-figure figcaption {
+  color: color-mix(in srgb, var(--default-color), transparent 14%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-rail__dl dt {
+  color: color-mix(in srgb, var(--default-color), transparent 16%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-rail__text {
+  color: color-mix(in srgb, var(--default-color), transparent 4%);
+}
+
+:root[data-theme="dark"] .case-study-page .cs-prose__lede--draft {
+  color: color-mix(in srgb, var(--default-color), transparent 7%);
+}
+
+@media (max-width: 1024px) {
+  .case-study-page .cs-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(1.15rem, 3vw, 1.55rem);
+  }
+
+  .case-study-page .cs-layout__main {
+    padding-inline-end: 0;
+  }
+
+  .case-study-page .cs-prose {
+    padding-inline: var(--cs-gutter);
+    border-left: none;
+    padding-left: var(--cs-gutter);
+  }
+
+  .case-study-page .cs-layout__rail {
+    height: auto;
+    min-height: 0;
+  }
+
+  .case-study-page .cs-rail {
+    flex: 0 1 auto;
+    min-height: 0;
+  }
+
+  .case-study-page .cs-rail__section--highlight {
+    margin-top: 0;
+  }
+
+  .case-study-page .cs-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .case-study-page .cs-hero__title {
+    font-size: clamp(1.52rem, 5.5vw + 0.45rem, 2.05rem);
+  }
+}
+
+/* ----- Case-study hero shell (single source; portfolio pages stay markup-identical) ----- */
+body.portfolio-details-page.case-study-page header#case-study-hero.cs-hero.project-hero.enhanced-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--header-mobile-stack-h) + clamp(0.65rem, 2vw, 1.15rem));
+  padding-inline: max(0px, env(safe-area-inset-left)) max(0px, env(safe-area-inset-right));
+  padding-block: clamp(1.35rem, 5svh, 2rem);
+  border-bottom: 1px solid color-mix(in srgb, var(--cs-line), transparent 18%);
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  body.portfolio-details-page.case-study-page header#case-study-hero.cs-hero.project-hero.enhanced-bg {
+    min-height: clamp(340px, min(52svh, 62vh), 620px);
+    padding-block: clamp(1.45rem, 3.5vh, 2.1rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  body.portfolio-details-page.case-study-page header#case-study-hero.cs-hero.project-hero.enhanced-bg {
+    margin-top: 88px;
+    min-height: clamp(380px, min(58svh, 66vh), 720px);
+    padding-block: clamp(1.55rem, 3.2vh, 2.45rem);
+  }
+}
+
+body.portfolio-details-page.case-study-page header#case-study-hero .layout-container.cs-hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.case-study-page header#case-study-hero .cs-hero__grid {
+  display: grid;
+  align-items: start;
+  gap: var(--cs-layout-gap);
+}
+
+@media (min-width: 768px) {
+  .case-study-page header#case-study-hero .cs-hero__grid {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .case-study-page header#case-study-hero .cs-hero__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(14.5rem, 17.25rem);
+    column-gap: var(--cs-layout-gap);
+    align-items: center;
+  }
+}
